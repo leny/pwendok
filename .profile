@@ -20,9 +20,9 @@ alias ...='cd ~-'
 alias cleansvn='find ./ -name ".svn" | xargs rm -Rf'
 
 alias vup='vagrant up'
-alias vdestroy='vagrant destroy'
+alias vdestroy='vagrant destroy --force'
 alias vssh='vagrant ssh'
-alias vdeploy='vagrant destroy && vagrant up && vagrant ssh'
+alias vdeploy='vagrant destroy --force && vagrant up && vagrant ssh'
 
 alias enpm='npm --registry registry.npmjs.eu'
 
