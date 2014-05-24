@@ -108,6 +108,11 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# global npm packages to install
+sudo npm install -g bower browserify coffee-script coffeegulp curiosity dalek-cli docco gitbook gitbook-pdf grunt grunt-cli grunt-devtools grunt-init gulp hexo iced-coffee-script mocha n phantomas plato stylus vibox vows woazar
+
+# Make a CLI alias to Sublime text
+sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime
 
 # - - -
 
