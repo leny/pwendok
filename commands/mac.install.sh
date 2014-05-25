@@ -38,7 +38,7 @@ sudo npm install n
 sudo n stable
 
 # global npm packages to install
-sudo npm install -g bower browserify coffee-script coffeegulp curiosity dalek-cli docco gitbook gitbook-pdf grunt grunt-cli grunt-devtools grunt-init gulp hexo iced-coffee-script mocha phantomas plato stylus vibox vows woazar
+sudo npm install -g bower browserify coffee-script coffeegulp curiosity dalek-cli docco gitbook gitbook-pdf grunt grunt-cli grunt-devtools grunt-init gulp hexo iced-coffee-script mocha phantomas plato stylus vibox vows woazar yo
 
 # - Install applications
 
