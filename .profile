@@ -19,6 +19,8 @@ alias ...='cd ~-'
 
 alias cleansvn='find ./ -name ".svn" | xargs rm -Rf'
 
+alias gitinit="git init"
+
 alias vup='vagrant up'
 alias vdestroy='vagrant destroy --force'
 alias vssh='vagrant ssh'
