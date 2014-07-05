@@ -12,7 +12,7 @@
 Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs
-2. Make pwendok script executable `$ chmod +x setup/mac*`
+2. Make pwendok script executable `$ chmod +x mac*`
 3. Setup profile : append `.profile` commands to the user profile.
 4. System setup : launch `./mac.setup.sh` to setup & clean the system (the script reboot).
 5. Install all the fonts from the NAS.
