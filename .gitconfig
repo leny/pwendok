@@ -1,5 +1,5 @@
 [user]
-    name = Leny
+    name = leny
     email = info@flatland.be
 [core]
     excludesfile = ~/.gitignore_global
