@@ -6,7 +6,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# - Install homebrew & cask
+echo "----- Install homebrew & cask -----"
 
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew doctor
@@ -17,31 +17,24 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 brew tap caskroom/versions
 
-# - Install Git, Node & npm with brew
+echo "----- Install Git, Node & npm with brew -----"
 
 brew install git
+brew install mercurial
 brew install node
 brew install tree
 brew install wget
 brew install hub
 
-# - Install Git, Node & npm with brew
+echo "----- Update node.js ----- "
 
-brew install git
-brew install node
-brew install tree
-brew install wget
-brew install hub
-
-# Update node
-
-sudo npm install n
+sudo npm install -g n
 sudo n stable
 
-# global npm packages to install
+echo "----- Install useful global npm packages -----"
 sudo npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
 
-# - Install applications
+echo "----- Install applications -----"
 
 brew cask install adobe-creative-cloud
 brew cask install alfred
@@ -51,6 +44,7 @@ brew cask install codekit
 brew cask install dropbox
 brew cask install droplr
 brew cask install fantastical
+brew cask install java
 brew cask install filebot
 brew cask install firefox
 brew cask install flux
@@ -80,5 +74,6 @@ brew cask install virtualbox
 brew cask install istat-menus
 brew cask install iterm
 
+echo "----- Install useful Quicklook Commands -----"
 # https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
