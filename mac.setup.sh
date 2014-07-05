@@ -118,14 +118,6 @@ sudo defaults write com.apple.dock autohide -bool true
 
 # - - -
 
-# Kill affected applications
-
-for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-    "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-    "Twitter" "iCal" "iTunes"; do
-    killall "$app" > /dev/null 2>&1
-done
-
 # Reboot!
 
 osascript -e 'tell app "System Events" to restart'
