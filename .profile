@@ -46,6 +46,10 @@ set match-hidden-files off
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
+# -- Cask
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
 # -- Prompt
 
 export CLICOLOR=1
