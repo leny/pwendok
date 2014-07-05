@@ -19,102 +19,102 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo nvram SystemAudioVolume=" "
 
 # Remove spotlight icon in the menubar
-sudo mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak
+mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak
 
 # Disable CMD+M system-wide keyboard shortcut
-sudo defaults write -g NSUserKeyEquivalents -dict-add 'Minimize' '\0'
+defaults write -g NSUserKeyEquivalents -dict-add 'Minimize' '\0'
 
 # Expand save panel by default
-sudo defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Expand print panel by default
-sudo defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
 # Save to disk (not to iCloud) by default
-sudo defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 # Disable the “Are you sure you want to open this application?” dialog
-sudo defaults write com.apple.LaunchServices LSQuarantine -bool false
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Set Help Viewer windows to non-floating mode
-sudo defaults write com.apple.helpviewer DevMode -bool true
+defaults write com.apple.helpviewer DevMode -bool true
 
 # Trackpad: enable tap to click for this user and for the login screen
-sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable press-and-hold for keys in favor of key repeat
-sudo defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Increase sound quality for Bluetooth headphones/headsets
-sudo defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
-sudo defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
-sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
-sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 # Automatically illuminate built-in MacBook keyboard in low light
-sudo defaults write com.apple.BezelServices kDim -bool true
+defaults write com.apple.BezelServices kDim -bool true
 # Turn off keyboard illumination when computer is not used for 2 minutes
-sudo defaults write com.apple.BezelServices kDimTime -int 120
+defaults write com.apple.BezelServices kDimTime -int 120
 
 # Disable auto-correct
-sudo defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Save screenshots to the desktop
-sudo defaults write com.apple.screencapture location -string "$HOME/Desktop"
+defaults write com.apple.screencapture location -string "$HOME/Desktop"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-sudo defaults write com.apple.screencapture type -string "png"
+defaults write com.apple.screencapture type -string "png"
 
 # Finder: show status bar
-sudo defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 
 # Finder: allow text selection in Quick Look
-sudo defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool true
 
 # Finder: show all filename extensions
-sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # When performing a search, search the current folder by default
-sudo defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 # Disable the warning when changing a file extension
-sudo defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Avoid creating .DS_Store files on network volumes
-sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-sudo defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.Finder FXPreferredViewStyle -string "Nlsv"
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
-sudo defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Only use UTF-8 in Terminal.app
-sudo defaults write com.apple.terminal StringEncodings -array 4
+defaults write com.apple.terminal StringEncodings -array 4
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
-sudo defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Empty Trash securely by default
-sudo defaults write com.apple.finder EmptyTrashSecurely -bool true
+defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Don’t show Dashboard as a Space
-sudo defaults write com.apple.dock dashboard-in-overlay -bool true
+defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Disable Dashboard
-sudo defaults write com.apple.dashboard mcx-disabled -bool true
+defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Automatically hide and show the Dock
-sudo defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
 
 # - - -
 

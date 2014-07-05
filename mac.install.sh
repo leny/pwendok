@@ -8,72 +8,72 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "----- Install homebrew & cask -----"
 
-sudo ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-sudo brew doctor
-sudo brew update
-sudo brew upgrade
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew doctor
+brew update
+brew upgrade
 
-sudo brew tap phinze/homebrew-cask
-sudo brew install brew-cask
-sudo brew tap caskroom/versions
+brew tap phinze/homebrew-cask
+brew install brew-cask
+brew tap caskroom/versions
 
 echo "----- Install Git, Node & npm with brew -----"
 
-sudo brew install git
-sudo brew install mercurial
-sudo brew install node
-sudo brew install tree
-sudo brew install wget
-sudo brew install hub
+brew install git
+brew install mercurial
+brew install node
+brew install tree
+brew install wget
+brew install hub
 
 echo "----- Update node.js ----- "
 
-sudo npm install -g n
-sudo n stable
+npm install -g n
+n stable
 
 echo "----- Install useful global npm packages -----"
-sudo npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
+npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
 
 echo "----- Install applications -----"
 
-sudo brew cask install adobe-creative-cloud
-sudo brew cask install alfred
-sudo brew cask install atom
-sudo brew cask install cleanmymac
-sudo brew cask install codekit
-sudo brew cask install dropbox
-sudo brew cask install droplr
-sudo brew cask install fantastical
-sudo brew cask install java
-sudo brew cask install filebot
-sudo brew cask install firefox
-sudo brew cask install flux
-sudo brew cask install gas-mask
-sudo brew cask install github
-sudo brew cask install google-chrome
-sudo brew cask install hipchat
-sudo brew cask install kaleidoscope
-sudo brew cask install keyboard-cleaner
-sudo brew cask install little-snitch
-sudo brew cask install mou
-sudo brew cask install onyx
-sudo brew cask install paintcode
-sudo brew cask install path-finder
-sudo brew cask install robomongo
-sudo brew cask install sequel-pro
-sudo brew cask install sourcetree
-sudo brew cask install spotify
-sudo brew cask install steam
-sudo brew cask install totals
-sudo brew cask install tower
-sudo brew cask install transmission
-sudo brew cask install vlc
-sudo brew cask install vagrant
-sudo brew cask install versions
-sudo brew cask install virtualbox
-sudo brew cask install istat-menus
-sudo brew cask install iterm2
+brew cask install adobe-creative-cloud
+brew cask install alfred
+brew cask install atom
+brew cask install cleanmymac
+brew cask install codekit
+brew cask install dropbox
+brew cask install droplr
+brew cask install fantastical
+brew cask install java
+brew cask install filebot
+brew cask install firefox
+brew cask install flux
+brew cask install gas-mask
+brew cask install github
+brew cask install google-chrome
+brew cask install hipchat
+brew cask install kaleidoscope
+brew cask install keyboard-cleaner
+brew cask install little-snitch
+brew cask install mou
+brew cask install onyx
+brew cask install paintcode
+brew cask install path-finder
+brew cask install robomongo
+brew cask install sequel-pro
+brew cask install sourcetree
+brew cask install spotify
+brew cask install steam
+brew cask install totals
+brew cask install tower
+brew cask install transmission
+brew cask install vlc
+brew cask install vagrant
+brew cask install versions
+brew cask install virtualbox
+brew cask install istat-menus
+brew cask install iterm2
 
 echo "----- Install useful Quicklook Commands -----"
 # https://github.com/sindresorhus/quick-look-plugins
-sudo brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
