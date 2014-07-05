@@ -117,3 +117,7 @@ for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
     "Twitter" "iCal" "iTunes"; do
     killall "$app" > /dev/null 2>&1
 done
+
+# Reboot!
+
+osascript -e 'tell app "System Events" to restart'
