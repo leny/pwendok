@@ -28,11 +28,11 @@ brew install hub
 
 echo "----- Update node.js ----- "
 
-sudo npm install -g n
-sudo n stable
+npm install -g n
+n stable
 
 echo "----- Install useful global npm packages -----"
-sudo npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
+npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
 
 echo "----- Install applications -----"
 
@@ -72,7 +72,7 @@ brew cask install vagrant
 brew cask install versions
 brew cask install virtualbox
 brew cask install istat-menus
-brew cask install iterm
+brew cask install iterm2
 
 echo "----- Install useful Quicklook Commands -----"
 # https://github.com/sindresorhus/quick-look-plugins
