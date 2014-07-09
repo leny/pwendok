@@ -17,6 +17,10 @@ alias ..='cd ..'
 alias cd..="cd .."
 alias ...='cd ~-'
 
+alias mkdir="mkdir -pv"
+
+alias ports="netstat -tulanp"
+
 alias cleansvn='find ./ -name ".svn" | xargs rm -Rf'
 
 alias gitinit="git init"
