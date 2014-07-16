@@ -30,7 +30,7 @@ defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreS
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # Remove spotlight icon in the menubar
-mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak
+sudo mv /System/Library/CoreServices/Search.bundle /System/Library/CoreServices/Search.bundle.bak
 
 # Disable CMD+M system-wide keyboard shortcut
 defaults write -g NSUserKeyEquivalents -dict-add 'Minimize' '\0'
