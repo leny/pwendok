@@ -7,11 +7,17 @@
 
 **pwendok** is a utility repository to store my dotfiles and other text-based utilities for when, two times a year, I clean my machines and do a *clean install*.
 
+The content of my dotfiles are compiled from my personal experience & from many places on the web, and the structure of this repo is based on [this article from Lars Kappert](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789).
+
 ## pwendok/setup
 
 Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs
+2. Clone this repo to `~/.pwendok` : `cd && git clone https://github.com/leny/pwendok.git ./.pwendok`
+
+_(TODO:complete)_
+
 2. Make pwendok script executable `$ chmod +x mac*`
 3. System setup : launch `./mac.setup.sh` to setup & clean the system (the script reboot).
 4. Install all the fonts from the NAS.
