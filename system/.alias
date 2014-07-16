@@ -1,0 +1,53 @@
+# -- Aliases
+
+# Navigation
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ~-"
+# - Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias wk="cd ~/Works"
+
+# Display
+alias l="ls -Falh"
+alias ld="ls -ld */"
+alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
+
+# Shortcuts
+alias c="clear"
+alias h="history"
+alias g="git"
+alias gitinit="git init"
+alias pg="ps aux | grep"
+alias pl="ps faux | less"
+alias duh="du -h --max-depth=1"
+
+# Implicit options
+alias wget="wget -c"
+alias mkdir="mkdir -pv"
+
+# Utils
+alias cleansvn="find ./ -name '.svn' | xargs rm -Rf"
+alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
+alias ports="netstat -tulanp"
+# - Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias sysupdate="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm update npm -g; npm update -g; sudo gem update --system; sudo gem update"
+# - flush DNS cache
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+# - Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+# - Ring the terminal bell, and put a badge on Terminal.app’s Dock icon (useful when executing time-consuming commands)
+alias badge="tput bel"
+# - Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Vagrant
+alias vup="vagrant up"
+alias vdestroy="vagrant destroy --force"
+alias vssh="vagrant ssh"
+alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
+
+# NPM : european mirror
+alias enpm="npm --registry registry.npmjs.eu"
