@@ -1,4 +1,4 @@
-## Prompt
+# -- Prompt
 
 bash_prompt_command() {
     # How many characters of the $PWD should be kept
