@@ -45,4 +45,4 @@ echo "\n\n\n----- Install useful global npm packages -----"
 npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas stylus tankipas vibox vows woazar yo
 
 echo "\n\n\n----- CLI Sublime Text Alias -----"
-[ -f ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/sublime"
+[ -f /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/sublime"
