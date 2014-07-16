@@ -215,8 +215,14 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-    "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
+    "Mail" "Safari" "SizeUp" "SystemUIServer" "Transmission" \
     "Twitter" "iCal" "iTunes"; do
     killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
+read -p "Reboot? (y/N)" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    osascript -e 'tell app "System Events" to restart'
+fi
