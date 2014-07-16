@@ -1,0 +1,42 @@
+# --- Caskfile
+
+cask install adobe-creative-cloud
+cask install alfred
+cask install atom
+cask install cleanmymac
+cask install codekit
+cask install dropbox
+cask install droplr
+cask install fantastical
+cask install java
+cask install filebot
+cask install firefox
+cask install flux
+cask install gas-mask
+cask install github
+cask install google-chrome
+cask install hipchat
+cask install istat-menus
+cask install iterm2
+cask install kaleidoscope
+cask install keyboard-cleaner
+cask install little-snitch
+cask install mou
+cask install onyx
+cask install paintcode
+cask install path-finder
+cask install robomongo
+cask install sequel-pro
+cask install sourcetree
+cask install spotify
+cask install steam
+cask install sublime-text3
+cask install totals
+cask install tower
+cask install transmission
+cask install vlc
+cask install vagrant
+cask install versions
+cask install virtualbox
+
+cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package && qlmanage -r
