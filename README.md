@@ -14,15 +14,10 @@ The content of my dotfiles are compiled from my personal experience & from many 
 Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs
-2. Clone this repo to `~/.pwendok` : `cd && git clone https://github.com/leny/pwendok.git ./.pwendok`
-
-_(TODO:complete)_
-
-2. Make pwendok script executable `$ chmod +x mac*`
-3. System setup : launch `./mac.setup.sh` to setup & clean the system (the script reboot).
+2. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok`
+3. System setup: launch `source install.sh`, then `source setup.sh` to setup & clean the system (the script reboot).
 4. Install all the fonts from the NAS.
-5. App & System Install : launch `./mac.install.sh` to install tools and many apps. Complete the app installations by refering to the `app.md` document.
+5. App Install: complete the app installations by refering to the `app.md` document.
 6. Open `leny.itermcolors` & configure iTerm.
-7. Launch and configure Alfred, then call `$ brew cask alfred link` to link the new cask paths with Alfred.
-9. Make a CLI alias to Sublime text : `sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublime`
-9. Link Sublime Text, Moom configuration from dropbox.
+7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
+8. Link Sublime Text, Moom configuration from dropbox (warn: read [this article](http://manytricks.com/blog/?p=3049) before).
