@@ -17,7 +17,7 @@ bash_prompt_command() {
     VC_SEPARATOR=$(vcprompt -f '•')
     VC_SYSTEM=$(vcprompt -f '%s')
     VC_BRANCH=$(vcprompt -f '›%b')
-    VC_STATUS=$(vcprompt -M '*' -A '+' -U '?' -f '(%m%a%u)')
+    VC_STATUS=$(vcprompt -M '*' -A '+' -U '?' -f '%m%a%u')
 }
 
 bash_prompt() {
@@ -66,11 +66,6 @@ bash_prompt() {
     local UC=$Y
     # root's color
     [ $UID -eq "0" ] && UC=$R
-
-    VC_SEPARATOR=$(vcprompt -f '•')
-    VC_SYSTEM=$(vcprompt -f '%s')
-    VC_BRANCH=$(vcprompt -f '›%b')
-    VC_STATUS=$(vcprompt -M '*' -A '+' -U '?' -f '%m%a%u')
 
     PS1="\n$TITLEBAR${Y}[\u@${W}\h${Y}:${EMC}\${NEW_PWD}${Y}${VC_SEPARATOR}${G}${VC_SYSTEM}${B}${VC_BRANCH}${R}${VC_STATUS}${Y}]\n${UC}➜${W} ${NONE}"
 }
