@@ -46,4 +46,3 @@ npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-
 
 echo "\n\n\n----- CLI Sublime Text Alias -----"
 [ -f ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/sublime"
-[ -f ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/subl"
