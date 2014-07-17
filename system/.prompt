@@ -14,10 +14,13 @@ bash_prompt_command() {
         NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
         NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
     fi
-    VC_SEPARATOR=$(vcprompt -f '•')
-    VC_SYSTEM=$(vcprompt -f '%s')
-    VC_BRANCH=$(vcprompt -f '›%b')
-    VC_STATUS=$(vcprompt -M '*' -A '+' -U '?' -f '%m%a%u')
+    local vc_string=$(vcprompt -M '@' -A '+' -U '?' -f '•;%s;›%b;%m%a%u')
+    local vc_array=(${vc_string//;/ })
+
+    VC_SEPARATOR=${vc_array[0]}
+    VC_SYSTEM=${vc_array[1]}
+    VC_BRANCH=${vc_array[2]}
+    VC_STATUS=${vc_array[3]//\@/\*}
 }
 
 bash_prompt() {
