@@ -75,7 +75,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Change Terminal Default Theme
-open "~/.pwendok/terminal/leny.terminal"
+open ~/.pwendok/terminal/leny.terminal
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal "Default Window Settings" -string "leny"
 defaults write com.apple.terminal "Startup Window Settings" -string "leny"
