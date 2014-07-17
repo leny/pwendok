@@ -18,6 +18,13 @@ chmod +x "$DOTFILES_DIR/bin/vcprompt"
 echo ""
 echo ""
 echo ""
+echo "----- Install sote -----"
+
+git clone https://github.com/leny/sote ~/.sote
+
+echo ""
+echo ""
+echo ""
 echo "----- Link dotfiles -----"
 
 ln -sfhv "$DOTFILES_DIR/runcom/.bash_profile" ~
