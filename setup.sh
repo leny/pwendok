@@ -4,6 +4,8 @@
 # Ask for the administrator password upfront
 sudo -v
 
+START_TIME=$SECONDS
+
 # Keep-alive: update existing `sudo` time stamp until this script has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
@@ -373,13 +375,20 @@ defaults write org.m0k.transmission WarningLegal -bool false
 defaults import com.manytricks.Moom ~/.pwendok/preferences/com.manytricks.Moom.plist
 
 ###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
 
+ELAPSED_TIME=$(($SECONDS - $START_TIME))
+
+echo "\n\n\n"
+echo "-------------------------"
+echo "----- Setup ended -----"
+echo "-------------------------"
 echo "Done. All these changes require a logout/restart to take effect."
+echo "Duration : $(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
+echo "-------------------------"
 
 read -p "Reboot? (y/N)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     osascript -e 'tell app "System Events" to restart'
 fi
+

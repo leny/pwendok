@@ -1,6 +1,8 @@
 #!/bin/sh
 # -- Install
 
+START_TIME=$SECONDS
+
 # CWD
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -48,3 +50,12 @@ npm install -g bower browserify codo coffee-script coffeegulp docco grunt grunt-
 
 echo "\n\n\n----- CLI Sublime Text Alias -----"
 [ -f /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/sublime"
+
+ELAPSED_TIME=$(($SECONDS - $START_TIME))
+
+echo "\n\n\n"
+echo "-------------------------"
+echo "----- Install ended -----"
+echo "-------------------------"
+echo "Duration : $(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
+echo "-------------------------"
