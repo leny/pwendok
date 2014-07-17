@@ -14,10 +14,28 @@ The content of my dotfiles are compiled from my personal experience & from many 
 Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs
-2. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok`
-3. System setup: launch `source install.sh`, then `source setup.sh` to setup & clean the system (the script reboot).
-4. Install all the fonts from the NAS.
-5. App Install: complete the app installations by refering to the `app.md` document.
+2. Install all the fonts from the NAS.
+3. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok`
+4. System setup: launch `source install.sh`, then `source setup.sh` to setup & clean the system (the script reboot).
+5. App Install: complete the app installations via the AppStore, and install these :
+    * 1Password
+    * Caffeine
+    * ColorSchemer Studio
+    * Dash
+    * Fonts
+    * LiveReload
+    * MPlayerX
+    * Moom
+    * Pocket
+    * Reeder
+    * Rested
+    * Sketch
+    * Soulver
+    * The Unarchiver
+    * Tweetbot
+    * Xcode
+    * xScope
+    * Billings Pro (not on AppStore : [download](https://www.marketcircle.com/billingspro/))
 6. Open `leny.itermcolors` & configure iTerm.
 7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
 8. Link Sublime Text, Moom configuration from dropbox (warn: read [this article](http://manytricks.com/blog/?p=3049) before).
