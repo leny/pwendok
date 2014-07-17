@@ -4,7 +4,7 @@ bash_prompt_command() {
     # How many characters of the $PWD should be kept
     local pwdmaxlen=35
     # Indicate that there has been dir truncation
-    local trunc_symbol=".."
+    local trunc_symbol="…"
     local dir=${PWD##*/}
     pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
     NEW_PWD=${PWD/#$HOME/\~}
