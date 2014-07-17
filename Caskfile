@@ -15,6 +15,7 @@ cask install flux
 cask install gas-mask
 cask install github
 cask install google-chrome
+cask install google-chrome-canary
 cask install hipchat
 cask install istat-menus
 cask install iterm2
