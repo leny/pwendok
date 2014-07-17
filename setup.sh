@@ -6,9 +6,6 @@ sudo -v
 
 START_TIME=$SECONDS
 
-# Keep-alive: update existing `sudo` time stamp until this script has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
@@ -91,6 +88,7 @@ defaults import com.googlecode.iterm2 ~/.pwendok/preferences/com.googlecode.iter
 ###############################################################################
 
 read -p "Are you on an SSD? (y/N)" -n 1 -r
+echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     # Disable local Time Machine snapshots
@@ -378,7 +376,9 @@ defaults import com.manytricks.Moom ~/.pwendok/preferences/com.manytricks.Moom.p
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
-echo "\n\n\n"
+echo ""
+echo ""
+echo ""
 echo "-------------------------"
 echo "----- Setup ended -----"
 echo "-------------------------"
