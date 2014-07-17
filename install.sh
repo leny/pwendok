@@ -18,6 +18,8 @@ ln -sfhv "$DOTFILES_DIR/editor/.editorconfig" ~
 ln -sfhv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfhv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfhv "$DOTFILES_DIR/hg/.hgignore_global" ~
+ln -sfhv "$DOTFILES_DIR/curl/.curlrc" ~
+ln -sfhv "$DOTFILES_DIR/wget/.wgetrc" ~
 
 echo "\n\n\n----- Install homebrew & cask -----"
 
