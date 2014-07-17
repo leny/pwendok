@@ -82,7 +82,7 @@ defaults write com.apple.terminal "Default Window Settings" -string "leny"
 defaults write com.apple.terminal "Startup Window Settings" -string "leny"
 
 # Import iTerm2 settings
-defaults import com.googlecode.iterm2 com.googlecode.iterm2.plist
+defaults import com.googlecode.iterm2 ~/.pwendok/preferences/com.googlecode.iterm2.plist
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
