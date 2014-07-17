@@ -23,9 +23,6 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-# Menu bar: hide the useless Time Machine and Volume icons
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
-
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
@@ -37,9 +34,11 @@ defaults write -g NSUserKeyEquivalents -dict-add 'Minimize' '\0'
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Expand print panel by default
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 
 # Save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
@@ -55,6 +54,59 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Set Help Viewer windows to non-floating mode
+defaults write com.apple.helpviewer DevMode -bool true
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+###############################################################################
+# Terminal & iTerm 2                                                          #
+###############################################################################
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+# Change Terminal Default Theme
+open "~/.pwendok/terminal/leny.terminal"
+sleep 1 # Wait a bit to make sure the theme is loaded
+defaults write com.apple.terminal "Default Window Settings" -string "leny"
+defaults write com.apple.terminal "Startup Window Settings" -string "leny"
+
+# Import iTerm2 settings
+defaults import com.googlecode.iterm2 com.googlecode.iterm2.plist
+
+###############################################################################
+# SSD-specific tweaks                                                         #
+###############################################################################
+
+read -p "Are you on an SSD? (y/N)" -n 1 -r
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    # Disable local Time Machine snapshots
+    sudo tmutil disablelocal
+
+    # Disable hibernation (speeds up entering sleep mode)
+    sudo pmset -a hibernatemode 0
+
+    # Remove the sleep image file to save disk space
+    sudo rm /Private/var/vm/sleepimage
+    # Create a zero-byte file instead…
+    sudo touch /Private/var/vm/sleepimage
+    # …and make sure it can’t be rewritten
+    sudo chflags uchg /Private/var/vm/sleepimage
+
+    # Disable the sudden motion sensor as it’s not useful for SSDs
+    sudo pmset -a sms 0
+fi
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -161,6 +213,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Empty Trash securely by default
 defaults write com.apple.finder EmptyTrashSecurely -bool true
 
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -186,6 +241,15 @@ defaults write com.apple.dock autohide -bool true
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
+# Set the icon size of Dock items to 18 pixels
+defaults write com.apple.dock tilesize -int 18
+
+# Dock: disable magnification
+defaults write com.apple.dock magnification -bool false
+
+# Set magnification icon size to 18 pixels
+defaults write com.apple.dock largesize -float 18
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
@@ -203,23 +267,116 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# Add a context menu item for showing the Web Inspector in web views
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+###############################################################################
+# Mail                                                                        #
+###############################################################################
+
+# Disable send and reply animations in Mail.app
+defaults write com.apple.mail DisableReplyAnimations -bool true
+defaults write com.apple.mail DisableSendAnimations -bool true
+
+# Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
+defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# Disable inline attachments (just show the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Menu bar: hide the useless Time Machine and Volume icons
+defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Disable local Time Machine backups
 hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
+# Activity Monitor                                                            #
+###############################################################################
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+###############################################################################
+# TextEdit, and Disk Utility                                                  #
+###############################################################################
+
+# Use plain text mode for new TextEdit documents
+defaults write com.apple.TextEdit RichText -int 0
+# Open and save files as UTF-8 in TextEdit
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
+# Enable the debug menu in Disk Utility
+defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
+defaults write com.apple.DiskUtility advanced-image-options -bool true
+
+###############################################################################
+# Mac App Store                                                               #
+###############################################################################
+
+# Enable the WebKit Developer Tools in the Mac App Store
+defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+
+# Enable Debug Menu in the Mac App Store
+defaults write com.apple.appstore ShowDebugMenu -bool true
+
+###############################################################################
+# Messages                                                                    #
+###############################################################################
+
+# Disable smart quotes as it’s annoying for messages that contain code
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticQuoteSubstitutionEnabled" -bool false
+
+# Disable continuous spell checking
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "continuousSpellCheckingEnabled" -bool false
+
+###############################################################################
+# Transmission.app                                                            #
+###############################################################################
+
+# Don't store incomplete downloads aside
+defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool false
+
+# Prompt for confirmation before downloading
+defaults write org.m0k.transmission DownloadAsk -bool true
+
+# Trash original torrent files
+defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+
+# Hide the donate message
+defaults write org.m0k.transmission WarningDonate -bool false
+# Hide the legal disclaimer
+defaults write org.m0k.transmission WarningLegal -bool false
+
+###############################################################################
+# Moom                                                                        #
+###############################################################################
+
+defaults import com.manytricks.Moom ~/.pwendok/preferences/com.manytricks.Moom.plist
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-    "Mail" "Safari" "SizeUp" "SystemUIServer" "Transmission" \
-    "Twitter" "iCal" "iTunes"; do
-    killall "$app" > /dev/null 2>&1
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "Done. All these changes require a logout/restart to take effect."
 
 read -p "Reboot? (y/N)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
