@@ -10,13 +10,13 @@ alias dt="cd ~/Desktop"
 alias wk="cd ~/Works"
 
 # Display
-alias l="ls -Falh"
+alias l="ls -FalhBG"
 alias ld="ls -ld */"
 alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
 # Shortcuts
 alias c="clear"
-alias h="history"
+alias h="history | tail -20"
 alias g="git"
 alias gitinit="git init"
 alias pg="ps aux | grep"
