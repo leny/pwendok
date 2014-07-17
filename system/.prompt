@@ -4,7 +4,7 @@ bash_prompt_command() {
     # How many characters of the $PWD should be kept
     local pwdmaxlen=35
     # Indicate that there has been dir truncation
-    local trunc_symbol=".."
+    local trunc_symbol="…"
     local dir=${PWD##*/}
     pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
     NEW_PWD=${PWD/#$HOME/\~}
@@ -12,7 +12,7 @@ bash_prompt_command() {
     if [ ${pwdoffset} -gt "0" ]
     then
         NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
-        NEW_PWD=${trunc_symbol}/${NEW_PWD#*/}
+        NEW_PWD=${trunc_symbol}${NEW_PWD#*/}
     fi
     local vc_string=$(vcprompt -M '@' -A '+' -U '?' -f '•;%s;›%b;%m%a%u')
     local vc_array=(${vc_string//;/ })
