@@ -14,13 +14,20 @@ bash_prompt_command() {
         NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
         NEW_PWD=${trunc_symbol}${NEW_PWD#*/}
     fi
-    local vc_string=$(vcprompt -M '@' -A '+' -U '?' -f '•;%s;›%b;%m%a%u')
+    local vc_string=$(vcprompt -M '@' -A '+' -U '?' -f '•;%s;%b;%m%a%u')
     local vc_array=(${vc_string//;/ })
 
     VC_SEPARATOR=${vc_array[0]}
     VC_SYSTEM=${vc_array[1]}
-    VC_BRANCH=${vc_array[2]}
-    VC_STATUS=${vc_array[3]//\@/\*}
+    if [ "$VC_SYSTEM" == "svn" ]
+    then
+        VC_BRANCH=""
+        VC_STATUS=""
+    else
+        VC_SYSTEM="${vc_array[1]}›"
+        VC_BRANCH=${vc_array[2]}
+        VC_STATUS=${vc_array[3]//\@/\*}
+    fi
 }
 
 bash_prompt() {
