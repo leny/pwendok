@@ -23,6 +23,7 @@ cask install kaleidoscope
 cask install keyboard-cleaner
 cask install little-snitch
 cask install mou
+cask install onepassword
 cask install onyx
 cask install paintcode
 cask install path-finder
