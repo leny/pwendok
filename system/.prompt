@@ -1,9 +1,10 @@
 # -- Prompt
 
 bash_prompt_command() {
-    # How many characters of the $PWD should be kept
+
+    # -- PWD truncation
+
     local pwdmaxlen=35
-    # Indicate that there has been dir truncation
     local trunc_symbol="…"
     local dir=${PWD##*/}
     pwdmaxlen=$(( ( pwdmaxlen < ${#dir} ) ? ${#dir} : pwdmaxlen ))
@@ -14,23 +15,33 @@ bash_prompt_command() {
         NEW_PWD=${NEW_PWD:$pwdoffset:$pwdmaxlen}
         NEW_PWD=${trunc_symbol}${NEW_PWD#*/}
     fi
+
+    # -- Version Control display
+
     local vc_string=$(vcprompt -M '@' -A '+' -U '?' -f '%s;%b;%m%a%u')
     local vc_array=(${vc_string//;/ })
 
-    VC_SEPARATOR=""
     VC_SYSTEM=${vc_array[0]}
-    VC_BRANCH=""
-    VC_STATUS=""
-    if [ "$VC_SYSTEM" != "" ]
-    then
-        VC_SEPARATOR="•"
-        if [ "$VC_SYSTEM" != "svn" ]
-        then
+
+    case "$VC_SYSTEM" in
+        "hg")
+            VC_SEPARATOR="•"
             VC_SYSTEM="${VC_SYSTEM}›"
             VC_BRANCH=${vc_array[1]}
             VC_STATUS=${vc_array[2]//\@/\*}
-        fi
-    fi
+        ;;
+        "git")
+            VC_SEPARATOR="•"
+            VC_SYSTEM="${VC_SYSTEM}›"
+            VC_BRANCH=${vc_array[1]}
+            VC_STATUS=${vc_array[2]//\@/\*}
+        ;;
+        *)
+            VC_SEPARATOR=""
+            VC_BRANCH=""
+            VC_STATUS=""
+        ;;
+    esac
 }
 
 bash_prompt() {
