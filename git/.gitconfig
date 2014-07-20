@@ -35,3 +35,5 @@
     untracked = cyan
 [http]
     postBuffer = 10485760000
+[status]
+    short = true
