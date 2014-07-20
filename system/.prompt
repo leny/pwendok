@@ -1,9 +1,7 @@
 # -- Prompt
 
 bash_prompt_command() {
-
     # -- PWD truncation
-
     local pwdmaxlen=35
     local trunc_symbol="…"
     local dir=${PWD##*/}
@@ -45,14 +43,7 @@ bash_prompt_command() {
 }
 
 bash_prompt() {
-    case $TERM in
-        xterm*|rxvt*)
-            local TITLEBAR='\[\033]0;${NEW_PWD}\007\]'
-        ;;
-        *)
-            local TITLEBAR=""
-        ;;
-    esac
+
     # unsets color to term's fg color
     local NONE="\[\033[0m\]"
 
@@ -91,7 +82,7 @@ bash_prompt() {
     # root's color
     [ $UID -eq "0" ] && UC=$EMR
 
-    PS1="\n$TITLEBAR${UC}[${UC}\u${M}@${W}\h${UC}:${NONE}\#${UC}:${C}\${NEW_PWD}${UC}\${VC_SEPARATOR}${G}\${VC_SYSTEM}${B}\${VC_BRANCH}${R}\${VC_STATUS}${UC}]\n${UC}➜${W} ${NONE}"
+    PS1="\n${UC}[${UC}\u${M}@${W}\h${UC}:${NONE}\#${UC}:${C}\${NEW_PWD}${UC}\${VC_SEPARATOR}${G}\${VC_SYSTEM}${B}\${VC_BRANCH}${R}\${VC_STATUS}${UC}]\n${UC}➜${W} ${NONE}"
 }
 
 PROMPT_COMMAND=bash_prompt_command
