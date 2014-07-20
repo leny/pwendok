@@ -22,6 +22,7 @@ alias gitinit="git init"
 alias pg="ps aux | grep"
 alias pl="ps faux | less"
 alias duh="du -h --max-depth=1"
+alias df="df -h"
 
 # Implicit options
 alias wget="wget -c"
