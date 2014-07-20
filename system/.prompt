@@ -78,9 +78,9 @@ bash_prompt() {
     # user's color
     local UC=$Y
     # root's color
-    [ $UID -eq "0" ] && UC=$R
+    [ $UID -eq "0" ] && UC=$EMR
 
-    PS1="\n$TITLEBAR${Y}[\u@${W}\h${Y}:${C}\${NEW_PWD}${Y}\${VC_SEPARATOR}${G}\${VC_SYSTEM}${B}\${VC_BRANCH}${R}\${VC_STATUS}${Y}]\n${UC}➜${W} ${NONE}"
+    PS1="\n$TITLEBAR${UC}[${UC}\u${M}@${W}\h${UC}:${NONE}\#${UC}:${C}\${NEW_PWD}${UC}\${VC_SEPARATOR}${G}\${VC_SYSTEM}${B}\${VC_BRANCH}${R}\${VC_STATUS}${UC}]\n${UC}➜${W} ${NONE}"
 }
 
 PROMPT_COMMAND=bash_prompt_command
