@@ -18,6 +18,7 @@ install hub
 install lynx
 install mercurial
 install node
+install p7zip
 install phantomjs
 install svn
 install tree
