@@ -37,4 +37,4 @@ Commands to run after a fresh install.
     * Billings Pro (not on AppStore : [download](https://www.marketcircle.com/billingspro/))
 6. Open `leny.itermcolors` & configure iTerm.
 7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
-8. Link Sublime Text, Moom configuration from dropbox (warn: read [this article](http://manytricks.com/blog/?p=3049) before).
+8. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install *Sublimall*.
