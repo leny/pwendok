@@ -80,12 +80,6 @@ git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntp
 git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
 git clone https://github.com/gruntjs/grunt-init-jquery ~/.grunt-init/jquery
 
-echo ""
-echo ""
-echo ""
-echo "----- CLI Sublime Text Alias -----"
-[ -f /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ] && ln -sfhv /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl "$DOTFILES_DIR/bin/sublime"
-
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo ""
