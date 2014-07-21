@@ -11,7 +11,8 @@ The content of my dotfiles are compiled from my personal experience & from [many
 
 ## pwendok/setup
 
-Commands to run after a fresh install.
+Commands to run after a fresh install.  
+**Note:** the following list (and the whole content of this *repo*) is useful for me, but feel free to dig into it, I hope some of my tools can help you too!
 
 1. Configure sys prefs & Finder prefs
 2. Install all the fonts from the NAS.
