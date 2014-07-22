@@ -19,6 +19,7 @@ Commands to run after a fresh install.
 3. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
 4. System setup: launch `source install.sh`, then `source setup.sh` to setup & clean the system (the script reboot).
 5. App Install: complete the app installations with the AppStore, installing these apps :
+    * Billings Pro
     * Caffeine
     * ColorSchemer Studio
     * Dash
@@ -35,6 +36,5 @@ Commands to run after a fresh install.
     * Tweetbot
     * Xcode
     * xScope
-    * Billings Pro (not on AppStore : [download](https://www.marketcircle.com/billingspro/))
 6. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
 7. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install & sync *Sublimall*.
