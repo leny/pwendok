@@ -38,3 +38,13 @@ Commands to run after a fresh install.
     * xScope
 6. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
 7. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install & sync *Sublimall*.
+
+## f.lux settings
+
+I note here my [f.lux](https://justgetflux.com) settings because it takes me weeks to find the good settings for my eyes / liferythm.  
+If you don't know [f.lux](https://justgetflux.com), go get a look, and try it. Your eyes will thanks you.
+
+* **wake up time:** 11:00 (*please, don't judge me ;)*)
+* **day temp:** sunlite (5500K)
+* **late temp:** fluorescent (4200K)
+* **night temp:** tungsten (2700K)
