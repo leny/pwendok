@@ -27,6 +27,7 @@ cask install onepassword
 cask install onyx
 cask install paintcode
 cask install path-finder
+cask install prey
 cask install robomongo
 cask install sequel-pro
 cask install sourcetree
