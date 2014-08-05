@@ -19,15 +19,18 @@ function dataurl() {
     echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')";
 }
 
-# project : if there's a sublime-project file here, opens it
+# project : if there's a sublime-project file here, opens it, if not, opens the folder in sublime
 function project() {
     if [ $# -eq 0 ]; then
-        local project=`find . -name "*.sublime-project" | head -1`
-        if [ -n "$project" ] && [ -f $project ]; then
-            open $project
-        fi;
+        local target="."
     else
-        echo -e "\033[1;31merror: \033[0;31mproject doesn't accept any argument.\033[0m";
+        local target=$1
+    fi;
+    local project=`find $target -name "*.sublime-project" | head -1`
+    if [ -n "$project" ] && [ -f $project ]; then
+        open $project
+    else
+        subl $target
     fi;
 }
 
