@@ -37,3 +37,6 @@
     postBuffer = 10485760000
 [status]
     short = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
