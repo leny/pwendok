@@ -21,17 +21,12 @@ function dataurl() {
 
 # project : if there's a sublime-project file here, opens it, if not, opens the folder in sublime
 function project() {
-    if [ $# -eq 0 ]; then
-        local target="."
+    PROJECT=$(ls -1 $1 | grep "sublime-project")
+    if [[ $? -eq 0 && $# -lt 2 ]]; then
+        subl -n --project "${1-.}/$PROJECT"
     else
-        local target=$1
-    fi;
-    local project=`find $target -name "*.sublime-project" | head -1`
-    if [ -n "$project" ] && [ -f $project ]; then
-        open $project
-    else
-        subl $target
-    fi;
+        subl -n -a ${@-./}
+    fi
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise opens the given location
