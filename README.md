@@ -17,7 +17,7 @@ Commands to run after a fresh install.
 1. Configure sys prefs & Finder prefs
 2. Install all the fonts from the NAS.
 3. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
-4. System setup: launch `source install.sh`, then `source setup.sh` to setup & clean the system (the script reboot).
+4. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
 5. App Install: complete the app installations with the AppStore, installing these apps :
     * Billings Pro
     * Caffeine
