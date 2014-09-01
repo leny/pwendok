@@ -27,14 +27,14 @@ echo ""
 echo ""
 echo "----- Link dotfiles -----"
 
-ln -sfhv "$DOTFILES_DIR/runcom/.bash_profile" ~
-ln -sfhv "$DOTFILES_DIR/runcom/.inputrc" ~
-ln -sfhv "$DOTFILES_DIR/editor/.editorconfig" ~
-ln -sfhv "$DOTFILES_DIR/git/.gitconfig" ~
-ln -sfhv "$DOTFILES_DIR/git/.gitignore_global" ~
-ln -sfhv "$DOTFILES_DIR/hg/.hgignore_global" ~
-ln -sfhv "$DOTFILES_DIR/curl/.curlrc" ~
-ln -sfhv "$DOTFILES_DIR/wget/.wgetrc" ~
+ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
+ln -sfv "$DOTFILES_DIR/editor/.editorconfig" ~
+ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
+ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
+ln -sfv "$DOTFILES_DIR/hg/.hgignore_global" ~
+ln -sfv "$DOTFILES_DIR/curl/.curlrc" ~
+ln -sfv "$DOTFILES_DIR/wget/.wgetrc" ~
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
