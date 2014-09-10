@@ -34,6 +34,12 @@ bash_prompt_command() {
             VC_BRANCH=${vc_array[1]}
             VC_STATUS=${vc_array[2]//\@/\*}
         ;;
+        "svn")
+            VC_SEPARATOR="•"
+            VC_SYSTEM="${VC_SYSTEM}"
+            VC_BRANCH=""
+            VC_STATUS=""
+        ;;
         *)
             VC_SEPARATOR=""
             VC_BRANCH=""
