@@ -20,7 +20,7 @@ echo ""
 echo ""
 echo "----- Install sote -----"
 
-git clone https://github.com/leny/sote ~/.sote
+git clone https://github.com/krkn/sote ~/.sote
 
 echo ""
 echo ""
