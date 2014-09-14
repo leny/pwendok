@@ -50,5 +50,11 @@ alias vdestroy="vagrant destroy --force"
 alias vssh="vagrant ssh"
 alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
 
-# NPM : european mirror
+# NPM
+# european mirror
 alias enpm="npm --registry registry.npmjs.eu"
+# aliases
+alias ni="npm install"
+alias nis="npm install --save"
+alias nisd="npm install --save-dev"
+alias nig="npm install -g"
