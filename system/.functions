@@ -56,6 +56,11 @@ function project() {
     fi
 }
 
+# gclone : clone a github repo by passing the user/repo tuple
+function gclone() {
+    git clone https://github.com/$1 $2
+}
+
 # depo : try to change directory to github repo, with user/repo, from the WORKS_PATH
 function depo() {
     eval cd "${WORKS_PATH}/${1}"
