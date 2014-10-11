@@ -62,6 +62,7 @@ alias nisd="npm install --save-dev"
 alias npmisd="npm install --save-dev"
 alias nig="npm install -g"
 alias npmig="npm install -g"
+alias npmo="npm outdated --depth=0"
 
 # node-webkit
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
