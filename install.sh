@@ -35,6 +35,7 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/hg/.hgignore_global" ~
 ln -sfv "$DOTFILES_DIR/curl/.curlrc" ~
 ln -sfv "$DOTFILES_DIR/wget/.wgetrc" ~
+ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
