@@ -20,24 +20,66 @@
 
 }
 
-// Fix seti-ui
-
-.list-inline.tab-bar.inset-panel {
-  height: 40px;
-}
-
 // Custom styles for bookmarks
 
 @import "octicon-utf-codes.less";
 
 .editor .gutter .line-number.bookmarked .icon-right {
-  visibility: visible;
-  opacity: 1;
-  padding: 0 0 0 .25em;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 0 0 .25em;
 
-  &:before {
-    content: @triangle-right;
-    font-size: 1em;
-    color: white;
-  }
+    &:before {
+        content: @triangle-right;
+        font-size: 1em;
+        color: white;
+    }
+}
+
+// Hack seti-ui
+
+@import "ui-mixins";
+@import "ui-variables";
+
+// fix height for empty tab-bar, allowing to drag & drop tabs between panes
+.list-inline.tab-bar.inset-panel {
+    height: 40px;
+}
+
+// adjust opacity & background-color setting in inactive panes, because it sucks
+@hacked-pane-background-color: lighten(@app-background-color, 7%);
+.panes {
+    .pane {
+        background-color: @hacked-pane-background-color;
+        &:focus {
+            background-color: @hacked-pane-background-color;
+        }
+        &.active {
+            .editor {
+                background-color: @hacked-pane-background-color;
+                .gutter {
+                    background-color: @hacked-pane-background-color;
+                }
+            }
+        }
+        &:not(.active) {
+            opacity: 1;
+
+            .editor {
+                background-color: @hacked-pane-background-color;
+                .gutter {
+                    background-color: @hacked-pane-background-color;
+                }
+            }
+            .tab.active {
+                border-bottom: solid 4px darken(@tab-highlight-color, 25%);
+                &:before {
+                    border-bottom: solid 4px darken(@tab-highlight-color, 25%);
+                }
+            }
+        }
+        .settings-view .editor-container .editor.mini, .settings-view .editor-container .editor.mini.is-focused {
+            background: white;
+        }
+    }
 }
