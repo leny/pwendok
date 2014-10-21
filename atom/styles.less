@@ -1,0 +1,43 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tree-view {
+
+}
+
+.editor {
+
+}
+
+.editor .cursor {
+
+}
+
+// Fix seti-ui
+
+.list-inline.tab-bar.inset-panel {
+  height: 40px;
+}
+
+// Custom styles for bookmarks
+
+@import "octicon-utf-codes.less";
+
+.editor .gutter .line-number.bookmarked .icon-right {
+  visibility: visible;
+  opacity: 1;
+  padding: 0 0 0 .25em;
+
+  &:before {
+    content: @triangle-right;
+    font-size: 1em;
+    color: white;
+  }
+}

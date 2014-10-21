@@ -1,0 +1,48 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# '.workspace':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+# Disabling some useless keybindings
+'.workspace':
+    'cmd-2': 'unset!'
+    'cmd-6': 'unset!'
+    'cmd-7': 'unset!'
+    'cmd-9': 'unset!'
+'body':
+    'cmd-0': 'unset!'
+
+# Disabling Keybindings for Sync-Settings commands
+'.workspace':
+  'ctrl-alt-u': 'unset!'
+  'ctrl-alt-d': 'unset!'
+
+# Remapping Keybindings for Bookmark handling
+    # Disabling conflicts
+'atom-workspace atom-text-editor:not(.mini)':
+  'cmd-j': 'unset!' # 'editor:join-lines'
+    # Remapping keys
+'.platform-darwin .editor':
+  'cmd-j': 'bookmarks:toggle-bookmark'
+  'ctrl-j': 'bookmarks:jump-to-next-bookmark'
+  'ctrl-shift-j': 'bookmarks:jump-to-previous-bookmark'
+  'cmd-alt-j': 'bookmarks:view-all'
+  'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
+
+# Remapping Keybindings for Autocomplete+
+'.autocomplete-plus input.hidden-input':
+  'enter': 'autocomplete-plus:confirm'
