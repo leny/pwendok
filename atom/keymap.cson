@@ -26,10 +26,9 @@
 'body':
     'cmd-0': 'unset!'
 
-# Disabling Keybindings for Sync-Settings commands
-'.workspace':
-  'ctrl-alt-u': 'unset!'
-  'ctrl-alt-d': 'unset!'
+# Remapping Close Window to close all tabs
+'body':
+  'shift-cmd-W': 'tabs:close-all-tabs' # not functional yet : command not exposed from atom/tabs
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
