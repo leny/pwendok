@@ -25,4 +25,3 @@
   'tree-view':
     'hideIgnoredNames': true
     'hideVcsIgnoredFiles': true
-  'tree-ignore': {}
