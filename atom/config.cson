@@ -25,3 +25,8 @@
   'tree-view':
     'hideIgnoredNames': true
     'hideVcsIgnoredFiles': true
+  'emmet':
+    'extensionsPath': '~/.pwendok/emmet'
+  'tree-ignore': {}
+'.ini.source':
+  'editor': {}

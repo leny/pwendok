@@ -45,3 +45,7 @@
 # Remapping Keybindings for Autocomplete+
 '.autocomplete-plus input.hidden-input':
   'enter': 'autocomplete-plus:confirm'
+
+# Remapping Keybinding for Emmet
+'.editor:not(.mini)':
+  'tab': 'emmet:expand-abbreviation'
