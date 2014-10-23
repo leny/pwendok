@@ -9,6 +9,7 @@
     'fontSize': 12
     'fontFamily': 'Fira Mono OT'
     'tabLength': 4
+    'invisibles': {}
   'core':
     'themes': [
       'seti-ui'
