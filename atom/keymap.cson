@@ -49,3 +49,13 @@
 # Remapping Keybinding for Emmet
 '.editor:not(.mini)':
   'tab': 'emmet:expand-abbreviation'
+
+# Remapping Keybindings for Pane Layout Switcher
+'.platform-darwin .workspace':
+  'cmd-k cmd-l cmd-&': 'pane-layout-switcher:changeLayoutOne'
+  'cmd-k cmd-l cmd-"': 'pane-layout-switcher:changeLayoutThree'
+  'cmd-k cmd-l cmd-\'': 'pane-layout-switcher:changeLayoutFour'
+  'cmd-k cmd-l cmd-(': 'pane-layout-switcher:changeLayoutFive'
+  'cmd-k cmd-l cmd-§': 'pane-layout-switcher:changeLayoutSix'
+  'cmd-k cmd-l cmd-!': 'pane-layout-switcher:changeLayoutEight'
+  'cmd-k cmd-l cmd-ç': 'pane-layout-switcher:changeLayoutNine'
