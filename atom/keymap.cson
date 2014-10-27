@@ -18,17 +18,12 @@
 #
 
 # Disabling some useless keybindings
-'.workspace':
+'body':
+    'cmd-0': 'unset!'
     'cmd-2': 'unset!'
     'cmd-6': 'unset!'
     'cmd-7': 'unset!'
     'cmd-9': 'unset!'
-'body':
-    'cmd-0': 'unset!'
-
-# Remapping Close Window to close all tabs
-'body':
-  'shift-cmd-W': 'tabs:close-all-tabs' # not functional yet : command not exposed from atom/tabs
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
@@ -42,20 +37,37 @@
   'cmd-alt-j': 'bookmarks:view-all'
   'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
 
-# Remapping Keybindings for Autocomplete+
-'.autocomplete-plus input.hidden-input':
-  'enter': 'autocomplete-plus:confirm'
-
-# Remapping Keybinding for Emmet
-'.editor:not(.mini)':
-  'tab': 'emmet:expand-abbreviation'
-
-# Remapping Keybindings for Pane Layout Switcher
+# Remapping Keybindings for Pane Manager
 '.platform-darwin .workspace':
-  'cmd-k cmd-l cmd-&': 'pane-layout-switcher:changeLayoutOne'
-  'cmd-k cmd-l cmd-"': 'pane-layout-switcher:changeLayoutThree'
-  'cmd-k cmd-l cmd-\'': 'pane-layout-switcher:changeLayoutFour'
-  'cmd-k cmd-l cmd-(': 'pane-layout-switcher:changeLayoutFive'
-  'cmd-k cmd-l cmd-§': 'pane-layout-switcher:changeLayoutSix'
-  'cmd-k cmd-l cmd-!': 'pane-layout-switcher:changeLayoutEight'
-  'cmd-k cmd-l cmd-ç': 'pane-layout-switcher:changeLayoutNine'
+  'cmd-k cmd-l cmd-&': 'pane-manager:changeLayoutOne'
+  'cmd-k cmd-l cmd-2': 'pane-manager:changeLayoutTwo'
+  'cmd-k cmd-l cmd-"': 'pane-manager:changeLayoutThree'
+  'cmd-k cmd-l cmd-\'': 'pane-manager:changeLayoutFour'
+  'cmd-k cmd-l cmd-(': 'pane-manager:changeLayoutFive'
+  'cmd-k cmd-l cmd-§': 'pane-manager:changeLayoutSix'
+  'cmd-k cmd-l cmd-7': 'pane-manager:changeLayoutSeven'
+  'cmd-k cmd-l cmd-!': 'pane-manager:changeLayoutEight'
+  'cmd-k cmd-l cmd-ç': 'pane-manager:changeLayoutNine'
+  'cmd-k cmd-l cmd-0': 'pane-manager:changeLayoutTen'
+  'cmd-k cmd-m cmd-&': 'pane-manager:moveToPaneOne'
+  'cmd-k cmd-m cmd-2': 'pane-manager:moveToPaneTwo'
+  'cmd-k cmd-m cmd-"': 'pane-manager:moveToPaneThree'
+  'cmd-k cmd-m cmd-\'': 'pane-manager:moveToPaneFour'
+  'cmd-k cmd-m cmd-(': 'pane-manager:moveToPaneFive'
+  'cmd-k cmd-m cmd-§': 'pane-manager:moveToPaneSix'
+  'cmd-k cmd-m cmd-7': 'pane-manager:moveToPaneSeven'
+  'cmd-k cmd-m cmd-!': 'pane-manager:moveToPaneEight'
+  'cmd-k cmd-m cmd-ç': 'pane-manager:moveToPaneNine'
+  'cmd-k cmd-m cmd-0': 'pane-manager:moveToPaneTen'
+  'cmd-k cmd-f cmd-&': 'pane-manager:focusToPaneOne'
+  'cmd-k cmd-f cmd-2': 'pane-manager:focusToPaneTwo'
+  'cmd-k cmd-f cmd-"': 'pane-manager:focusToPaneThree'
+  'cmd-k cmd-f cmd-\'': 'pane-manager:focusToPaneFour'
+  'cmd-k cmd-f cmd-(': 'pane-manager:focusToPaneFive'
+  'cmd-k cmd-f cmd-§': 'pane-manager:focusToPaneSix'
+  'cmd-k cmd-f cmd-7': 'pane-manager:focusToPaneSeven'
+  'cmd-k cmd-f cmd-!': 'pane-manager:focusToPaneEight'
+  'cmd-k cmd-f cmd-ç': 'pane-manager:focusToPaneNine'
+  'cmd-k cmd-f cmd-0': 'pane-manager:focusToPaneTen'
+# Remapping close all
+  'cmd-shift-w': 'close-all:close'
