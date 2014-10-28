@@ -37,6 +37,10 @@
   'cmd-alt-j': 'bookmarks:view-all'
   'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
 
+# Autocomplete plus mapping
+".autocomplete-plus input.hidden-input":
+  "enter": "autocomplete-plus:confirm"
+
 # Remapping Keybindings for Pane Manager
 '.platform-darwin .workspace':
   'cmd-k cmd-l cmd-&': 'pane-manager:changeLayoutOne'
