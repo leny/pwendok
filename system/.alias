@@ -49,6 +49,8 @@ alias vup="vagrant up"
 alias vdestroy="vagrant destroy --force"
 alias vssh="vagrant ssh"
 alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
+alias vreload="vagrant up && vagrant ssh"
+alias vhalt="vagrant halt"
 
 # NPM
 # european mirror
