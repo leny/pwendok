@@ -83,3 +83,29 @@
         }
     }
 }
+
+
+// Hack EasyMotion
+@import "syntax-variables";
+
+.editor .easy-motion-cover .letter-cover {
+    background-color: lighten(@app-background-color, 25%);
+    border-radius: 3px;
+    &.single {
+        color: #ffcc66;
+    }
+    &.many {
+        color: #ffcc66;
+    }
+}
+
+.easy-motion-input {
+    position: absolute;
+    z-index: -1;
+    width: 0px;
+    height: 0px;
+}
+
+.editor.easy-motion-editor .search-results .marker .region {
+    display: none;
+}
