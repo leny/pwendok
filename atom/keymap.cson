@@ -75,3 +75,7 @@
   'cmd-k cmd-f cmd-0': 'pane-manager:focusToPaneTen'
 # Remapping close all
   'cmd-shift-w': 'close-all:close'
+
+# Remapping EasyMotion
+'.editor:not(.mini)':
+  'shift-cmd-I': 'easy-motion:start'
