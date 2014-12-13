@@ -17,6 +17,7 @@
     ]
     'disabledPackages': [
       'wrap-guide'
+      'autocomplete-plus'
     ]
     'destroyEmptyPanes': false
   'atom-color-highlight':
@@ -27,6 +28,10 @@
     'hideVcsIgnoredFiles': true
   'emmet':
     'extensionsPath': '~/.pwendok/emmet'
-  'easy-motion': {}
+  'autosave':
+    'enabled': true
+  'inline-autocomplete':
+    'includeGrammarKeywords': true
+    'includeCompletionsFromAllBuffers': true
 '.ini.source':
   'editor': {}
