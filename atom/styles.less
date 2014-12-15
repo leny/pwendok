@@ -90,6 +90,18 @@
 }
 
 
+// Hack Invisible Characters
+.editor {
+    .line .invisible-character {
+        opacity: .66;
+        color: @hacked-pane-background-color;
+    }
+    .line.cursor-line .invisible-character {
+        opacity: 0;
+    }
+}
+
+
 // Hack EasyMotion
 @import "syntax-variables";
 

@@ -79,3 +79,11 @@
 # Remapping EasyMotion
 '.editor:not(.mini)':
   'shift-cmd-I': 'easy-motion:start'
+
+# Remapping Spotify
+'.platform-darwin, .platform-darwin .command-palette .editor':
+  'cmd-alt-shift-right': 'unset!'
+  'cmd-alt-shift-left': 'unset!'
+  'ctrl-alt-t': 'unset!'
+  'ctrl-alt-P': 'unset!'
+  'ctrl-alt-p': 'unset!'

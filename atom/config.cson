@@ -10,6 +10,7 @@
     'tabLength': 4
     'fontSize': 12
     'invisibles': {}
+    'showInvisibles': true
   'core':
     'themes': [
       'seti-ui'
@@ -33,5 +34,7 @@
   'inline-autocomplete':
     'includeGrammarKeywords': true
     'includeCompletionsFromAllBuffers': true
+  'atom-spotify':
+    'displayOnLeftSide': false
 '.ini.source':
   'editor': {}
