@@ -23,6 +23,7 @@ install phantomjs
 install svn
 install tree
 install wget --enable-iri
+install ansible
 
 # Remove outdated versions from the cellar
 
