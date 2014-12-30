@@ -36,5 +36,9 @@
     'includeCompletionsFromAllBuffers': true
   'atom-spotify':
     'displayOnLeftSide': false
+  'fuzzy-finder':
+    'ignoredNames': [
+      '*.scssc'
+    ]
 '.ini.source':
   'editor': {}

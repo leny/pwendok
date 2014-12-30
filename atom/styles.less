@@ -93,7 +93,7 @@
 // Hack Invisible Characters
 .editor {
     .line .invisible-character {
-        opacity: .66;
+        opacity: .5;
         color: @hacked-pane-background-color;
     }
     .line.cursor-line .invisible-character {
@@ -101,6 +101,10 @@
     }
 }
 
+// Hack bracket matcher
+.bracket-matcher .region {
+    border-bottom: 1px dotted darken(#ffcc66, 25%);
+}
 
 // Hack EasyMotion
 @import "syntax-variables";
