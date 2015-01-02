@@ -9,8 +9,8 @@
     'fontFamily': 'Fira Mono OT'
     'tabLength': 4
     'fontSize': 12
-    'invisibles': {}
     'showInvisibles': true
+    'invisibles': {}
   'core':
     'themes': [
       'seti-ui'
@@ -36,6 +36,13 @@
     'includeCompletionsFromAllBuffers': true
   'atom-spotify':
     'displayOnLeftSide': false
+  'string-looper':
+    'enums': [
+      [
+        'oui'
+        'non'
+      ]
+    ]
   'fuzzy-finder':
     'ignoredNames': [
       '*.scssc'
