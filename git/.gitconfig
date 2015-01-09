@@ -34,7 +34,7 @@
     changed = green
     untracked = cyan
 [http]
-    postBuffer = 10485760000000
+    postBuffer = 104857600000000
 [status]
     short = true
 [filter "media"]
