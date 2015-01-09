@@ -84,21 +84,6 @@ defaults write com.apple.terminal "Startup Window Settings" -string "leny"
 defaults import com.googlecode.iterm2 ~/.pwendok/preferences/com.googlecode.iterm2.plist
 
 ###############################################################################
-# SSD-specific tweaks                                                         #
-###############################################################################
-
-read -p "Are you on an SSD? (y/N)" -n 1 -r
-echo ""
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    # Disable local Time Machine snapshots
-    sudo tmutil disablelocal
-
-    # Disable the sudden motion sensor as it’s not useful for SSDs
-    sudo pmset -a sms 0
-fi
-
-###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
@@ -381,4 +366,3 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     osascript -e 'tell app "System Events" to restart'
 fi
-
