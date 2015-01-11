@@ -8,23 +8,11 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
-
-}
-
-.editor {
-
-}
-
-.editor .cursor {
-
-}
-
 // Custom styles for bookmarks
 
 @import "octicon-utf-codes.less";
 
-.editor .gutter .line-number.bookmarked .icon-right {
+atom-text-editor::shadow .gutter .line-number.bookmarked .icon-right {
     visibility: visible;
     opacity: 1;
     padding: 0 0 0 .25em;
@@ -37,7 +25,7 @@
 }
 
 // always show fold icons
-.editor .gutter .line-number.foldable .icon-right {
+atom-text-editor::shadow .gutter .line-number.foldable .icon-right {
     visibility: visible;
 }
 
@@ -53,45 +41,43 @@
 
 // adjust opacity & background-color setting in inactive panes, because it sucks
 @hacked-pane-background-color: lighten(@app-background-color, 7%);
-.panes {
-    .pane {
+atom-pane {
+    background-color: @hacked-pane-background-color;
+    &:focus {
         background-color: @hacked-pane-background-color;
-        &:focus {
+    }
+    &.active {
+        atom-text-editor::shadow {
             background-color: @hacked-pane-background-color;
-        }
-        &.active {
-            .editor {
-                background-color: @hacked-pane-background-color;
-                .gutter {
-                    background-color: @hacked-pane-background-color;
-                }
+            .gutter {
+                // background-color: @hacked-pane-background-color;
             }
         }
-        &:not(.active) {
-            opacity: 1;
+    }
+    &:not(.active) {
+        opacity: 1;
 
-            .editor {
+        atom-text-editor {
+            background-color: @hacked-pane-background-color;
+            &::shadow .gutter {
                 background-color: @hacked-pane-background-color;
-                .gutter {
-                    background-color: @hacked-pane-background-color;
-                }
             }
-            .tab.active {
+        }
+        .tab.active {
+            border-bottom: solid 4px darken(@tab-highlight-color, 25%);
+            &:before {
                 border-bottom: solid 4px darken(@tab-highlight-color, 25%);
-                &:before {
-                    border-bottom: solid 4px darken(@tab-highlight-color, 25%);
-                }
             }
         }
-        .settings-view .editor-container .editor.mini, .settings-view .editor-container .editor.mini.is-focused {
-            background: white;
-        }
+    }
+    .settings-view atom-text-editor::shadow-container atom-text-editor[mini], .settings-view .editor-container atom-text-editor[mini].is-focused {
+        background: white;
     }
 }
 
 
 // Hack Invisible Characters
-.editor {
+atom-text-editor::shadow {
     .line .invisible-character {
         opacity: .5;
         color: @hacked-pane-background-color;
@@ -102,15 +88,15 @@
 }
 
 // Hack bracket matcher
-.bracket-matcher .region {
-    border-bottom: 1px dotted darken(#ffcc66, 25%);
+atom-text-editor::shadow .bracket-matcher .region {
+    border-bottom: 1px dotted darken(#ffcc66, 33%);
 }
 
 // Hack EasyMotion
 @import "syntax-variables";
 
-.editor .easy-motion-cover .letter-cover {
-    background-color: lighten(@app-background-color, 25%);
+atom-text-editor .easy-motion-cover .letter-cover {
+    background-color: lighten(@app-background-color, 25%) !important;
     border-radius: 3px;
     &.single {
         color: #ffcc66;
@@ -127,6 +113,6 @@
     height: 0px;
 }
 
-.editor.easy-motion-editor .search-results .marker .region {
+atom-text-editor.easy-motion-editor .search-results .marker .region {
     display: none;
 }
