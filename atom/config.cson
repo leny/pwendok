@@ -1,4 +1,4 @@
-'global':
+'*':
   'exception-reporting':
     'userId': 'b08fe082-5af7-c7d4-b900-777e08a254b5'
   'welcome':
@@ -7,18 +7,18 @@
     'userId': '5acd58d5e46233222cf4316630249b64bf87bc75'
   'editor':
     'fontFamily': 'Fira Mono OT'
-    'tabLength': 4
     'fontSize': 12
     'showInvisibles': true
+    'tabLength': 4
     'invisibles': {}
   'core':
-    'themes': [
-      'seti-ui'
-      'tomorrow-night-eighties'
-    ]
     'disabledPackages': [
       'wrap-guide'
       'autocomplete-plus'
+    ]
+    'themes': [
+      'seti-ui'
+      'tomorrow-night-eighties'
     ]
     'destroyEmptyPanes': false
   'atom-color-highlight':
@@ -41,6 +41,10 @@
       [
         'oui'
         'non'
+      ]
+      [
+        'am'
+        'pm'
       ]
     ]
   'fuzzy-finder':
