@@ -47,6 +47,9 @@ atom-pane {
         background-color: @hacked-pane-background-color;
     }
     &.active {
+        .item-views {
+            background: @hacked-pane-background-color;
+        }
         atom-text-editor::shadow {
             background-color: @hacked-pane-background-color;
             .gutter {
