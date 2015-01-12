@@ -50,6 +50,12 @@ git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntp
 git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
 git clone https://github.com/gruntjs/grunt-init-jquery ~/.grunt-init/jquery
 
+echo ""
+echo ""
+echo ""
+echo "----- Install apm packages -----"
+apm install --packages-file ~/.atom/local-packages.txt
+
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo ""
