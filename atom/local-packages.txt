@@ -1,5 +1,4 @@
 Stylus
-close-all
 easy-motion
 editorconfig
 emmet
