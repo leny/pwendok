@@ -30,5 +30,8 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Grunt auto-completion
 eval "$(grunt --completion=bash)"
 
+# Gulp auto-completion
+eval "$(gulp --completion=bash)"
+
 # Sote inclusion
 source ~/.sote/bin/sote

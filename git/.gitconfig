@@ -5,6 +5,7 @@
     excludesfile = ~/.gitignore_global
     editor = sublime
 [alias]
+    aa = add --all
     st = status
     sts = status -sb
     stl = ls-files -m -o --exclude-standard

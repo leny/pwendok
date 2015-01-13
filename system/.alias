@@ -16,6 +16,7 @@ alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
 # Shortcuts
 alias c="clear"
+alias q="exit"
 alias h="history | tail -20"
 alias g="git"
 alias gitinit="git init"
@@ -51,6 +52,8 @@ alias vssh="vagrant ssh"
 alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
 alias vreload="vagrant up && vagrant ssh"
 alias vhalt="vagrant halt"
+alias vgstatus="vagrant global-status"
+alias vstatus="vagrant status"
 
 # NPM
 # european mirror

@@ -10,6 +10,25 @@ function manpdf() {
     man -t "${1}" | open -f -a /Applications/Preview.app/
 }
 
+# Display all ip addresses for this host
+function ips ()
+{
+    ifconfig | awk '/inet /{ print $2 }'
+}
+
+# Displays your ip address, as seen by the Internet
+function myip ()
+{
+    res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
+    echo -e "Your public IP is: \033[0;33m$res\033[0m"
+}
+
+# Checks whether a website is down for you, or everybody
+function down4me ()
+{
+    curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g'
+}
+
 # Create a data URL from a file
 function dataurl() {
     local mimeType=$(file -b --mime-type "$1");
