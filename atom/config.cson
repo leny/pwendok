@@ -51,5 +51,6 @@
     'ignoredNames': [
       '*.scssc'
     ]
+  'easy-motion': {}
 '.ini.source':
   'editor': {}
