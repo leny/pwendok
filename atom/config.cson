@@ -52,5 +52,7 @@
       '*.scssc'
     ]
   'easy-motion': {}
+  'whitespace':
+    'ignoreWhitespaceOnCurrentLine': false
 '.ini.source':
   'editor': {}
