@@ -3,6 +3,7 @@
 cask install adobe-creative-cloud
 cask install alfred
 cask install atom
+cask install chromium
 cask install cleanmymac
 cask install codekit
 cask install dropbox

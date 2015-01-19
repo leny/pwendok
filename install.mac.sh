@@ -9,6 +9,15 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo ""
 echo ""
 echo ""
+echo "----- Install tools for XCode -----"
+
+if [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then
+    sudo xcode-select -switch /usr/bin
+fi
+
+echo ""
+echo ""
+echo ""
 echo "----- Install homebrew & cask -----"
 
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
@@ -23,6 +32,25 @@ echo ""
 echo "----- Install brew's -----"
 
 brew bundle "$DOTFILES_DIR/Brewfile"
+
+local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
+
+# htop
+if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop")" != "root:wheel" || ! "$(($(stat -L -f "%DMp" "$binroot/htop") & 4))" ]]; then
+    echo "- Updating htop permissions"
+    sudo chown root:wheel "$binroot/htop"
+    sudo chmod u+s "$binroot/htop"
+fi
+
+# bash
+if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
+    echo "- Adding $binroot/bash to the list of acceptable shells"
+    echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
+fi
+if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
+    echo "- Making $binroot/bash your default shell"
+    sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
+fi
 
 echo ""
 echo ""

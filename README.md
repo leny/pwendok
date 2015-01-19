@@ -16,9 +16,10 @@ Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs
 2. Install all the fonts from the NAS.
-3. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
-4. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
-5. App Install: complete the app installations with the AppStore, installing these apps :
+3. Install XCode Command Line tools with `xcode-select --install`
+4. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
+5. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
+6. App Install: complete the app installations with the AppStore, installing these apps :
     * Billings Pro
     * Caffeine
     * ColorSchemer Studio
@@ -36,8 +37,8 @@ Commands to run after a fresh install.
     * Tweetbot
     * Xcode
     * xScope
-6. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
-7. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install & sync *Sublimall*.
+7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
+8. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install & sync *Sublimall*.
 
 ## f.lux settings
 
