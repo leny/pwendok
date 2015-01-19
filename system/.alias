@@ -71,5 +71,8 @@ alias nig="npm install -g"
 alias npmig="npm install -g"
 alias npmo="npm outdated --depth=0"
 
+# Tower
+alias tower="gittower ."
+
 # node-webkit
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
