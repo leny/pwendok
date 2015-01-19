@@ -45,6 +45,9 @@ alias badge="tput bel"
 # - Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# PHP
+alias elefan="php -S localhost:8080"
+
 # Vagrant
 alias vup="vagrant up"
 alias vdestroy="vagrant destroy --force"
