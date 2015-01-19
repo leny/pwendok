@@ -1,36 +1,25 @@
 # -- Functions
 
 # Create a new directory and enter it
-function mkd() {
-    mkdir -p "$@" && cd "$@"
-}
+mkd() { mkdir -p "$@" && cd "$@"; }
 
 # Open man page as PDF
-function manpdf() {
-    man -t "${1}" | open -f -a /Applications/Preview.app/
-}
+manpdf() { man -t "${1}" | open -f -a /Applications/Preview.app/; }
 
 # Display all ip addresses for this host
-function ips ()
-{
-    ifconfig | awk '/inet /{ print $2 }'
-}
+ips() { ifconfig | awk '/inet /{ print $2 }'; }
 
 # Displays your ip address, as seen by the Internet
-function myip ()
-{
+myip() {
     res=$(curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+')
     echo -e "Your public IP is: \033[0;33m$res\033[0m"
 }
 
 # Checks whether a website is down for you, or everybody
-function down4me ()
-{
-    curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g'
-}
+down4me() { curl -s "http://www.downforeveryoneorjustme.com/$1" | sed '/just you/!d;s/<[^>]*>//g'; }
 
 # Create a data URL from a file
-function dataurl() {
+dataurl() {
     local mimeType=$(file -b --mime-type "$1");
     if [[ $mimeType == text/* ]]; then
         mimeType="${mimeType};charset=utf-8";
@@ -39,7 +28,7 @@ function dataurl() {
 }
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise opens the given location
-function s() {
+s() {
     if [ $# -eq 0 ]; then
         subl .;
     else
@@ -48,7 +37,7 @@ function s() {
 }
 
 # `a` with no arguments opens the current directory in Atom Editor, otherwise opens the given location
-function a() {
+a() {
     if [ $# -eq 0 ]; then
         atom .;
     else
@@ -57,7 +46,7 @@ function a() {
 }
 
 # `o` with no arguments opens the current directory, otherwise opens the given location
-function o() {
+o() {
     if [ $# -eq 0 ]; then
         open .;
     else
@@ -66,7 +55,7 @@ function o() {
 }
 
 # project : if there's a sublime-project file here, opens it, if not, opens the folder in sublime
-function project() {
+project() {
     PROJECT=$(ls -1 $1 | grep "sublime-project")
     if [[ $? -eq 0 && $# -lt 2 ]]; then
         subl -n --project "${1-.}/$PROJECT"
@@ -76,14 +65,10 @@ function project() {
 }
 
 # gclone : clone a github repo by passing the user/repo tuple
-function gclone() {
-    git clone https://github.com/$1 $2
-}
+gclone() { git clone https://github.com/$1 $2; }
 
 # depo : try to change directory to github repo, with user/repo, from the WORKS_PATH
-function depo() {
-    eval cd "${WORKS_PATH}/${1}"
-}
+depo() { eval cd "${WORKS_PATH}/${1}"; }
 
 _depo_complete() {
     local word="${COMP_WORDS[COMP_CWORD]}"
