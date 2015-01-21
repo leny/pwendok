@@ -33,7 +33,6 @@ echo "----- Install brew's -----"
 
 brew update
 brew upgrade
-brew bundle "$DOTFILES_DIR/Brewfile"
 brew install $(cat "$DOTFILES_DIR/Brewfile"|grep -v "#")
 brew cleanup
 
