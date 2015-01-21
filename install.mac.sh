@@ -31,7 +31,11 @@ echo ""
 echo ""
 echo "----- Install brew's -----"
 
+brew update
+brew upgrade
 brew bundle "$DOTFILES_DIR/Brewfile"
+brew install $(cat "$DOTFILES_DIR/Brewfile"|grep -v "#")
+brew cleanup
 
 local binroot="$(brew --config | awk '/HOMEBREW_PREFIX/ {print $2}')"/bin
 
@@ -58,7 +62,7 @@ echo ""
 echo "----- Install app's -----"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew bundle "$DOTFILES_DIR/Caskfile"
+brew cask install $(cat "$DOTFILES_DIR/Caskfile"|grep -v "#")
 
 echo ""
 echo ""

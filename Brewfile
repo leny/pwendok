@@ -1,10 +1,5 @@
 # --- Brewfile
 
-# Update Homebrew, formulae, and packages
-
-update
-upgrade
-
 # Install GNU packages (and override OSX version)
 
 install ansible
@@ -30,6 +25,3 @@ install tree
 install wget --enable-iri
 install ansible
 
-# Remove outdated versions from the cellar
-
-cleanup
