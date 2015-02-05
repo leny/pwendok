@@ -38,7 +38,7 @@ Commands to run after a fresh install.
     * Xcode
     * xScope
 7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
-8. Launch Sublime Text, install [Package Control](https://sublime.wbond.net/installation), then install & sync *Sublimall*.
+8. Launch Atom and run the `Package sync: sync` command.
 
 ## f.lux settings
 

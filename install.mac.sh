@@ -85,7 +85,7 @@ echo ""
 echo ""
 echo ""
 echo "----- Install apm packages -----"
-apm install --packages-file ~/.atom/local-packages.txt
+apm install package-sync
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
