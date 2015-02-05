@@ -16,45 +16,51 @@
       "wrap-guide"
       "autocomplete-plus"
     ]
-    'themes': [
-      'seti-ui'
-      'tomorrow-night-eighties'
+    themes: [
+      "seti-ui"
+      "tomorrow-night-eighties"
     ]
-    'destroyEmptyPanes': false
-  'atom-color-highlight':
-    'hideMarkersInStrings': true
-    'hideMarkersInComments': true
-  'tree-view':
-    'hideVcsIgnoredFiles': true
-    'hideIgnoredNames': true
-  'emmet':
-    'extensionsPath': '~/.pwendok/emmet'
-  'autosave':
-    'enabled': true
-  'inline-autocomplete':
-    'includeGrammarKeywords': true
-    'includeCompletionsFromAllBuffers': true
-  'atom-spotify':
-    'displayOnLeftSide': false
-  'string-looper':
-    'enums': [
+    destroyEmptyPanes: false
+  "atom-color-highlight":
+    hideMarkersInStrings: true
+    hideMarkersInComments: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
+  emmet:
+    extensionsPath: "~/.pwendok/emmet"
+  autosave:
+    enabled: true
+  "inline-autocomplete":
+    includeGrammarKeywords: true
+    includeCompletionsFromAllBuffers: true
+  "atom-spotify":
+    displayOnLeftSide: false
+  "string-looper":
+    enums: [
       [
-        'oui'
-        'non'
+        "oui"
+        "non"
       ]
       [
-        'am'
-        'pm'
+        "am"
+        "pm"
       ]
     ]
-  'fuzzy-finder':
-    'ignoredNames': [
-      '*.scssc'
+  "fuzzy-finder":
+    ignoredNames: [
+      "*.scssc"
     ]
-  'easy-motion': {}
-  'whitespace':
-    'ignoreWhitespaceOnCurrentLine': false
-'.ini.source':
-  'editor': {}
+  "easy-motion": {}
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  linter:
+    lintOnSave: false
+    lintOnChange: false
+    lintOnEditorFocus: false
+  htmlhint:
+    validateOnSave: false
+  "html-validation": {}
   "w3c-validation":
     validateOnSave: false
+  "tree-ignore": {}
