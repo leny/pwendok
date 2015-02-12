@@ -24,6 +24,7 @@
     'cmd-6': 'unset!'
     'cmd-7': 'unset!'
     'cmd-9': 'unset!'
+    'ctrl-tab': 'native!'
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
