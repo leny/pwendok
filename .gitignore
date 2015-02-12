@@ -6,3 +6,4 @@ dev
 .npm
 .node-gyp
 atom/packages
+atom/.apm
