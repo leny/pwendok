@@ -9,10 +9,10 @@
 #
 # Here's an example taken from Atom's built-in keymap:
 #
-# '.editor':
+# 'atom-text-editor':
 #   'enter': 'editor:newline'
 #
-# '.workspace':
+# 'atom-workspace':
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
@@ -23,14 +23,14 @@
     'cmd-2': 'unset!'
     'cmd-6': 'unset!'
     'cmd-7': 'unset!'
-    'cmd-9': 'unset!'
+    # 'cmd-9': 'unset!'
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
 'atom-workspace atom-text-editor:not(.mini)':
   'cmd-j': 'unset!' # 'editor:join-lines'
     # Remapping keys
-'.platform-darwin .editor':
+'.platform-darwin atom-text-editor':
   'cmd-j': 'bookmarks:toggle-bookmark'
   'ctrl-j': 'bookmarks:jump-to-next-bookmark'
   'ctrl-shift-j': 'bookmarks:jump-to-previous-bookmark'
@@ -38,11 +38,11 @@
   'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
 
 # Remapping autocomplete toggle
-'.editor':
+'atom-text-editor':
   'cmd-space': 'autocomplete:toggle'
 
 # Remapping Keybindings for Pane Manager
-'.platform-darwin .workspace':
+'.platform-darwin atom-workspace':
   'cmd-k cmd-l cmd-&': 'pane-manager:changeLayoutOne'
   'cmd-k cmd-l cmd-2': 'pane-manager:changeLayoutTwo'
   'cmd-k cmd-l cmd-"': 'pane-manager:changeLayoutThree'
@@ -51,7 +51,7 @@
   'cmd-k cmd-l cmd-§': 'pane-manager:changeLayoutSix'
   'cmd-k cmd-l cmd-7': 'pane-manager:changeLayoutSeven'
   'cmd-k cmd-l cmd-!': 'pane-manager:changeLayoutEight'
-  'cmd-k cmd-l cmd-ç': 'pane-manager:changeLayoutNine'
+  'cmd-k cmd-l cmd-9': 'pane-manager:changeLayoutNine'
   'cmd-k cmd-l cmd-0': 'pane-manager:changeLayoutTen'
   'cmd-k cmd-m cmd-&': 'pane-manager:moveToPaneOne'
   'cmd-k cmd-m cmd-2': 'pane-manager:moveToPaneTwo'
@@ -61,7 +61,7 @@
   'cmd-k cmd-m cmd-§': 'pane-manager:moveToPaneSix'
   'cmd-k cmd-m cmd-7': 'pane-manager:moveToPaneSeven'
   'cmd-k cmd-m cmd-!': 'pane-manager:moveToPaneEight'
-  'cmd-k cmd-m cmd-ç': 'pane-manager:moveToPaneNine'
+  'cmd-k cmd-m cmd-9': 'pane-manager:moveToPaneNine'
   'cmd-k cmd-m cmd-0': 'pane-manager:moveToPaneTen'
   'cmd-k cmd-f cmd-&': 'pane-manager:focusToPaneOne'
   'cmd-k cmd-f cmd-2': 'pane-manager:focusToPaneTwo'
@@ -77,11 +77,17 @@
   'cmd-shift-w': 'close-all:close'
 
 # Remapping EasyMotion
-'.editor:not(.mini)':
+'atom-text-editor:not(.mini)':
   'shift-cmd-I': 'easy-motion:start'
 
+# Emmet
+# language-specific Tab triggers
+# you can add more triggers by changing `grammar` attribute values
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
 # Remapping Spotify
-'.platform-darwin, .platform-darwin .command-palette .editor':
+'.platform-darwin, .platform-darwin .command-palette atom-text-editor':
   'cmd-alt-shift-right': 'unset!'
   'cmd-alt-shift-left': 'unset!'
   'ctrl-alt-t': 'unset!'
