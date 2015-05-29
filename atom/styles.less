@@ -78,6 +78,13 @@ atom-pane {
     }
 }
 
+tabs-bar tabs-tab, .tab-bar tabs-tab, tabs-bar .tab, .tab-bar .tab {
+  margin-left: 10px;
+  padding-left: 5px;
+  &:before {
+    left: -10px;
+  }
+}
 
 // Hack Invisible Characters
 atom-text-editor::shadow {
@@ -93,29 +100,4 @@ atom-text-editor::shadow {
 // Hack bracket matcher
 atom-text-editor::shadow .bracket-matcher .region {
     border-bottom: 1px dotted darken(#ffcc66, 33%);
-}
-
-// Hack EasyMotion
-@import "syntax-variables";
-
-atom-text-editor .easy-motion-cover .letter-cover {
-    background-color: lighten(@app-background-color, 25%) !important;
-    border-radius: 3px;
-    &.single {
-        color: #ffcc66;
-    }
-    &.many {
-        color: #ffcc66;
-    }
-}
-
-.easy-motion-input {
-    position: absolute;
-    z-index: -1;
-    width: 0px;
-    height: 0px;
-}
-
-atom-text-editor.easy-motion-editor .search-results .marker .region {
-    display: none;
 }

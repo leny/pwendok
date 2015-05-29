@@ -13,3 +13,11 @@
 #     'prefix': 'log'
 #     'body': 'console.log $1'
 #
+
+'.source.js':
+  'Function Expression':
+    'prefix': 'varfunc'
+    'body': """var $1 = function( $2 ) {
+      $3
+    }; // $1
+    """

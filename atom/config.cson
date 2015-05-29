@@ -9,12 +9,11 @@
     fontFamily: "Fira Mono OT"
     fontSize: 12
     showInvisibles: true
-    tabLength: 4
-    invisibles: {}
+    invisibles:
+      {}
   core:
     disabledPackages: [
       "wrap-guide"
-      "autocomplete-plus"
     ]
     themes: [
       "seti-ui"
@@ -51,7 +50,8 @@
     ignoredNames: [
       "*.scssc"
     ]
-  "easy-motion": {}
+  "easy-motion":
+    {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
   linter:
@@ -60,7 +60,9 @@
     lintOnEditorFocus: false
   htmlhint:
     validateOnSave: false
-  "html-validation": {}
+  "html-validation":
+    {}
   "w3c-validation":
     validateOnSave: false
-  "tree-ignore": {}
+  "tree-ignore":
+    {}

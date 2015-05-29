@@ -27,7 +27,7 @@
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
-'atom-workspace atom-text-editor:not(.mini)':
+'atom-workspace atom-text-editor:not([mini])':
   'cmd-j': 'unset!' # 'editor:join-lines'
     # Remapping keys
 '.platform-darwin atom-text-editor':
@@ -76,15 +76,15 @@
 # Remapping close all
   'cmd-shift-w': 'close-all:close'
 
-# Remapping EasyMotion
-'atom-text-editor:not(.mini)':
-  'shift-cmd-I': 'easy-motion:start'
-
 # Emmet
 # language-specific Tab triggers
 # you can add more triggers by changing `grammar` attribute values
 'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
   'tab': 'emmet:expand-abbreviation-with-tab'
+# Remapping Emmet
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-E': 'unset!'
+  'shift-cmd-E': 'easy-motion-redux:start'
 
 # Remapping Spotify
 '.platform-darwin, .platform-darwin .command-palette atom-text-editor':

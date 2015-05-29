@@ -1,7 +1,8 @@
 'packages': [
-  'easy-motion'
+  'coffeescript-check'
   'editorconfig'
   'emmet'
+  'easy-motion-redux'
   'htmlhint'
   'inc-dec-value'
   'indent-toggle-on-paste'
