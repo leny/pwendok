@@ -55,7 +55,6 @@
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
   linter:
-    lintOnSave: false
     lintOnChange: false
     lintOnEditorFocus: false
   htmlhint:
@@ -66,3 +65,13 @@
     validateOnSave: false
   "tree-ignore":
     {}
+  "tab-control":
+    autoSaveChanges: true
+    displayInStatusBar: true
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  "file-types":
+    {}
+"source.coffee":
+  editor:
+    tabLength: 4
