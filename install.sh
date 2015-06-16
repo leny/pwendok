@@ -29,7 +29,8 @@ echo "----- Link dotfiles -----"
 
 ln -sfv "$DOTFILES_DIR/runcom/bash_profile" ~/.bash_profile
 ln -sfv "$DOTFILES_DIR/runcom/inputrc" ~/.inputrc
-ln -sfv "$DOTFILES_DIR/editor/editorconfig" ~/.editorconfig
+ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
+ln -sfv "$DOTFILES_DIR/eslintrc/eslintrc" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/hg/hgignore_global" ~/.hgignore_global
