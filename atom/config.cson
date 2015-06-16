@@ -9,8 +9,8 @@
     fontFamily: "Fira Mono OT"
     fontSize: 12
     showInvisibles: true
-    invisibles:
-      {}
+    invisibles: {}
+    tabLength: 4
   core:
     disabledPackages: [
       "wrap-guide"
@@ -50,8 +50,7 @@
     ignoredNames: [
       "*.scssc"
     ]
-  "easy-motion":
-    {}
+  "easy-motion": {}
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
   linter:
@@ -59,19 +58,34 @@
     lintOnEditorFocus: false
   htmlhint:
     validateOnSave: false
-  "html-validation":
-    {}
+  "html-validation": {}
   "w3c-validation":
     validateOnSave: false
-  "tree-ignore":
-    {}
+  "tree-ignore": {}
   "tab-control":
     autoSaveChanges: true
     displayInStatusBar: true
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
-  "file-types":
-    {}
+  "file-types": {}
+  "atom-beautify":
+    _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
+".basic.html.text":
+  editor:
+    tabLength: 4
+    softTabs: true
+".css.scss.source":
+  editor:
+    tabLength: 4
+    softTabs: true
+".js.source":
+  editor:
+    tabLength: 4
+    softTabs: true
+"source.js":
+  editor:
+    tabLength: 4
+    softTabs: true
 "source.coffee":
   editor:
     tabLength: 4
