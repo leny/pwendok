@@ -56,6 +56,12 @@
   linter:
     lintOnChange: false
     lintOnEditorFocus: false
+    subtleLinterErrors: [
+      "csslint"
+      "htmlhint"
+    ]
+    showErrorInline: false
+    statusBar: "Show error if the cursor is in range"
   htmlhint:
     validateOnSave: false
   "html-validation": {}
@@ -70,6 +76,8 @@
   "file-types": {}
   "atom-beautify":
     _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
+  build: {}
+  "run-command": {}
 ".basic.html.text":
   editor:
     tabLength: 4
@@ -81,6 +89,14 @@
 ".js.source":
   editor:
     tabLength: 4
+    softTabs: true
+".coffee.source":
+  editor:
+    tabLength: 2
+    softTabs: true
+".source.yaml":
+  editor:
+    tabLength: 2
     softTabs: true
 "source.js":
   editor:
