@@ -78,30 +78,30 @@
     _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
   build: {}
   "run-command": {}
-".basic.html.text":
-  editor:
-    tabLength: 4
-    softTabs: true
 ".css.scss.source":
   editor:
     tabLength: 4
     softTabs: true
-".js.source":
+".basic.html.text":
   editor:
     tabLength: 4
-    softTabs: true
-".coffee.source":
-  editor:
-    tabLength: 2
     softTabs: true
 ".source.yaml":
   editor:
     tabLength: 2
     softTabs: true
-"source.js":
+".coffee.source":
+  editor:
+    tabLength: 2
+    softTabs: true
+".js.source":
   editor:
     tabLength: 4
     softTabs: true
 "source.coffee":
   editor:
     tabLength: 4
+"source.js":
+  editor:
+    tabLength: 4
+    softTabs: true
