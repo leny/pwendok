@@ -79,6 +79,7 @@ alias tower="gittower ."
 
 # Docker & Boot2Docker
 alias dcompose="docker-compose"
+alias dmachine="docker-machine"
 alias dockup="boot2docker init && boot2docker up && eval \"\$(boot2docker shellinit)\""
 
 # node-webkit

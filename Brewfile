@@ -5,6 +5,9 @@
 ansible
 bash
 bash-completion
+docker
+docker-compose
+docker-machine
 coreutils
 moreutils
 findutils
