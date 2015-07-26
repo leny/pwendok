@@ -101,3 +101,36 @@ atom-text-editor::shadow {
 atom-text-editor::shadow .bracket-matcher .region {
     border-bottom: 1px dotted darken(#ffcc66, 33%);
 }
+
+// Hack Lazy motion
+atom-text-editor::shadow {
+    .lazy-motion-match .region {
+      background-color: transparent;
+      border: 2px solid @syntax-result-marker-color;
+    }
+  .lazy-motion-match.top .region {
+    border: 2px solid @syntax-result-marker-color;
+  }
+  .lazy-motion-match.bottom .region {
+    border: 2px solid @syntax-result-marker-color;
+  }
+  .lazy-motion-match.current .region {
+    background-color: lighten( @app-background-color, 25% );
+  }
+  .lazy-motion-flash .region {
+    background-color: lighten( @app-background-color, 33% );
+  }
+  .lazy-motion-cursor .region {
+    background-color: @syntax-cursor-color;
+  }
+  .lazy-motion-hover {
+    color: hsl( hue( @text-color-warning ), 100% - saturation( @app-background-color ), 60% - lightness( @app-background-color ) * 0.2 );
+    background-color: lighten( @app-background-color, 12.5% );
+    &.top {
+      background-color: lighten( @app-background-color, 12.5% );
+    }
+    &.bottom {
+      background-color: lighten( @app-background-color, 12.5% );
+    }
+  }
+}
