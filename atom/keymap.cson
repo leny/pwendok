@@ -19,12 +19,12 @@
 
 # Disabling some useless keybindings
 'body':
-    'cmd-0': 'unset!'
-    'cmd-2': 'unset!'
-    'cmd-6': 'unset!'
-    'cmd-7': 'unset!'
-    # 'cmd-9': 'unset!'
-    'ctrl-tab': 'native!'
+  'cmd-0': 'unset!'
+  'cmd-2': 'unset!'
+  'cmd-6': 'unset!'
+  'cmd-7': 'unset!'
+  # 'cmd-9': 'unset!'
+  'ctrl-tab': 'native!'
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
@@ -94,3 +94,13 @@
   'ctrl-alt-t': 'unset!'
   'ctrl-alt-P': 'unset!'
   'ctrl-alt-p': 'unset!'
+
+# Lazy Motion
+'atom-text-editor':
+  'shift-cmd-I': 'lazy-motion:forward'
+  'shift-cmd-U': 'lazy-motion:backward'
+
+'.platform-darwin atom-text-editor.lazy-motion':
+  'tab': 'lazy-motion:forward'
+  'shift-tab': 'lazy-motion:backward'
+  'esc': 'core:cancel'

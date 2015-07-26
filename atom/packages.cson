@@ -9,6 +9,7 @@ packages: [
   "language-jade"
   "language-nginx"
   "language-swift"
+  "lazy-motion"
   "linter"
   "linter-coffeelint"
   "linter-csslint"

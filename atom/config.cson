@@ -73,35 +73,39 @@
     displayInStatusBar: true
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+    useGlobalEslint: true
+    globalNodePath: "/usr/local"
   "file-types": {}
   "atom-beautify":
     _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
   build: {}
   "run-command": {}
-".css.scss.source":
-  editor:
-    tabLength: 4
-    softTabs: true
+  covalent: {}
+  motepair: {}
 ".basic.html.text":
   editor:
     tabLength: 4
     softTabs: true
-".source.yaml":
+".css.scss.source":
   editor:
-    tabLength: 2
+    tabLength: 4
+    softTabs: true
+".js.source":
+  editor:
+    tabLength: 4
     softTabs: true
 ".coffee.source":
   editor:
     tabLength: 2
     softTabs: true
-".js.source":
+".source.yaml":
+  editor:
+    tabLength: 2
+    softTabs: true
+"source.js":
   editor:
     tabLength: 4
     softTabs: true
 "source.coffee":
   editor:
     tabLength: 4
-"source.js":
-  editor:
-    tabLength: 4
-    softTabs: true
