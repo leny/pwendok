@@ -80,7 +80,7 @@ alias tower="gittower ."
 # Docker & Boot2Docker
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
-alias dockup="boot2docker init && boot2docker up && eval \"\$(boot2docker shellinit)\""
+alias dockup="docker-machine start dev && docker-machine env dev && eval \"$(docker-machine env dev)\""
 
 # node-webkit
 alias nw="/Applications/node-webkit.app/Contents/MacOS/node-webkit"
