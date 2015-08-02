@@ -44,6 +44,8 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias badge="tput bel"
 # - Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# - Fuck: forgot sudo
+alias fuck="sudo !!"
 
 # PHP
 alias elefan="php -S localhost:8080"
