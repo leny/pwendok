@@ -90,3 +90,28 @@ _depo_complete() {
 }
 
 complete -F _depo_complete depo
+
+# obit : open atom from a directory entered like for the depo function
+
+obit() { eval atom "${WORKS_PATH}/${1}"; }
+
+_obit_complete() {
+    local word="${COMP_WORDS[COMP_CWORD]}"
+    local base_path="$WORKS_PATH"
+    compopt -o nospace
+    if [[ "$word" == *\/* ]]
+    then
+        if [[ "${word#${word%?}}" == '/' ]]
+        then
+            base_path="$WORKS_PATH/$word"
+            COMPREPLY=( $(compgen -o nospace -P "$word" -W "$(eval ls $base_path)" ) )
+        else
+            base_path="$WORKS_PATH/$(dirname $word)"
+            COMPREPLY=( $(compgen -o nospace -P "$(dirname $word)/" -W "$(eval ls $base_path)" -- "$(basename $word)" ) )
+        fi
+    else
+        COMPREPLY=( $(compgen -o nospace -S / -W "$(eval ls $base_path)" -- "$word" ) )
+    fi
+}
+
+complete -F _obit_complete obit
