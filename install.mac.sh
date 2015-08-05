@@ -62,6 +62,7 @@ echo "----- Install app's -----"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install $(cat "$DOTFILES_DIR/Caskfile"|grep -v "#")
+qlmanage -r
 
 echo ""
 echo ""
