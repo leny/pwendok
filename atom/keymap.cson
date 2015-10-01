@@ -87,6 +87,10 @@
   'shift-cmd-E': 'unset!'
   'shift-cmd-E': 'easy-motion-redux:start'
 
+'atom-text-editor:not([mini])':
+  'alt-shift-up': 'unset!'
+  'alt-shift-down': 'unset!'
+
 # Remapping Spotify
 '.platform-darwin, .platform-darwin .command-palette atom-text-editor':
   'cmd-alt-shift-right': 'unset!'
@@ -104,3 +108,8 @@
   'tab': 'lazy-motion:forward'
   'shift-tab': 'lazy-motion:backward'
   'esc': 'core:cancel'
+
+# Expand Region
+'atom-text-editor:not([mini])':
+  'alt-shift-up': 'expand-region:expand'
+  'alt-shift-down': 'expand-region:shrink'

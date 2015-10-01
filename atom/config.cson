@@ -62,6 +62,7 @@
     ]
     showErrorInline: false
     statusBar: "Show error if the cursor is in range"
+    showErrorPanel: false
   htmlhint:
     validateOnSave: false
   "html-validation": {}
