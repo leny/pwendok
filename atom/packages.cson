@@ -14,6 +14,7 @@ packages: [
   "linter-coffeelint"
   "linter-csslint"
   "linter-eslint"
+  "linter-gadkod"
   "linter-htmlhint"
   "markdown-writer"
   "open-in-browser"
