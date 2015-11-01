@@ -7,7 +7,6 @@ export PWENDOK=~/.pwendok
 # Configuration
     # Theme
 ZSH_THEME="leny"
-ZSH_THEME="robbyrussell" # tmp
     # Custom folder location
 ZSH_CUSTOM=$PWENDOK/zsh/custom
     # Plugins
