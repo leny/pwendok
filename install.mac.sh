@@ -29,6 +29,14 @@ brew tap caskroom/versions
 echo ""
 echo ""
 echo ""
+echo "----- Install oh-my-zsh -----"
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
+
+echo ""
+echo ""
+echo ""
 echo "----- Install brew's -----"
 
 brew update
@@ -50,10 +58,10 @@ if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash"
     echo "- Adding $binroot/bash to the list of acceptable shells"
     echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
 fi
-if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
-    echo "- Making $binroot/bash your default shell"
-    sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
-fi
+# if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
+#     echo "- Making $binroot/bash your default shell"
+#     sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
+# fi
 
 echo ""
 echo ""
