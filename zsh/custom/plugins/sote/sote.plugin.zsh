@@ -88,21 +88,24 @@ sote() {
             done
             return;
             ;;
-        "--completion-options")
-            echo "-v"
-            echo "--version"
-            echo "-h"
-            echo "--help"
-            echo "-l"
-            echo "--list"
-            echo "-s"
-            echo "--show"
-            echo "-a"
-            echo "--add"
-            echo "-r"
-            echo "--remove"
-            echo "-c"
-            echo "--clear"
+        "--completion-options-short")
+            echo "v"
+            echo "h"
+            echo "l"
+            echo "s"
+            echo "a"
+            echo "r"
+            echo "c"
+            return;
+            ;;
+        "--completion-options-long")
+            echo "version"
+            echo "help"
+            echo "list"
+            echo "show"
+            echo "add"
+            echo "remove"
+            echo "clear"
             return;
             ;;
         "-l"|"--list")
@@ -159,3 +162,30 @@ sote() {
     esac
 
 }
+
+_sote_complete() {
+    local word="$words[2]"
+
+    if [[ $CURRENT -eq 2 ]] then
+        if [[ "${word:0:1}" == "-" ]] then
+            if [[ "${word:0:2}" == "--" ]] then
+                compadd -P "--" "$@" $(sote --completion-options-long)
+            else
+                compadd -P "-" "$@" $(sote --completion-options-short)
+            fi
+        else
+            compadd "$@" $(sote --completion-keys)
+        fi
+    else
+        local action="$words[2]"
+        if [[ $CURRENT -eq 3 ]] then
+            case "$action" in
+                "-s"|"--show"|"-r"|"--remove"|"-a"|"--add")
+                    compadd "$@" $(sote --completion-keys)
+                    ;;
+            esac
+        fi
+    fi
+}
+
+compdef _sote_complete sote
