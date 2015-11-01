@@ -27,8 +27,8 @@ echo ""
 echo ""
 echo "----- Link dotfiles -----"
 
-ln -sfv "$DOTFILES_DIR/runcom/bash_profile" ~/.bash_profile
-ln -sfv "$DOTFILES_DIR/runcom/inputrc" ~/.inputrc
+ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
+ln -sfv "$DOTFILES_DIR/bash/inputrc" ~/.inputrc
 ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/eslintrc/eslintrc" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig

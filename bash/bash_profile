@@ -1,4 +1,4 @@
-for DOTFILE in `find ~/.pwendok/system`
+for DOTFILE in `find ~/.pwendok/bash/system`
 do
     [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
