@@ -1,0 +1,16 @@
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
+# Path to pwendok
+export PWENDOK=~/.pwendok
+
+# Configuration
+    # Theme
+ZSH_THEME="leny"
+ZSH_THEME="robbyrussell" # tmp
+    # Custom folder location
+ZSH_CUSTOM=$PWENDOK/zsh/custom
+    # Plugins
+plugins=(git depo sote)
+
+source $ZSH/oh-my-zsh.sh
