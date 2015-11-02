@@ -84,7 +84,7 @@ echo ""
 echo ""
 echo ""
 echo "----- Install useful global npm packages -----"
-npm install -g bower browserify codo coffee-script coffeegulp docco gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus tankipas vibox vows woazar yo
+npm install -g bower browserify codo coffee-script coffeegulp docco eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus tankipas vibox vows woazar yo
 git clone https://github.com/gruntjs/grunt-init-gruntfile ~/.grunt-init/gruntfile
 git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntplugin
 git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
