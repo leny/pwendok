@@ -75,7 +75,7 @@
   'cmd-k cmd-f cmd-ç': 'pane-manager:focusToPaneNine'
   'cmd-k cmd-f cmd-0': 'pane-manager:focusToPaneTen'
 # Remapping close all
-  'cmd-shift-w': 'close-all:close'
+  'cmd-shift-w': 'tabs:close-all-tabs'
 
 # Emmet
 # language-specific Tab triggers
@@ -86,6 +86,7 @@
 '.platform-darwin atom-text-editor:not([mini])':
   'shift-cmd-E': 'unset!'
   'shift-cmd-E': 'easy-motion-redux:start'
+  'cmd-g cmd-e': 'easy-motion-redux:start'
 
 'atom-text-editor:not([mini])':
   'alt-shift-up': 'unset!'
@@ -102,7 +103,9 @@
 # Lazy Motion
 'atom-text-editor':
   'shift-cmd-I': 'lazy-motion:forward'
+  'cmd-g cmd-i': 'lazy-motion:forward'
   'shift-cmd-U': 'lazy-motion:backward'
+  'cmd-g cmd-u': 'lazy-motion:backward'
 
 '.platform-darwin atom-text-editor.lazy-motion':
   'tab': 'lazy-motion:forward'
@@ -113,3 +116,23 @@
 'atom-text-editor:not([mini])':
   'alt-shift-up': 'expand-region:expand'
   'alt-shift-down': 'expand-region:shrink'
+
+# Wrap'n'pad
+'atom-text-editor:not([mini])':
+  'cmd-c cmd-(': 'wrap-and-pad:wrap-and-pad-with-parenthesis'
+  'cmd-c cmd-5': 'wrap-and-pad:wrap-and-pad-with-brackets'
+  'cmd-c alt-cmd-(': 'wrap-and-pad:wrap-and-pad-with-curly-brackets'
+
+# Markdown Writer
+".platform-darwin atom-text-editor:not([mini])[data-grammar~='gfm']":
+  "cmd-c cmd-l": "markdown-writer:insert-link"
+  "cmd-c cmd-g": "markdown-writer:insert-image"
+  "cmd-c cmd-i": "markdown-writer:toggle-italic-text"
+  "cmd-c cmd-b": "markdown-writer:toggle-bold-text"
+  "cmd-c cmd-k": "markdown-writer:toggle-code-text"
+  "cmd-c cmd-<": "markdown-writer:toggle-keystroke-text"
+  "cmd-c cmd-h": "markdown-writer:toggle-strikethrough-text"
+  'cmd-c cmd->': "markdown-writer:toggle-blockquote"
+  'cmd-c cmd-"': "markdown-writer:toggle-codeblock-text"
+  "cmd-c cmd-o": "markdown-writer:toggle-ol"
+  "cmd-c cmd-u": "markdown-writer:toggle-ul"

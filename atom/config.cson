@@ -14,12 +14,16 @@
   core:
     disabledPackages: [
       "wrap-guide"
+      "gutter-shadow"
     ]
     themes: [
       "seti-ui"
       "tomorrow-night-eighties"
     ]
     destroyEmptyPanes: false
+    packagesWithKeymapsDisabled: [
+      "spell-check"
+    ]
   "atom-color-highlight":
     hideMarkersInStrings: true
     hideMarkersInComments: true
@@ -33,8 +37,6 @@
   "inline-autocomplete":
     includeGrammarKeywords: true
     includeCompletionsFromAllBuffers: true
-  "atom-spotify":
-    displayOnLeftSide: false
   "string-looper":
     enums: [
       [
@@ -83,13 +85,23 @@
   "run-command": {}
   covalent: {}
   motepair: {}
+  "spell-check": {}
+  "wrap-and-pad":
+    "trim-before": true
+".css.scss.source":
+  editor:
+    tabLength: 4
+    softTabs: true
 ".basic.html.text":
   editor:
     tabLength: 4
     softTabs: true
-".css.scss.source":
+".jade.source":
+  whitespace:
+    removeTrailingWhitespace: true
+".source.yaml":
   editor:
-    tabLength: 4
+    tabLength: 2
     softTabs: true
 ".js.source":
   editor:
@@ -99,17 +111,10 @@
   editor:
     tabLength: 2
     softTabs: true
-".source.yaml":
+"source.coffee":
   editor:
-    tabLength: 2
-    softTabs: true
-".jade.source":
-  whitespace:
-    removeTrailingWhitespace: true
+    tabLength: 4
 "source.js":
   editor:
     tabLength: 4
     softTabs: true
-"source.coffee":
-  editor:
-    tabLength: 4

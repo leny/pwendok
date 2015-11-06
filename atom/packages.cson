@@ -31,4 +31,5 @@ packages: [
   "tomorrow-night-eighties"
   "tree-ignore"
   "w3c-validation"
+  "wrap-and-pad"
 ]
