@@ -119,20 +119,20 @@
 
 # Wrap'n'pad
 'atom-text-editor:not([mini])':
-  'cmd-c cmd-(': 'wrap-and-pad:wrap-and-pad-with-parenthesis'
-  'cmd-c cmd-5': 'wrap-and-pad:wrap-and-pad-with-brackets'
-  'cmd-c alt-cmd-(': 'wrap-and-pad:wrap-and-pad-with-curly-brackets'
+  'cmd-g cmd-(': 'wrap-and-pad:wrap-and-pad-with-parenthesis'
+  'cmd-g cmd-5': 'wrap-and-pad:wrap-and-pad-with-brackets'
+  'cmd-g alt-cmd-(': 'wrap-and-pad:wrap-and-pad-with-curly-brackets'
 
 # Markdown Writer
 ".platform-darwin atom-text-editor:not([mini])[data-grammar~='gfm']":
-  "cmd-c cmd-l": "markdown-writer:insert-link"
-  "cmd-c cmd-g": "markdown-writer:insert-image"
-  "cmd-c cmd-i": "markdown-writer:toggle-italic-text"
-  "cmd-c cmd-b": "markdown-writer:toggle-bold-text"
-  "cmd-c cmd-k": "markdown-writer:toggle-code-text"
-  "cmd-c cmd-<": "markdown-writer:toggle-keystroke-text"
-  "cmd-c cmd-h": "markdown-writer:toggle-strikethrough-text"
-  'cmd-c cmd->': "markdown-writer:toggle-blockquote"
-  'cmd-c cmd-"': "markdown-writer:toggle-codeblock-text"
-  "cmd-c cmd-o": "markdown-writer:toggle-ol"
-  "cmd-c cmd-u": "markdown-writer:toggle-ul"
+  "cmd-g cmd-l": "markdown-writer:insert-link"
+  "cmd-g cmd-g": "markdown-writer:insert-image"
+  "cmd-g cmd-i": "markdown-writer:toggle-italic-text"
+  "cmd-g cmd-b": "markdown-writer:toggle-bold-text"
+  "cmd-g cmd-k": "markdown-writer:toggle-code-text"
+  "cmd-g cmd-<": "markdown-writer:toggle-keystroke-text"
+  "cmd-g cmd-h": "markdown-writer:toggle-strikethrough-text"
+  'cmd-g cmd->': "markdown-writer:toggle-blockquote"
+  'cmd-g cmd-"': "markdown-writer:toggle-codeblock-text"
+  "cmd-g cmd-o": "markdown-writer:toggle-ol"
+  "cmd-g cmd-u": "markdown-writer:toggle-ul"
