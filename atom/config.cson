@@ -88,6 +88,8 @@
   "spell-check": {}
   "wrap-and-pad":
     "trim-before": true
+  "local-config":
+    applyOnActivation: true
 ".css.scss.source":
   editor:
     tabLength: 4
