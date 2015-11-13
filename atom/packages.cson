@@ -16,6 +16,7 @@ packages: [
   "linter-eslint"
   "linter-gadkod"
   "linter-htmlhint"
+  "local-config"
   "markdown-writer"
   "open-in-browser"
   "package-sync"
