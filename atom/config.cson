@@ -62,7 +62,6 @@
       "csslint"
       "htmlhint"
     ]
-    showErrorInline: false
     statusBar: "Show error if the cursor is in range"
     showErrorPanel: false
   htmlhint:

@@ -3,7 +3,7 @@
     email = info@flatland.be
 [core]
     excludesfile = ~/.gitignore_global
-    editor = sublime
+	editor = nano
 [alias]
     aa = add --all
     st = status
@@ -43,3 +43,5 @@
     smudge = git-media-smudge %f
 [credential]
     helper = osxkeychain
+[push]
+	default = simple
