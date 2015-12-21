@@ -35,3 +35,9 @@ eval "$(gulp --completion=bash)"
 
 # Sote inclusion
 source ~/.sote/bin/sote
+
+# enpot completion
+. <(enpot completion)
+
+# npm completion
+. <(npm completion)
