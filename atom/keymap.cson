@@ -38,6 +38,10 @@
   'cmd-alt-j': 'bookmarks:view-all'
   'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
 
+# Add file from tree view
+'.platform-darwin':
+    'ctrl-cmd-n': 'tree-view:add-file'
+
 # Remapping autocomplete toggle
 'atom-text-editor':
   'cmd-space': 'autocomplete:toggle'
