@@ -7,3 +7,4 @@ dev
 .node-gyp
 atom/packages
 atom/.apm
+atom/blob-store

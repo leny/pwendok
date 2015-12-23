@@ -89,22 +89,11 @@
     "trim-before": true
   "local-config":
     applyOnActivation: true
-".css.scss.source":
-  editor:
-    tabLength: 4
-    softTabs: true
 ".basic.html.text":
   editor:
     tabLength: 4
     softTabs: true
-".jade.source":
-  whitespace:
-    removeTrailingWhitespace: true
-".source.yaml":
-  editor:
-    tabLength: 2
-    softTabs: true
-".js.source":
+".css.scss.source":
   editor:
     tabLength: 4
     softTabs: true
@@ -112,10 +101,21 @@
   editor:
     tabLength: 2
     softTabs: true
-"source.coffee":
+".js.source":
   editor:
     tabLength: 4
+    softTabs: true
+".source.yaml":
+  editor:
+    tabLength: 2
+    softTabs: true
+".jade.source":
+  whitespace:
+    removeTrailingWhitespace: true
 "source.js":
   editor:
     tabLength: 4
     softTabs: true
+"source.coffee":
+  editor:
+    tabLength: 4
