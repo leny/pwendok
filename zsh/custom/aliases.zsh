@@ -10,6 +10,9 @@ alias ...="cd ~-"
 alias cleansvn="find ./ -name '.svn' | xargs rm -Rf"
 alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
+# --- php
+alias elefan="php -S localhost:8080"
+
 # --- vagrant
 alias vup="vagrant up"
 alias vdestroy="vagrant destroy --force"
@@ -41,4 +44,4 @@ alias tower="gittower ."
 # --- docker & Boot2Docker
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
-alias dockup="docker-machine env dev && eval '\$(docker-machine env dev)'"
+alias dockup="docker-machine env dev && eval '\\$(docker-machine env dev)'"

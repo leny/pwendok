@@ -10,6 +10,6 @@ ZSH_THEME="leny"
     # Custom folder location
 ZSH_CUSTOM=$PWENDOK/zsh/custom
     # Plugins
-plugins=(git depo sote)
+plugins=(git brew depo docker sote)
 
 source $ZSH/oh-my-zsh.sh
