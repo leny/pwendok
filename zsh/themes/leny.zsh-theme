@@ -19,11 +19,11 @@ $(prompt_user_style)[\
 $fg_no_bold[magenta]@\
 $fg_no_bold[white]%m\
 $(prompt_user_style):\
-$fg_no_bold[cyan]%~\
+$fg_no_bold[cyan]%40<(…)<%~%<<%{$reset_color%}\
 $(prompt_user_style)]
 $(prompt_user_style)➜ %{$reset_color%}'
 
-RPROMPT='%{${_lineup}%}$(git_prompt_info)%{${_linedown}%}'
+RPROMPT='%{${_lineup}%}$(git_prompt_info)%{${_linedown}%}%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="$(prompt_user_style)(%{$fg_no_bold[green]%}git%{$fg_no_bold[magenta]%}›"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$(prompt_user_style))"
