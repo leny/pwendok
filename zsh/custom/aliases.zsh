@@ -44,4 +44,4 @@ alias tower="gittower ."
 # --- docker & Boot2Docker
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
-alias dockup="docker-machine env dev && eval '\\$(docker-machine env dev)'"
+alias dockup="docker-machine env dev && eval \"\$(docker-machine env dev)\""
