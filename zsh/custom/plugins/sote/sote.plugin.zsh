@@ -150,7 +150,7 @@ sote() {
             return;
             ;;
         *)
-            path=$( git config --file $store --get "store.$action" )
+            dest_path=$( git config --file $store --get "store.$action" )
             if [ "$dest_path" != "" ]
             then
                 cd $dest_path
