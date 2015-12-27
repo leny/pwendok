@@ -23,3 +23,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # completions
 . <(npm completion)
 . <(enpot completion)
+eval "$(gulp --completion=zsh)"

@@ -8,3 +8,4 @@ dev
 atom/packages
 atom/.apm
 atom/blob-store
+atom/config.cson.bck
