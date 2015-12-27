@@ -29,6 +29,7 @@ packages: [
   "string-looper"
   "Stylus"
   "tab-control"
+  "todo-show"
   "tomorrow-night-eighties"
   "tree-ignore"
   "w3c-validation"
