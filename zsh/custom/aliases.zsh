@@ -8,6 +8,7 @@ alias ...="cd ~-"
 
 # --- utils
 alias cleansvn="find ./ -name '.svn' | xargs rm -Rf"
+alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
 alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
 # --- php
