@@ -8,6 +8,7 @@ alias ...="cd ~-"
 
 # --- utils
 alias cleansvn="find ./ -name '.svn' | xargs rm -Rf"
+alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
 alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
 # --- php
@@ -45,3 +46,7 @@ alias tower="gittower ."
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
 alias dockup="docker-machine env dev && eval \"\$(docker-machine env dev)\""
+
+# --- git (overrides from oh-my-zsh/git - )
+alias gcm="git commit -m"
+alias gs="git status -sb"
