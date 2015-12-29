@@ -24,6 +24,7 @@ p7zip
 phantomjs
 ssh-copy-id
 svn
+tmux
 tree
 wget --enable-iri
 zsh
