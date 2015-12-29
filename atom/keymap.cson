@@ -26,6 +26,7 @@
   'cmd-h': 'unset!'
   # 'cmd-9': 'unset!'
   'ctrl-tab': 'native!'
+  'ctrl-cmd-w': 'window:close'
 
 # Remapping Keybindings for Bookmark handling
     # Disabling conflicts
@@ -81,6 +82,7 @@
   'cmd-k cmd-f cmd-0': 'pane-manager:focusToPaneTen'
 # Remapping close all
   'cmd-shift-w': 'tabs:close-all-tabs'
+
 
 # Emmet
 # language-specific Tab triggers
