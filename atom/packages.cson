@@ -1,4 +1,5 @@
 packages: [
+  "caniuse"
   "coffeescript-check"
   "easy-motion-redux"
   "editorconfig"
