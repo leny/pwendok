@@ -23,6 +23,7 @@
   'cmd-2': 'unset!'
   'cmd-6': 'unset!'
   'cmd-7': 'unset!'
+  'cmd-h': 'unset!'
   # 'cmd-9': 'unset!'
   'ctrl-tab': 'native!'
 
@@ -140,3 +141,11 @@
   'cmd-g cmd-"': "markdown-writer:toggle-codeblock-text"
   "cmd-g cmd-o": "markdown-writer:toggle-ol"
   "cmd-g cmd-u": "markdown-writer:toggle-ul"
+
+# CoffeeScript Check
+".platform-darwin atom-text-editor:not([mini])":
+  "cmd-g cmd-c": "coffeescript-check:check"
+
+# W3C Validation
+".platform-darwin atom-text-editor:not([mini])":
+  "cmd-g cmd-h": "w3c-validation:validate"
