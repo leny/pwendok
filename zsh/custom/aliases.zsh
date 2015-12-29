@@ -11,6 +11,14 @@ alias cleansvn="find ./ -name '.svn' | xargs rm -Rf"
 alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
 alias tree="find . | sed 's/[^/]*\//|   /g;s/| *\([^| ]\)/+--- \1/'"
 
+# --- ps
+alias psa="ps aux"
+alias psg="ps aux | grep "
+
+# --- dutils
+alias df='df -h'
+alias du='du -h -d 2'
+
 # --- php
 alias elefan="php -S localhost:8080"
 
