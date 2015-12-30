@@ -46,6 +46,7 @@ alias npmisd="npm install --save-dev"
 alias nig="npm install -g"
 alias npmig="npm install -g"
 alias npmo="npm outdated --depth=0"
+alias nity="npm init -y"
 
 # --- tower
 alias tower="gittower ."
