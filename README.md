@@ -14,7 +14,7 @@ The content of my dotfiles are compiled from my personal experience & from [many
 Commands to run after a fresh install.  
 **Note:** the following list (and the whole content of this *repo*) is useful for me, but feel free to dig into it, I hope some of my tools can help you too!
 
-1. Configure sys prefs & Finder prefs
+1. Configure sys prefs & Finder prefs (remap capslock to ctrl)
 2. Install all the fonts from the NAS.
 3. Install XCode Command Line tools with `xcode-select --install`, then agree to xcode license with `sudo xcodebuild -license`
 4. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
