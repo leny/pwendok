@@ -89,6 +89,8 @@
     "trim-before": true
   "local-config":
     applyOnActivation: true
+  caniuse:
+    useAccessibleColors: true
 ".basic.html.text":
   editor:
     tabLength: 4
@@ -99,7 +101,7 @@
     softTabs: true
 ".coffee.source":
   editor:
-    tabLength: 2
+    tabLength: 4
     softTabs: true
 ".js.source":
   editor:
