@@ -1,55 +1,25 @@
-# Your keymap
-#
-# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
-# to apply styles to elements, Atom keymaps use selectors to associate
-# keystrokes with events in specific contexts.
-#
-# You can create a new keybinding in this file by typing "key" and then hitting
-# tab.
-#
-# Here's an example taken from Atom's built-in keymap:
-#
-# 'atom-text-editor':
-#   'enter': 'editor:newline'
-#
-# 'atom-workspace':
-#   'ctrl-P': 'core:move-up'
-#   'ctrl-p': 'core:move-down'
-#
+# Atom's keymap
 
-# Disabling some useless keybindings
 'body':
+  # Disabling some useless keybindings
   'cmd-0': 'unset!'
   'cmd-2': 'unset!'
   'cmd-6': 'unset!'
   'cmd-7': 'unset!'
   'cmd-h': 'unset!'
-  # 'cmd-9': 'unset!'
   'ctrl-tab': 'native!'
   'ctrl-cmd-w': 'window:close'
 
-# Remapping Keybindings for Bookmark handling
-    # Disabling conflicts
-'atom-workspace atom-text-editor:not([mini])':
-  'cmd-j': 'unset!' # 'editor:join-lines'
-    # Remapping keys
-'.platform-darwin atom-text-editor':
-  'cmd-j': 'bookmarks:toggle-bookmark'
-  'ctrl-j': 'bookmarks:jump-to-next-bookmark'
-  'ctrl-shift-j': 'bookmarks:jump-to-previous-bookmark'
-  'cmd-alt-j': 'bookmarks:view-all'
-  'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
-
-# Add file from tree view
 '.platform-darwin':
-    'ctrl-cmd-n': 'tree-view:add-file'
+  # Add file from tree view
+  'ctrl-cmd-n': 'tree-view:add-file'
 
-# Remapping autocomplete toggle
-'atom-text-editor':
-  'cmd-space': 'autocomplete:toggle'
+'atom-workspace atom-text-editor:not([mini])':
+  # Disabling conflicts
+  'cmd-j': 'unset!' # 'editor:join-lines'
 
-# Remapping Keybindings for Pane Manager
 '.platform-darwin atom-workspace':
+  # Remapping Keybindings for Pane Manager
   'cmd-k cmd-l cmd-&': 'pane-manager:changeLayoutOne'
   'cmd-k cmd-l cmd-2': 'pane-manager:changeLayoutTwo'
   'cmd-k cmd-l cmd-"': 'pane-manager:changeLayoutThree'
@@ -80,58 +50,58 @@
   'cmd-k cmd-f cmd-!': 'pane-manager:focusToPaneEight'
   'cmd-k cmd-f cmd-ç': 'pane-manager:focusToPaneNine'
   'cmd-k cmd-f cmd-0': 'pane-manager:focusToPaneTen'
-# Remapping close all
+  # Remapping close all
   'cmd-shift-w': 'tabs:close-all-tabs'
 
-
-# Emmet
-# language-specific Tab triggers
-# you can add more triggers by changing `grammar` attribute values
-'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
-  'tab': 'emmet:expand-abbreviation-with-tab'
-# Remapping Emmet
-'.platform-darwin atom-text-editor:not([mini])':
-  'shift-cmd-E': 'unset!'
-  'shift-cmd-E': 'easy-motion-redux:start'
-  'cmd-g cmd-e': 'easy-motion-redux:start'
+'.platform-darwin atom-text-editor':
+  # Remapping bookmarks
+  'cmd-j': 'bookmarks:toggle-bookmark'
+  'ctrl-j': 'bookmarks:jump-to-next-bookmark'
+  'ctrl-shift-j': 'bookmarks:jump-to-previous-bookmark'
+  'cmd-alt-j': 'bookmarks:view-all'
+  'ctrl-alt-cmd-j': 'bookmarks:clear-bookmarks'
 
 'atom-text-editor:not([mini])':
+  # Remapping Emmet
   'alt-shift-up': 'unset!'
   'alt-shift-down': 'unset!'
-
-# Remapping Spotify
-'.platform-darwin, .platform-darwin .command-palette atom-text-editor':
-  'cmd-alt-shift-right': 'unset!'
-  'cmd-alt-shift-left': 'unset!'
-  'ctrl-alt-t': 'unset!'
-  'ctrl-alt-P': 'unset!'
-  'ctrl-alt-p': 'unset!'
-
-# Lazy Motion
-'atom-text-editor':
+  # Expand region
+  'alt-shift-up': 'expand-region:expand'
+  'alt-shift-down': 'expand-region:shrink'
+  # Wrap'n'pad
+  'cmd-g cmd-(': 'wrap-and-pad:wrap-and-pad-with-parenthesis'
+  'cmd-g cmd-5': 'wrap-and-pad:wrap-and-pad-with-brackets'
+  'cmd-g alt-cmd-(': 'wrap-and-pad:wrap-and-pad-with-curly-brackets'
+  # CoffeeScript Check
+  "cmd-g cmd-c": "coffeescript-check:check"
+  # W3C Validation
+  "cmd-g cmd-h": "w3c-validation:validate"
+  # Remapping autocomplete toggle
+  'cmd-space': 'autocomplete:toggle'
+  # Lazy Motion
   'shift-cmd-I': 'lazy-motion:forward'
   'cmd-g cmd-i': 'lazy-motion:forward'
   'shift-cmd-U': 'lazy-motion:backward'
   'cmd-g cmd-u': 'lazy-motion:backward'
+  # Easy Motion (redux)
+  'cmd-g cmd-e': 'easy-motion-redux:start'
 
-'.platform-darwin atom-text-editor.lazy-motion':
+'.platform-darwin atom-text-editor:not([mini])':
+  # Remapping Emmet
+  'shift-cmd-E': 'unset!'
+
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
+  # Emmet's language-specific Tab triggers
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+'atom-text-editor.lazy-motion':
+  # Lazy Motion internals
   'tab': 'lazy-motion:forward'
   'shift-tab': 'lazy-motion:backward'
   'esc': 'core:cancel'
 
-# Expand Region
-'atom-text-editor:not([mini])':
-  'alt-shift-up': 'expand-region:expand'
-  'alt-shift-down': 'expand-region:shrink'
-
-# Wrap'n'pad
-'atom-text-editor:not([mini])':
-  'cmd-g cmd-(': 'wrap-and-pad:wrap-and-pad-with-parenthesis'
-  'cmd-g cmd-5': 'wrap-and-pad:wrap-and-pad-with-brackets'
-  'cmd-g alt-cmd-(': 'wrap-and-pad:wrap-and-pad-with-curly-brackets'
-
-# Markdown Writer
 ".platform-darwin atom-text-editor:not([mini])[data-grammar~='gfm']":
+  # Markdown Writer
   "cmd-g cmd-l": "markdown-writer:insert-link"
   "cmd-g cmd-g": "markdown-writer:insert-image"
   "cmd-g cmd-i": "markdown-writer:toggle-italic-text"
@@ -143,11 +113,3 @@
   'cmd-g cmd-"': "markdown-writer:toggle-codeblock-text"
   "cmd-g cmd-o": "markdown-writer:toggle-ol"
   "cmd-g cmd-u": "markdown-writer:toggle-ul"
-
-# CoffeeScript Check
-".platform-darwin atom-text-editor:not([mini])":
-  "cmd-g cmd-c": "coffeescript-check:check"
-
-# W3C Validation
-".platform-darwin atom-text-editor:not([mini])":
-  "cmd-g cmd-h": "w3c-validation:validate"
