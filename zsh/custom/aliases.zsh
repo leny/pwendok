@@ -1,5 +1,7 @@
-# -- aliases
+# -- reload
+alias pwreload="source ~/.zshrc"
 
+# -- aliases
 alias c="clear"
 alias q="exit"
 
