@@ -14,7 +14,6 @@
   core:
     disabledPackages: [
       "wrap-guide"
-      "gutter-shadow"
     ]
     themes: [
       "seti-ui"
@@ -89,6 +88,8 @@
     "trim-before": true
   "local-config":
     applyOnActivation: true
+  caniuse:
+    useAccessibleColors: true
 ".basic.html.text":
   editor:
     tabLength: 4
