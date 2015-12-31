@@ -61,3 +61,10 @@ alias dockup="docker-machine env dev && eval \"\$(docker-machine env dev)\""
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
 alias gs="git status -sb"
+
+# --- tmux
+alias tmn="tmux new -s"
+alias tma="tmux attach -t"
+alias tml="tmux ls"
+alias tmks="tmux kill-server"
+alias tmk="tmux kill-session -t"
