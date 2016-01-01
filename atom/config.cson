@@ -90,7 +90,7 @@
     applyOnActivation: true
   caniuse:
     useAccessibleColors: true
-".css.scss.source":
+".basic.html.text":
   editor:
     tabLength: 4
     softTabs: true
@@ -103,7 +103,7 @@
     removeTrailingWhitespace: true
 ".source.yaml":
   editor:
-    tabLength: 2
+    tabLength: 4
     softTabs: true
 ".js.source":
   editor:
@@ -116,6 +116,7 @@
 "source.coffee":
   editor:
     tabLength: 4
+    softTabs: true
 "source.js":
   editor:
     tabLength: 4
