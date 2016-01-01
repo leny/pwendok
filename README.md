@@ -1,4 +1,4 @@
-# <img src="dotfiles-logo.svg" alt="dotfiles logo" width="200">
+# <img src="https://raw.githubusercontent.com/leny/pwendok/master/dotfiles-logo.svg" alt="dotfiles logo" width="200">
 
 > My dotfiles  
 > These are my dotfiles. There are many of them, but those are mine. :)
