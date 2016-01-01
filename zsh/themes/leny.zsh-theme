@@ -21,7 +21,7 @@ $(prompt_user_style) :\
 $fg_no_bold[cyan] %40<(…)<%~%<<%{$reset_color%}
 $(prompt_user_style)➜ %{$reset_color%}'
 
-RPROMPT='%{${_lineup}%}$(git_prompt_info)$(git_prompt_status)$(git_remote_status)%{${_linedown}%}%{$reset_color%}'
+RPROMPT='%{${_lineup}%}$(dock-compose-status)$(git_prompt_info)$(git_prompt_status)$(git_remote_status)%{${_linedown}%}%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[green]%}git %{$fg_no_bold[yellow]%}› %{$fg_no_bold[magenta]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -34,3 +34,10 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg_bold[purple]%} %{↓%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg_bold[cyan]%} %{↑%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg_no_bold[gray]%} ?"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%} %{✓%G%}"
+
+ZSH_THEME_DOCKER_PROMPT_PREFIX="%{$fg_no_bold[green]%}docker %{$fg_no_bold[yellow]%}›"
+ZSH_THEME_DOCKER_PROMPT_NO_MACHINE="%{$fg_no_bold[red]%} no machine"
+ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX="%{$fg_no_bold[cyan]%}"
+ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX="%{$fg_no_bold[magenta]%}containers up"
+ZSH_THEME_DOCKER_NO_CONTAINERS="%{$fg_bold[yellow]%} no %{$fg_no_bold[magenta]%}container up"
+ZSH_THEME_DOCKER_PROMPT_SUFFIX=" %{$fg_no_bold[yellow]%}- "
