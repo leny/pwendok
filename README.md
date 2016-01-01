@@ -1,4 +1,4 @@
-# pwendok
+# <img src="https://raw.githubusercontent.com/leny/pwendok/master/dotfiles-logo.svg" alt="dotfiles logo" width="200">
 
 > My dotfiles  
 > These are my dotfiles. There are many of them, but those are mine. :)
@@ -52,3 +52,7 @@ If you don't know [f.lux](https://justgetflux.com), go get a look, and try it. Y
 * **day temp:** sunlite (5500K)
 * **late temp:** fluorescent (4200K)
 * **night temp:** tungsten (2700K)
+
+* * *
+
+dotfiles' logo by [Joel Glovier](https://github.com/jglovier/dotfiles-logo)
