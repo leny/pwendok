@@ -84,7 +84,7 @@
   'shift-cmd-U': 'lazy-motion:backward'
   'cmd-g cmd-u': 'lazy-motion:backward'
   # Easy Motion (redux)
-  'cmd-g cmd-e': 'easy-motion-redux:start'
+  'cmd-g cmd-e': 'easy-motion-redux:words'
 
 '.platform-darwin atom-text-editor:not([mini])':
   # Remapping Emmet
