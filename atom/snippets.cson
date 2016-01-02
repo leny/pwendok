@@ -21,3 +21,8 @@
       $3
     }; // $1
     """
+
+'.source.js':
+  'console.log':
+    'prefix': 'clog'
+    'body': """console.log( $1 );"""
