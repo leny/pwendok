@@ -91,6 +91,8 @@
     applyOnActivation: true
   caniuse:
     useAccessibleColors: true
+  "toggle-quotes":
+    quoteCharacters: "\"'`"
 ".basic.html.text":
   editor:
     tabLength: 4

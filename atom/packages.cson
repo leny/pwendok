@@ -39,6 +39,7 @@ packages: [
   "Stylus"
   "tab-control"
   "todo-show"
+  "toggle-quotes"
   "tomorrow-night-eighties"
   "w3c-validation"
   "wrap-and-pad"
