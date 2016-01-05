@@ -57,6 +57,12 @@ alias tower="gittower ."
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
 alias dockup="docker-machine env dev && eval \"\$(docker-machine env dev)\""
+alias dstop="docker stop \$(docker ps -q)"
+alias dclean="docker stop \$(docker ps -a -q) && docker rm \$(docker ps -a -q)"
+alias dcb="docker-compose build"
+alias dcu="docker-compose up -d"
+alias dcl="docker-compose logs"
+alias dcs="docker-compose stop"
 
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
