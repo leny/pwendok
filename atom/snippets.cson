@@ -18,11 +18,19 @@
   'Function Expression':
     'prefix': 'varfunc'
     'body': """var $1 = function( $2 ) {
-      $3
+        $3
     }; // $1
     """
-
-'.source.js':
   'console.log':
     'prefix': 'clog'
     'body': """console.log( $1 );"""
+  'function':
+    'prefix': 'func'
+    'body': """function( $1 ) {
+        $2
+    };"""
+  'arrow function':
+    'prefix': '=>',
+    'body': """( $1 ) => {
+        $2
+    };"""
