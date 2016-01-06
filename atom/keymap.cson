@@ -85,6 +85,9 @@
   'cmd-g cmd-u': 'lazy-motion:backward'
   # Easy Motion (redux)
   'cmd-g cmd-e': 'easy-motion-redux:words'
+  # Indent Toggle On Paste
+  'cmd-shift-v': 'indent-toggle-on-paste:paste'
+
 
 '.platform-darwin atom-text-editor:not([mini])':
   # Remapping Emmet
