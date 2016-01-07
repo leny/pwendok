@@ -53,16 +53,6 @@ if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop
     sudo chmod u+s "$binroot/htop"
 fi
 
-# bash
-if [[ "$(type -P $binroot/bash)" && "$(cat /etc/shells | grep -q "$binroot/bash")" ]]; then
-    echo "- Adding $binroot/bash to the list of acceptable shells"
-    echo "$binroot/bash" | sudo tee -a /etc/shells >/dev/null
-fi
-# if [[ "$(dscl . -read ~ UserShell | awk '{print $2}')" != "$binroot/bash" ]]; then
-#     echo "- Making $binroot/bash your default shell"
-#     sudo chsh -s "$binroot/bash" "$USER" >/dev/null 2>&1
-# fi
-
 echo ""
 echo ""
 echo ""
@@ -75,16 +65,8 @@ qlmanage -r
 echo ""
 echo ""
 echo ""
-echo "----- Install homebrew's bash -----"
-
-grep "/usr/local/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
-chsh -s /usr/local/bin/bash
-
-echo ""
-echo ""
-echo ""
 echo "----- Install useful global npm packages -----"
-npm install -g bower browserify codo coffee-script coffeegulp docco eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus stylint tankipas vibox vows woazar yo
+npm install -g babel-cli bower browserify coffee-script enpot eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
 git clone https://github.com/gruntjs/grunt-init-gruntfile ~/.grunt-init/gruntfile
 git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntplugin
 git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
