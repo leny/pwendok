@@ -2,9 +2,6 @@
 
 # Install GNU packages (and override OSX version)
 
-ansible
-bash
-bash-completion
 docker
 docker-compose
 docker-machine

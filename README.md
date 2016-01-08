@@ -33,7 +33,6 @@ Commands to run after a fresh install.
     * Pocket
     * Reeder
     * Rested
-    * Sketch
     * Slack
     * Soulver
     * The Unarchiver

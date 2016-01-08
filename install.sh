@@ -9,30 +9,10 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo ""
 echo ""
 echo ""
-echo "----- Install vcprompt -----"
-
-mkdir -pv "$DOTFILES_DIR/bin"
-curl -L https://github.com/djl/vcprompt/raw/master/bin/vcprompt > "$DOTFILES_DIR/bin/vcprompt"
-chmod +x "$DOTFILES_DIR/bin/vcprompt"
-
-echo ""
-echo ""
-echo ""
-echo "----- Install sote -----"
-
-git clone https://github.com/krkn/sote ~/.sote
-
-echo ""
-echo ""
-echo ""
 echo "----- Link dotfiles -----"
 
-ln -sfv "$DOTFILES_DIR/bash/bash_profile" ~/.bash_profile
-ln -sfv "$DOTFILES_DIR/bash/inputrc" ~/.inputrc
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
-ln -sfv "$DOTFILES_DIR/tmux/tmux.conf" ~/.tmux.conf
 ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
-ln -sfv "$DOTFILES_DIR/eslintrc/eslintrc" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/hg/hgignore_global" ~/.hgignore_global

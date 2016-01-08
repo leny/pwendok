@@ -1,6 +1,5 @@
 packages: [
   "atom-beautify"
-  "atom-ternjs"
   "caniuse"
   "coffeescript-check"
   "easy-motion-redux"
