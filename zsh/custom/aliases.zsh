@@ -67,6 +67,8 @@ alias dcs="docker-compose stop"
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
 alias gs="git status -sb"
+alias gitinit="git init"
+alias gi="git init"
 
 # --- tmux
 alias tmn="tmux new -s"
