@@ -9,6 +9,7 @@
   'cmd-h': 'unset!'
   'ctrl-tab': 'native!'
   'ctrl-cmd-w': 'window:close'
+  'ctrl-o': 'core:save'
 
 '.platform-darwin':
   # Add file from tree view
