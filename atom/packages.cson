@@ -1,4 +1,5 @@
 packages: [
+  "apidoc-snippets"
   "atom-beautify"
   "caniuse"
   "coffeescript-check"
