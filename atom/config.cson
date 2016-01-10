@@ -97,10 +97,6 @@
   editor:
     tabLength: 4
     softTabs: true
-".basic.html.text":
-  editor:
-    tabLength: 4
-    softTabs: true
 ".jade.source":
   whitespace:
     removeTrailingWhitespace: true
