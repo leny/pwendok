@@ -37,3 +37,16 @@
   'import statement':
     'prefix': 'import',
     'body': """import $1 from \"$2\";"""
+
+'*':
+  'Webshaker Header':
+    'prefix': 'wsk-header'
+    'body': """/* webshaker/${1:repo}
+\ *
+\ * ${2:/path} - ${3:description}
+\ *
+\ * coded by ${4:leny@flatLand!}
+\ * started at ${5:date}
+\ */
+
+$6"""

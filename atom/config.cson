@@ -97,26 +97,26 @@
   editor:
     tabLength: 4
     softTabs: true
-".jade.source":
-  whitespace:
-    removeTrailingWhitespace: true
-".source.yaml":
+".coffee.source":
   editor:
-    tabLength: 4
+    tabLength: 2
     softTabs: true
 ".js.source":
   editor:
     tabLength: 4
     softTabs: true
-".coffee.source":
-  editor:
-    tabLength: 2
-    softTabs: true
-"source.coffee":
+".source.yaml":
   editor:
     tabLength: 4
     softTabs: true
+".jade.source":
+  whitespace:
+    removeTrailingWhitespace: true
 "source.js":
+  editor:
+    tabLength: 4
+    softTabs: true
+"source.coffee":
   editor:
     tabLength: 4
     softTabs: true
