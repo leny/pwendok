@@ -28,12 +28,12 @@
     'prefix': 'func'
     'body': """function( $1 ) {
         $2
-    };"""
+    }"""
   'arrow function':
     'prefix': '=>',
     'body': """( $1 ) => {
         $2
-    };"""
+    }"""
   'import statement':
     'prefix': 'import',
     'body': """import $1 from \"$2\";"""
