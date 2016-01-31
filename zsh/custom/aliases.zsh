@@ -1,5 +1,6 @@
 # -- reload
 alias pwreload="source ~/.zshrc"
+alias dotreload="source ~/.zshrc"
 
 # -- aliases
 alias c="clear"
@@ -23,6 +24,10 @@ alias du='du -h -d 2'
 
 # --- php
 alias elefan="php -S localhost:8080"
+
+# --- python
+alias python="python3"
+alias pip="pip3"
 
 # --- vagrant
 alias vup="vagrant up"

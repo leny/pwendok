@@ -19,6 +19,8 @@ nmap
 node
 p7zip
 phantomjs
+python
+python3
 ssh-copy-id
 svn
 tmux
