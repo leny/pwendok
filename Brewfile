@@ -11,6 +11,7 @@ findutils
 git
 git-extras
 gnu-sed --default-names
+gstreamer
 htop-osx
 hub
 lynx
@@ -21,6 +22,10 @@ p7zip
 phantomjs
 python
 python3
+sdl2
+sdl2_image
+sdl2_ttf
+sdl2_mixer
 ssh-copy-id
 svn
 tmux
