@@ -83,6 +83,13 @@ echo ""
 echo "----- Install apm packages -----"
 apm install package-sync
 
+echo ""
+echo ""
+echo ""
+echo "----- Install python packages -----"
+pip install -I Cython==0.23
+USE_OSX_FRAMEWORKS=0 pip install kivy
+
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo ""
