@@ -23,7 +23,6 @@ python
 python3
 ssh-copy-id
 svn
-tmux
 tree
 wget --enable-iri
 zsh
