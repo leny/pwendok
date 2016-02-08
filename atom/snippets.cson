@@ -37,6 +37,12 @@
   'import statement':
     'prefix': 'import',
     'body': """import $1 from \"$2\";"""
+  'ajax error':
+    'prefix': 'ajerr',
+    'body': """return ajax.error( oRequest, oResponse, ${1:500}, "${2:UNKNOWN_ERROR}"$3 );"""
+  'ajax send':
+    'prefix': 'ajsnd',
+    'body': """return ajax.send( oRequest, oResponse, $1 );"""
 
 '*':
   'Webshaker Header':
