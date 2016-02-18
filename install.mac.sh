@@ -58,10 +58,6 @@ if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop
     sudo chmod u+s "$binroot/htop"
 fi
 
-# nvm
-mkdir ~/.nvm
-nvm install node
-
 echo ""
 echo ""
 echo ""
