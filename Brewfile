@@ -17,7 +17,6 @@ hub
 lynx
 mercurial
 nmap
-node
 nvm
 p7zip
 phantomjs

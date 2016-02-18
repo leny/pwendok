@@ -60,6 +60,7 @@ fi
 
 # nvm
 mkdir ~/.nvm
+nvm install node
 
 echo ""
 echo ""
