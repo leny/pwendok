@@ -4,6 +4,10 @@ export ZSH=~/.oh-my-zsh
 # Path to pwendok
 export PWENDOK=~/.pwendok
 
+# nvm configuration
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
 # Configuration
     # Theme
 ZSH_THEME="leny"
