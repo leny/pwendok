@@ -9,6 +9,34 @@ prompt_user_style() {
     fi
 }
 
+_start_time=$SECONDS
+prompt_preexec() {
+    _start_time=$SECONDS
+}
+
+prompt_precmd() {
+    timer_result=$(($SECONDS-$_start_time))
+    if [[ $timer_result -ge 3600 ]]; then
+        let "timer_hours = $timer_result / 3600"
+        let "remainder = $timer_result % 3600"
+        let "timer_minutes = $remainder / 60"
+        let "timer_seconds = $remainder % 60"
+        print -P "%{$fg_no_bold[magenta]%}◴ duration: %{$fg_bold[red]%}${timer_hours}h ${timer_minutes}m ${timer_seconds}s%{$reset_color%}"
+    elif [[ $timer_result -ge 60 ]]; then
+        let "timer_minutes = $timer_result / 60"
+        let "timer_seconds = $timer_result % 60"
+        print -P "%{$fg_no_bold[magenta]%}◴ duration: %{$fg_bold[yellow]%}${timer_minutes}m ${timer_seconds}s%{$reset_color%}"
+    elif [[ $timer_result -gt 5 ]]; then
+        print -P "%{$fg_no_bold[magenta]%}◴ duration: %{$fg_bold[green]%}${timer_result}s%{$reset_color%}"
+    fi
+    _start_time=$SECONDS
+}
+
+autoload -Uz add-zsh-hook
+
+add-zsh-hook preexec prompt_preexec
+add-zsh-hook precmd prompt_precmd
+
 _lineup=$'\e[1A'
 _linedown=$'\e[1B'
 
