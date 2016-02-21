@@ -5,6 +5,7 @@ alias dotreload="source ~/.zshrc"
 # -- aliases
 alias c="clear"
 alias q="exit"
+alias cdc="cd && clear"
 
 # --- navigation
 alias ...="cd ~-"
