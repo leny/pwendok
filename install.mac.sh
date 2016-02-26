@@ -89,6 +89,17 @@ echo ""
 echo "----- Install python packages -----"
 pip install -I Cython==0.23
 USE_OSX_FRAMEWORKS=0 pip install kivy
+pip install pygments
+
+echo ""
+echo ""
+echo ""
+echo "----- Generate directory structure -----"
+mkdir -p ~/Works/flatland
+mkdir -p ~/Works/hepl
+mkdir -p ~/Works/leny
+mkdir -p ~/Works/misc
+mkdir -p ~/Works/resources
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
