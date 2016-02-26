@@ -2,18 +2,21 @@
 
 # Install GNU packages (and override OSX version)
 
+ack
 docker
 docker-compose
 docker-machine
 coreutils
 moreutils
 findutils
+geoip
 git
 git-extras
 gnu-sed --default-names
 gstreamer
 htop-osx
 hub
+links
 lynx
 mercurial
 nmap
