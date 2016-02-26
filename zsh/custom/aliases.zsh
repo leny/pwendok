@@ -81,3 +81,7 @@ alias gcm="git commit -m"
 alias gs="git status -sb"
 alias gitinit="git init"
 alias gi="git init"
+
+# --- brew
+alias brup="brew update && brew upgrade && brew cleanup"
+alias burp="brup"
