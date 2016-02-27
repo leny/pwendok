@@ -11,7 +11,7 @@ if [ "$0" != "-zsh" ]; then
     echo ""
     echo ""
     echo ""
-    echo "----- Install oh-my-zsh -----"
+<    echo "----- Install oh-my-zsh -----"
     echo "After zsh install, re-run the script to continue."
 
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -71,7 +71,7 @@ echo ""
 echo ""
 echo ""
 echo "----- Install useful global npm packages -----"
-npm install -g babel-cli bower browserify coffee-script enpot eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
+npm install -g bower browserify coffee-script enpot eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
 git clone https://github.com/gruntjs/grunt-init-gruntfile ~/.grunt-init/gruntfile
 git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntplugin
 git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
