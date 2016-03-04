@@ -10,7 +10,7 @@ alias l="k -hA --si"
 alias ll="ls -lAFh"
 
 # --- navigation
-alias ...="cd ~-"
+alias ...="cd -"
 
 # --- redo last command with sudo
 alias fuck="sudo \$(fc -ln -1)"
