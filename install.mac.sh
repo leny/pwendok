@@ -12,6 +12,7 @@ echo ""
 echo "----- Finalize zsh installation -----"
 
 rm ~/.zshrc
+rm ~/.zshrc.pre-oh-my-zsh
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
 
