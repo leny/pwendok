@@ -16,7 +16,7 @@ Commands to run after a fresh install.
 
 1. Configure sys prefs & Finder prefs (remap capslock to ctrl)
 2. Install all the fonts from the NAS.
-3. Install XCode Command Line tools with `xcode-select --install`, then agree to xcode license with `sudo xcodebuild -license`
+3. Install XCode Command Line tools with `xcode-select --install`.
 4. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
 5. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
 6. App Install: complete the app installations with the AppStore, installing these apps :
