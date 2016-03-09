@@ -9,6 +9,15 @@ DOTFILES_DIR="$( cd "$( dirname "${(%):-%x}" )" && pwd )"
 echo ""
 echo ""
 echo ""
+echo "----- Finalize zsh installation -----"
+
+rm ~/.zshrc
+ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
+ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
+
+echo ""
+echo ""
+echo ""
 echo "----- Install tools for XCode -----"
 
 if [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then

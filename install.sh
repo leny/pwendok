@@ -11,7 +11,6 @@ echo ""
 echo ""
 echo "----- Link dotfiles -----"
 
-ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
@@ -26,7 +25,7 @@ echo ""
 echo "----- Install oh-my-zsh -----"
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
+
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
