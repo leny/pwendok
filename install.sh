@@ -20,6 +20,14 @@ ln -sfv "$DOTFILES_DIR/curl/curlrc" ~/.curlrc
 ln -sfv "$DOTFILES_DIR/wget/wgetrc" ~/.wgetrc
 ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
+echo ""
+echo ""
+echo ""
+echo "----- Install oh-my-zsh -----"
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
+
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
 echo ""

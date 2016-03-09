@@ -4,20 +4,7 @@
 START_TIME=$SECONDS
 
 # CWD
-DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-if [ "$0" != "-zsh" ]; then
-
-    echo ""
-    echo ""
-    echo ""
-<    echo "----- Install oh-my-zsh -----"
-    echo "After zsh install, re-run the script to continue."
-
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
-
-fi
+DOTFILES_DIR="$( cd "$( dirname "${(%):-%x}" )" && pwd )"
 
 echo ""
 echo ""
