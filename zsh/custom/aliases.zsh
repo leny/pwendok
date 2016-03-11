@@ -47,7 +47,6 @@ alias vstatus="vagrant status"
 
 # --- npm
 # european mirror
-alias enpm="npm --registry registry.npmjs.eu"
 alias ni="npm install"
 alias npmi="npm install"
 alias nri="rm -rf ./node_modules && npm install"
@@ -60,6 +59,7 @@ alias nig="npm install -g"
 alias npmig="npm install -g"
 alias npmo="npm outdated --depth=0"
 alias nity="npm init -y"
+alias nit="npm init"
 
 # --- tower
 alias tower="gittower ."
