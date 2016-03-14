@@ -1,5 +1,4 @@
 # -- reload
-alias pwreload="source ~/.zshrc"
 alias dotreload="source ~/.zshrc"
 
 # -- aliases
@@ -48,15 +47,10 @@ alias vstatus="vagrant status"
 # --- npm
 # european mirror
 alias ni="npm install"
-alias npmi="npm install"
 alias nri="rm -rf ./node_modules && npm install"
-alias npmri="rm -rf ./node_modules && npm install"
 alias nis="npm install --save"
-alias npmis="npm install --save"
 alias nisd="npm install --save-dev"
-alias npmisd="npm install --save-dev"
 alias nig="npm install -g"
-alias npmig="npm install -g"
 alias npmo="npm outdated --depth=0"
 alias nity="npm init -y"
 alias nit="npm init"
@@ -83,8 +77,7 @@ alias gitinit="git init"
 alias gi="git init"
 
 # --- brew
-alias brup="brew update && brew upgrade && brew cleanup"
-alias burp="brup"
+alias burp="brew update && brew upgrade && brew cleanup"
 
 # --- IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
