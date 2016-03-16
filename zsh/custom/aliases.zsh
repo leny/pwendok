@@ -27,9 +27,6 @@ alias psg="ps aux | grep "
 alias df='df -h'
 alias du='du -h -d 2'
 
-# --- php
-alias elefan="php -S localhost:8080"
-
 # --- python
 alias python="python3"
 alias pip="pip3"
