@@ -5,9 +5,9 @@ function is_dock_project() {
 }
 
 ZSH_THEME_DOCKER_PROMPT_PREFIX="dock:("
-ZSH_THEME_DOCKER_PROMPT_NO_MACHINE="%{$fg_bold[red]%}no machine"
-ZSH_THEME_DOCKER_NO_CONTAINERS="%{$fg_bold[red]%}no container"
-ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX="%{$fg_bold[green]%}%{%G%} containers up"
+ZSH_THEME_DOCKER_PROMPT_NO_MACHINE="%{$fg_bold[red]%} no machine"
+ZSH_THEME_DOCKER_NO_CONTAINERS="%{$fg_bold[red]%} no container"
+ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX="%{$fg_bold[green]%} %{%G%} containers up"
 ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX=""
 ZSH_THEME_DOCKER_PROMPT_SUFFIX=")"
 
@@ -27,7 +27,7 @@ function dock-compose-status() {
             if [[ $COUNTER == 0 ]]; then
                 echo -n $ZSH_THEME_DOCKER_NO_CONTAINERS
             else
-                echo -n "$ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX $COUNTER $ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX"
+                echo -n "$ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX$COUNTER$ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX"
             fi
         fi
         echo -n $ZSH_THEME_DOCKER_PROMPT_SUFFIX
