@@ -75,6 +75,7 @@ alias gi="git init"
 
 # --- brew
 alias burp="brew update && brew upgrade && brew cleanup"
+alias bcu="brew cask install `brew cask list`"
 
 # --- IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
