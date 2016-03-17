@@ -7,7 +7,7 @@ export PWENDOK=~/.pwendok
 # Configuration
     # Theme
 ZSH_THEME="leny"
-ZSH_THEME="leny-simple"
+ZSH_THEME="leny-powerline"
     # Custom folder location
 ZSH_CUSTOM=$PWENDOK/zsh/custom
     # Plugins
