@@ -83,9 +83,9 @@ prompt_dir() {
 
 prompt_context() {
     if [[ $UID -eq 0 ]] then
-        echo "%{$fg_bold[red]%}›%{$reset_color%}"
+        echo "%{$fg_bold[red]%}%{$reset_color%}"
     else
-        echo "%{$fg_no_bold[yellow]%}›%{$reset_color%}"
+        echo "%{$fg_no_bold[yellow]%}%{$reset_color%}"
     fi
 }
 
