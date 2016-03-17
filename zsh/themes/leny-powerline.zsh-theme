@@ -34,24 +34,9 @@ prompt_preexec() {
     _start_time=$SECONDS
 }
 
-TIMER_DISPLAY=''
+TIMER_RESULT=''
 prompt_precmd() {
-    timer_result=$(($SECONDS-$_start_time))
-    if [[ $timer_result -ge 3600 ]]; then
-        let "timer_hours = $timer_result / 3600"
-        let "remainder = $timer_result % 3600"
-        let "timer_minutes = $remainder / 60"
-        let "timer_seconds = $remainder % 60"
-        TIMER_DISPLAY="${timer_hours}h ${timer_minutes}m ${timer_seconds}s"
-    elif [[ $timer_result -ge 60 ]]; then
-        let "timer_minutes = $timer_result / 60"
-        let "timer_seconds = $timer_result % 60"
-        TIMER_DISPLAY="${timer_minutes}m ${timer_seconds}s"
-    elif [[ $timer_result -gt 5 ]]; then
-        TIMER_DISPLAY="${timer_result}s"
-    else
-        TIMER_DISPLAY=""
-    fi
+    TIMER_RESULT=$(($SECONDS-$_start_time))
     _start_time=$SECONDS
 }
 
@@ -65,28 +50,37 @@ add-zsh-hook precmd prompt_precmd
 # ------------------------------ STATUS
 
 prompt_status() {
-    [[ $UID -eq 0 ]] && prompt_segment black red ""
     [[ $RETVAL -ne 0 ]] && prompt_segment yellow black ""
-    [[ $TIMER_DISPLAY != "" ]] && prompt_segment white black " $TIMER_DISPLAY%{$fg_no_bold[white]%}"
+    [[ $UID -eq 0 ]] && prompt_segment black red ""
+}
+
+prompt_timer() {
+    if [[ $TIMER_RESULT -ge 3600 ]]; then
+        let "timer_hours = $TIMER_RESULT / 3600"
+        let "remainder = $TIMER_RESULT % 3600"
+        let "timer_minutes = $remainder / 60"
+        let "timer_seconds = $remainder % 60"
+        TIMER_DISPLAY="${timer_hours}h ${timer_minutes}m ${timer_seconds}s"
+        prompt_segment red white " $TIMER_DISPLAY%{$fg_no_bold[red]%}"
+    elif [[ $TIMER_RESULT -ge 60 ]]; then
+        let "timer_minutes = $TIMER_RESULT / 60"
+        let "timer_seconds = $TIMER_RESULT % 60"
+        TIMER_DISPLAY="${timer_minutes}m ${timer_seconds}s"
+        prompt_segment yellow white " $TIMER_DISPLAY%{$fg_no_bold[yellow]%}"
+    elif [[ $TIMER_RESULT -gt 5 ]]; then
+        TIMER_DISPLAY="${TIMER_RESULT}s"
+        prompt_segment green white " $TIMER_DISPLAY%{$fg_no_bold[green]%}"
+    fi
 }
 
 # ------------------------------ DIRECTORY
 
 prompt_dir() {
-    _bg='magenta'
+    _bg='blue'
     _fg='black'
     _dir='%40<(…)<%~% '
+
     prompt_segment $_bg $_fg $_dir
-}
-
-# ------------------------------ CONTEXT
-
-prompt_context() {
-    if [[ $UID -eq 0 ]] then
-        echo "%{$fg_bold[red]%}%{$reset_color%}"
-    else
-        echo "%{$fg_no_bold[yellow]%}%{$reset_color%}"
-    fi
 }
 
 # ------------------------------ GIT
@@ -136,16 +130,42 @@ ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX=" containers"
 ZSH_THEME_DOCKER_NO_CONTAINERS="0 container"
 ZSH_THEME_DOCKER_PROMPT_SUFFIX=""
 
+# ------------------------------ CONTEXT
+
+prompt_context() {
+    local symbols
+    symbols=()
+
+    [[ -e gulpfile.js ]] && symbols+="gulp"
+    [[ -e gulpfile.coffee ]] && symbols+="gulp"
+    [[ -e gruntfile.js ]] && symbols+="grunt"
+    [[ -e gruntfile.coffee ]] && symbols+="grunt"
+
+    [[ -n "$symbols" ]] && prompt_segment white black "$symbols"
+}
+
 # ------------------------------ /BUILD
 build_prompt() {
   RETVAL=$?
   prompt_status
+  prompt_timer
   prompt_dir
   prompt_git
   prompt_docker
+  prompt_context
   prompt_end
+}
+
+# ------------------------------ INVITE
+
+prompt_invite() {
+    if [[ $UID -eq 0 ]] then
+        echo "%{$fg_bold[red]%}%{$reset_color%}"
+    else
+        echo "%{$fg_no_bold[yellow]%}%{$reset_color%}"
+    fi
 }
 
 PROMPT='
 %{%f%b%k%}$(build_prompt)
-$(prompt_context) '
+$(prompt_invite) '
