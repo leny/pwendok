@@ -4,29 +4,29 @@
 # Powerline vars & segments functions
 CURRENT_BG='NONE'
 () {
-  local LC_ALL="" LC_CTYPE="fr_BE.UTF-8"
-  SEGMENT_SEPARATOR=$'\ue0b0'
+    local LC_ALL="" LC_CTYPE="fr_BE.UTF-8"
+    SEGMENT_SEPARATOR=$'\ue0b0'
 }
 prompt_segment() {
-  local bg fg
-  [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
-  [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
-  if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
-  else
-    echo -n "%{$bg%}%{$fg%} "
-  fi
-  CURRENT_BG=$1
-  [[ -n $3 ]] && echo -n $3
+    local bg fg
+    [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
+    [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
+    if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
+      echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    else
+      echo -n "%{$bg%}%{$fg%} "
+    fi
+    CURRENT_BG=$1
+    [[ -n $3 ]] && echo -n $3
 }
 prompt_end() {
-  if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
-  else
-    echo -n "%{%k%}"
-  fi
-  echo -n "%{%f%}"
-  CURRENT_BG=''
+    if [[ -n $CURRENT_BG ]]; then
+        echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    else
+        echo -n "%{%k%}"
+    fi
+    echo -n "%{%f%}"
+    CURRENT_BG=''
 }
 
 _start_time=$SECONDS
@@ -51,7 +51,18 @@ add-zsh-hook precmd prompt_precmd
 
 prompt_status() {
     [[ $RETVAL -ne 0 ]] && prompt_segment yellow black ""
-    [[ $UID -eq 0 ]] && prompt_segment black red ""
+}
+
+prompt_user() {
+    if [[ $UID -eq 0 ]]; then
+        prompt_segment black red ""
+    else
+        if [[ $USER != "leny" ]]; then
+            prompt_segment black yellow $USER
+        else
+            prompt_segment black yellow ""
+        fi
+    fi
 }
 
 prompt_timer() {
@@ -78,7 +89,7 @@ prompt_timer() {
 prompt_dir() {
     _bg='blue'
     _fg='black'
-    _dir='%40<(…)<%~% '
+    _dir="%$1<(…)<%~%<<"
 
     prompt_segment $_bg $_fg $_dir
 }
@@ -132,40 +143,105 @@ ZSH_THEME_DOCKER_PROMPT_SUFFIX=""
 
 # ------------------------------ CONTEXT
 
-prompt_context() {
-    local symbols
-    symbols=()
+prompt_tooling() {
+    local tooling
+    tooling=()
 
-    [[ -e gulpfile.js ]] && symbols+="gulp"
-    [[ -e gulpfile.coffee ]] && symbols+="gulp"
-    [[ -e gruntfile.js ]] && symbols+="grunt"
-    [[ -e gruntfile.coffee ]] && symbols+="grunt"
+    [[ -e gulpfile.js ]] && tooling+="gulp"
+    [[ -e gulpfile.coffee ]] && tooling+="gulp"
+    [[ -e gruntfile.js ]] && tooling+="grunt"
+    [[ -e gruntfile.coffee ]] && tooling+="grunt"
 
-    [[ -n "$symbols" ]] && prompt_segment white black "$symbols"
-}
-
-# ------------------------------ /BUILD
-build_prompt() {
-  RETVAL=$?
-  prompt_status
-  prompt_timer
-  prompt_dir
-  prompt_git
-  prompt_docker
-  prompt_context
-  prompt_end
+    [[ -n "$tooling" ]] && prompt_segment white black "$tooling"
 }
 
 # ------------------------------ INVITE
 
 prompt_invite() {
     if [[ $UID -eq 0 ]] then
-        echo "%{$fg_bold[red]%}%{$reset_color%}"
+        echo "\n%{$fg_bold[red]%}%{$reset_color%}"
     else
-        echo "%{$fg_no_bold[yellow]%}%{$reset_color%}"
+        echo "\n%{$fg_no_bold[yellow]%}%{$reset_color%}"
     fi
 }
 
+# ------------------------------ /BUILD
+
+build_prompt() {
+    RETVAL=$?
+
+    local _termWidth _restChars
+    (( _termWidth = ${COLUMNS} - 1 ))
+    _restChars=$_termWidth
+
+    # --- status (always printed)
+    _statusPart=$(prompt_status)
+    _statusCount=${#${(S)_statusPart//\%\{*\%\}}}
+    (( _restChars -= $_statusCount ))
+    prompt_status
+
+    # --- user (always printed)
+    _userPart=$(prompt_user)
+    _userCount=${#${(S)_userPart//\%\{*\%\}}}
+    (( _restChars -= $_userCount ))
+    prompt_user
+
+    # --- timer (always printed)
+    # _timerCount=${#${(S)$(prompt_timer)//\%\{*\%\}}}
+    _timerPart=$(prompt_timer)
+    _timerCount=${#${(S)_timerPart//\%\{*\%\}}}
+    (( _restChars -= $_timerCount ))
+    prompt_timer
+
+    # --- dir (printed to not exceed third of resting place)
+    (( _dirTrim = $_restChars / 3 ))
+    _dirPart=$(prompt_dir $_dirTrim)
+    _dirCount=${#_dirPart}
+    (( _restChars -= $_dirCount ))
+    prompt_dir $_dirTrim
+
+    # --- git (printed in smaller form if no place rest)
+    _gitPart=$(prompt_git)
+    _gitCount=${#${(S)_gitPart//\%\{*\%\}}}
+    if [[ $_gitCount -gt 0 ]]; then
+        if [[ $_gitCount -gt (( $_restChars / 1.5 )) ]]; then
+            _gitPart=$(prompt_segment black white "%{$fg_no_bold[magenta]%}%{$fg_no_bold[black]%}")
+            _gitCount=${#${(S)_gitPart//\%\{*\%\}}}
+            prompt_segment black white "%{$fg_no_bold[magenta]%}%{$fg_no_bold[black]%}"
+        else
+            prompt_git
+        fi
+    fi
+    (( _restChars -= $_gitCount ))
+
+    # --- docker (printed in smaller form if no place rest)
+    _dockerPart=$(prompt_docker)
+    _dockerCount=${#${(S)_dockerPart//\%\{*\%\}}}
+    if [[ $_dockerCount -gt 0 ]]; then
+        if [[ $_dockerCount -gt (( $_restChars / 1.25 )) ]]; then
+            _dockerPart=$(prompt_segment cyan black "▣%{$fg_no_bold[cyan]%}")
+            _dockerCount=${#${(S)_dockerPart//\%\{*\%\}}}
+            prompt_segment cyan black "▣%{$fg_no_bold[cyan]%}"
+        else
+            prompt_docker
+        fi
+    fi
+    (( _restChars -= $_dockerCount ))
+
+    # --- tooling (printed if place rest)
+    _toolingPart=$(prompt_tooling)
+    _toolingCount=${#${(S)_toolingPart//\%\{*\%\}}}
+    if [[ $_toolingCount -gt 0 ]]; then
+        if [[ $_toolingCount -lt $_restChars ]]; then
+            prompt_tooling
+        fi
+    fi
+    (( _restChars -= $_toolingCount ))
+
+    prompt_end
+
+    prompt_invite
+}
+
 PROMPT='
-%{%f%b%k%}$(build_prompt)
-$(prompt_invite) '
+%{%f%b%k%}$(build_prompt) '
