@@ -87,9 +87,15 @@ prompt_timer() {
 # ------------------------------ DIRECTORY
 
 prompt_dir() {
-    _bg='blue'
-    _fg='black'
-    _dir="%$1<(…)<%~%<<"
+    if [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)$' ]]; then
+        _bg='blue'
+        _fg='white'
+        _dir="$match[1]/%{$fg_bold[yellow]%}$match[2]%{$fg_no_bold[blue]%}"
+    else
+        _fg='black'
+        _bg='cyan'
+        _dir="%$1<(…)<%~%<<"
+    fi
 
     prompt_segment $_bg $_fg $_dir
 }
@@ -196,7 +202,7 @@ build_prompt() {
     # --- dir (printed to not exceed third of resting place)
     (( _dirTrim = $_restChars / 3 ))
     _dirPart=$(prompt_dir $_dirTrim)
-    _dirCount=${#_dirPart}
+    _dirCount=${#${(S)_dirPart//\%\{*\%\}}}
     (( _restChars -= $_dirCount ))
     prompt_dir $_dirTrim
 
