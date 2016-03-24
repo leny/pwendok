@@ -51,6 +51,7 @@ alias nig="npm install -g"
 alias npmo="npm outdated --depth=0"
 alias nity="npm init -y"
 alias nit="npm init"
+alias ncc="npm cache clear"
 
 # --- tower
 alias tower="gittower ."
