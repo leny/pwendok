@@ -60,7 +60,7 @@ fi
 echo ""
 echo ""
 echo ""
-echo "----- Install app's -----"
+echo "----- Install app's from Cask -----"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install $(cat "$DOTFILES_DIR/Caskfile"|grep -v "#")
@@ -69,23 +69,50 @@ qlmanage -r
 echo ""
 echo ""
 echo ""
+echo "----- Install app's from AppStore -----"
+
+# using https://github.com/argon/mas
+mas install 918858936 # Airmail 2
+mas install 937984704 # Amphetamine
+mas install 434514810 # Billings Pro
+mas install 417896628 # ColorSchemer Studio
+mas install 449589707 # Dash
+mas install 498672703 # Droplr
+mas install 975937182 # Fantastical 2
+mas install 724408341 # Fonts
+mas install 435932420 # iPackr
+mas install 409183694 # Keynote
+mas install 421131143 # MPlayerX
+mas install 419330170 # Moom
+mas install 409203825 # Numbers
+mas install 409201541 # Pages
+mas install 568494494 # Pocket
+mas install 880001334 # Reeder
+mas install 421879749 # Rested
+mas install 413965349 # Soulver
+mas install 557168941 # Tweetbot
+mas install 497799835 # Xcode
+mas install 889428659 # xScope
+
+echo ""
+echo ""
+echo ""
 echo "----- Install useful global npm packages -----"
-npm install -g bower browserify coffee-script enpot eslint gadkod grunt grunt-cli grunt-devtools grunt-init gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
-git clone https://github.com/gruntjs/grunt-init-gruntfile ~/.grunt-init/gruntfile
-git clone https://github.com/gruntjs/grunt-init-gruntplugin ~/.grunt-init/gruntplugin
-git clone https://github.com/gruntjs/grunt-init-node ~/.grunt-init/node
-git clone https://github.com/gruntjs/grunt-init-jquery ~/.grunt-init/jquery
+
+npm install -g bower browserify coffee-script enpot eslint gadkod grunt grunt-cli gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
 
 echo ""
 echo ""
 echo ""
 echo "----- Install apm packages -----"
+
 apm install package-sync
 
 echo ""
 echo ""
 echo ""
 echo "----- Install python packages -----"
+
 pip install -I Cython==0.23
 USE_OSX_FRAMEWORKS=0 pip install kivy
 pip install pygments
@@ -94,6 +121,7 @@ echo ""
 echo ""
 echo ""
 echo "----- Generate directory structure -----"
+
 mkdir -p ~/Works/flatland
 mkdir -p ~/Works/hepl
 mkdir -p ~/Works/leny

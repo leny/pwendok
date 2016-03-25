@@ -3,6 +3,7 @@
 # Install GNU packages (and override OSX version)
 
 ack
+argon/mas/mas
 docker
 docker-compose
 docker-machine

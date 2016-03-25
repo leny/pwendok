@@ -19,28 +19,8 @@ Commands to run after a fresh install.
 3. Install XCode Command Line tools with `xcode-select --install`.
 4. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
 5. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
-6. App Install: complete the app installations with the AppStore, installing these apps :
-    * Amphetamine
-    * Billings Pro
-    * ColorSchemer Studio
-    * Dash
-    * Fantastical
-    * Fonts
-    * LiveReload
-    * MPlayerX
-    * Moom
-    * Numbers
-    * Pocket
-    * Reeder
-    * Rested
-    * Slack
-    * Soulver
-    * The Unarchiver
-    * Tweetbot
-    * Xcode
-    * xScope
-7. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
-8. Launch Atom and run the `Package sync: sync` command.
+6. Launch and configure Alfred, then call `brew cask alfred link` to link the new cask paths with Alfred.
+7. Launch Atom and run the `Package sync: sync` command.
 
 ## f.lux settings
 
