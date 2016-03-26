@@ -1,7 +1,10 @@
 # --- Caskfile
 
+# ----- Apps
+
 adobe-creative-cloud
 alfred
+arduino
 atom
 beardedspice
 brave
@@ -20,6 +23,8 @@ istat-menus
 iterm2
 kaleidoscope
 macdown
+minecraft
+mongohub
 mou
 1password
 onyx
@@ -33,10 +38,69 @@ slack
 steam
 sublime-text3
 teseve
+things
 tower
 transmission
-vlc
+transmit
 vagrant
+versions
 virtualbox
+vlc
+
+# ----- Quicklook plugins
 
 qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
+
+# ----- Fonts
+
+font-alegreya-sans-sc
+font-alegreya-sans
+font-alegreya-sc
+font-alegreya
+font-amaranth
+font-arial-black
+font-arial
+font-bebas-neue
+font-bitter
+font-bree-serif
+font-charter
+font-code
+font-comfortaa
+font-comic-sans-ms
+font-copse
+font-courier-new
+font-dejavu-sans-mono-for-powerline
+font-dejavu-sans
+font-droid-sans-mono
+font-droid-sans
+font-droid-serif
+font-exo
+font-exo2
+font-fira-mono-for-powerline
+font-fira-mono
+font-fira-sans
+font-fontawesome
+font-georgia
+font-hack
+font-lobster-two
+font-norwester
+font-octicons
+font-open-sans
+font-pacifico
+font-pt-mono
+font-pt-sans
+font-pt-serif
+font-quicksans
+font-roboto-condensed
+font-roboto-mono
+font-roboto-slab
+font-roboto
+font-source-code-pro
+font-source-sans-pro
+font-source-serif-pro
+font-tauri
+font-tex-gyre-schola
+font-times-new-roman
+font-ubuntu
+font-trebuchet-ms
+font-verdana

@@ -37,6 +37,7 @@ brew doctor
 brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
+brew tap caskroom/fonts
 
 echo ""
 echo ""
@@ -80,6 +81,7 @@ mas install 449589707 # Dash
 mas install 498672703 # Droplr
 mas install 975937182 # Fantastical 2
 mas install 724408341 # Fonts
+mas install 463541543 # Gemini
 mas install 435932420 # iPackr
 mas install 409183694 # Keynote
 mas install 421131143 # MPlayerX
