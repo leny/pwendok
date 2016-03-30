@@ -44,6 +44,8 @@ alias vstatus="vagrant status"
 # --- npm
 # european mirror
 alias ni="npm install"
+alias nid="npm install --only=dev"
+alias nip="npm install --only=prod"
 alias nri="rm -rf ./node_modules && npm install"
 alias nis="npm install --save"
 alias nisd="npm install --save-dev"
