@@ -89,14 +89,13 @@
   # Indent Toggle On Paste
   'cmd-shift-v': 'indent-toggle-on-paste:paste'
 
-
 '.platform-darwin atom-text-editor:not([mini])':
   # Remapping Emmet
   'shift-cmd-E': 'unset!'
   # indent-toggle-on-paste
   'cmd-shift-v': 'indent-toggle-on-paste:paste'
 
-'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini]), atom-text-editor[data-grammar~="less"]:not([mini]), atom-text-editor[data-grammar~="stylus"]:not([mini])':
   # Emmet's language-specific Tab triggers
   'tab': 'emmet:expand-abbreviation-with-tab'
 

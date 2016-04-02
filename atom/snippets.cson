@@ -45,14 +45,14 @@
     'body': """return ajax.send( oRequest, oResponse, $1 );"""
 
 '*':
-  'Webshaker Header':
-    'prefix': 'wsk-header'
-    'body': """/* webshaker/${1:repo}
+  'File Header':
+    'prefix': 'file-header'
+    'body': """/* ${1:context}/${2:repo}
 \ *
-\ * ${2:/path} - ${3:description}
+\ * ${3:/path} - ${4:description}
 \ *
-\ * coded by ${4:leny@flatLand!}
-\ * started at ${5:date}
+\ * coded by ${5:leny@flatLand!}
+\ * started at ${6:date}
 \ */
 
-$6"""
+$7"""
