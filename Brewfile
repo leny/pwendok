@@ -34,4 +34,5 @@ ssh-copy-id
 svn
 tree
 wget --enable-iri
+youtube-dl
 zsh

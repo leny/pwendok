@@ -7,6 +7,7 @@ alias q="exit"
 alias cdc="cd && clear"
 alias l="k -hA --si"
 alias ll="ls -lAFh"
+alias week='date +%V'
 
 # --- navigation
 alias ...="cd -"
