@@ -1,5 +1,4 @@
 bin
-*.sublime-*
 storage
 compile-cache
 dev
