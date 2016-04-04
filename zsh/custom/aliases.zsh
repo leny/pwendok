@@ -70,6 +70,8 @@ alias dcu="docker-compose up -d"
 alias dcl="docker-compose logs"
 alias dcs="docker-compose stop"
 alias dcrm="docker-compose rm -f"
+alias dvl="docker volume ls"
+alias dvrm="docker volume rm"
 
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
