@@ -8,6 +8,7 @@ packages: [
   "emmet"
   "gutter-shadow"
   "indent-toggle-on-paste"
+  "language-babel"
   "language-docker"
   "language-jade"
   "language-javascript-jxa"
