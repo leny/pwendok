@@ -91,6 +91,14 @@ prompt_dir() {
         _bg='blue'
         _fg='white'
         _dir="$match[1]/%{$fg_bold[yellow]%}$match[2]%{$fg_no_bold[blue]%}"
+    elif [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)$' ]]; then
+        _bg='blue'
+        _fg='white'
+        _dir="$match[1]%{$fg_no_bold[blue]%}"
+    elif [[ $PWD =~ '^\/Users\/leny\/.pwendok$' ]]; then
+        _bg='red'
+        _fg='white'
+        _dir="%{$fg_bold[yellow]%}.pwendok%{$fg_no_bold[red]%}"
     else
         _fg='black'
         _bg='cyan'
