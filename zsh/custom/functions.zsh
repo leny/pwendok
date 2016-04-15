@@ -30,3 +30,10 @@ cat() {
     colored=$(echo $out | pygmentize -f console -g 2>/dev/null)
     [[ -n $colored ]] && echo "$colored" || echo "$out"
 }
+
+task() {
+    [[ -e gulpfile.js ]] && gulp $@
+    [[ -e gulpfile.coffee ]] && gulp $@
+    [[ -e gruntfile.js ]] && grunt $@
+    [[ -e gruntfile.coffee ]] && grunt $@
+}
