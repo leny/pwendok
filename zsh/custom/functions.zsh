@@ -32,6 +32,16 @@ cat() {
 }
 
 task() {
+    case "$1" in
+        "-w"|"--which")
+            [[ -e gulpfile.js ]] && echo "gulp"
+            [[ -e gulpfile.coffee ]] && echo "gulp"
+            [[ -e gruntfile.js ]] && echo "grunt"
+            [[ -e gruntfile.coffee ]] && echo "grunt"
+            return;
+            ;;
+    esac
+
     [[ -e gulpfile.js ]] && gulp $@
     [[ -e gulpfile.coffee ]] && gulp $@
     [[ -e gruntfile.js ]] && grunt $@
