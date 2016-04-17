@@ -32,6 +32,9 @@ alias du='du -h -d 2'
 alias python="python3"
 alias pip="pip3"
 
+# --- miscs
+alias ydl="youtube-dl"
+
 # --- npm
 # european mirror
 alias ni="npm install"
