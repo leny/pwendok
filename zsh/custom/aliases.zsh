@@ -32,16 +32,6 @@ alias du='du -h -d 2'
 alias python="python3"
 alias pip="pip3"
 
-# --- vagrant
-alias vup="vagrant up"
-alias vdestroy="vagrant destroy --force"
-alias vssh="vagrant ssh"
-alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
-alias vreload="vagrant up && vagrant ssh"
-alias vhalt="vagrant halt"
-alias vgstatus="vagrant global-status"
-alias vstatus="vagrant status"
-
 # --- npm
 # european mirror
 alias ni="npm install"
