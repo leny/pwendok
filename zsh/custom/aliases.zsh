@@ -34,6 +34,7 @@ alias pip="pip3"
 
 # --- miscs
 alias ydl="youtube-dl"
+alias ydlp="youtube-dl --yes-playlist -f '(mp4)[height>=720]'"
 
 # --- npm
 # european mirror
