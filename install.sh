@@ -14,7 +14,6 @@ echo "----- Link dotfiles -----"
 ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
-ln -sfv "$DOTFILES_DIR/hg/hgignore_global" ~/.hgignore_global
 ln -sfv "$DOTFILES_DIR/curl/curlrc" ~/.curlrc
 ln -sfv "$DOTFILES_DIR/wget/wgetrc" ~/.wgetrc
 ln -sfv "$DOTFILES_DIR/atom" ~/.atom
