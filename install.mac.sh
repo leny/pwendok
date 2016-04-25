@@ -86,12 +86,14 @@ mas install 435932420 # iPackr
 mas install 409183694 # Keynote
 mas install 421131143 # MPlayerX
 mas install 419330170 # Moom
+mas install 928871589 # Noizio
 mas install 409203825 # Numbers
 mas install 409201541 # Pages
 mas install 568494494 # Pocket
 mas install 880001334 # Reeder
 mas install 421879749 # Rested
 mas install 413965349 # Soulver
+mas install 531349534 # Tadam
 mas install 557168941 # Tweetbot
 mas install 497799835 # Xcode
 mas install 889428659 # xScope
