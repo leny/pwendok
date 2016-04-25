@@ -1,3 +1,5 @@
+// cf. http://superuser.com/questions/268785/find-all-the-fonts-used-in-a-photoshop-file
+
 var p = new ActionReference();
 
 function arrayUnique(a){
