@@ -63,7 +63,7 @@ alias dcb="docker-compose build"
 alias dcu="docker-compose up -d"
 alias dcl="docker-compose logs -f"
 alias dcs="docker-compose stop"
-alias dcrm="docker-compose rm -f"
+alias dcrm="docker-compose rm -f --all"
 alias dvl="docker volume ls"
 alias dvrm="docker volume rm"
 
