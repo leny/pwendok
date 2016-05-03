@@ -14,9 +14,9 @@ ZSH_THEME_DOCKER_PROMPT_SUFFIX=")"
 function dock-compose-status() {
     if [ $(is_dock_project) ]; then
         echo -n $ZSH_THEME_DOCKER_PROMPT_PREFIX
-        if [ $(docker-machine status dev) != "Running" ]; then
-            echo -n $ZSH_THEME_DOCKER_PROMPT_NO_MACHINE
-        else
+        # if [ $(docker-machine status dev) != "Running" ]; then
+        #     echo -n $ZSH_THEME_DOCKER_PROMPT_NO_MACHINE
+        # else
             COUNTER=0
             docker-compose ps 2>/dev/null | tail -n+3 | while read line
             do
@@ -29,7 +29,7 @@ function dock-compose-status() {
             else
                 echo -n "$ZSH_THEME_DOCKER_CONTAINERS_COUNT_PREFIX$COUNTER$ZSH_THEME_DOCKER_CONTAINERS_COUNT_SUFFIX"
             fi
-        fi
+        # fi
         echo -n $ZSH_THEME_DOCKER_PROMPT_SUFFIX
     fi
 }
