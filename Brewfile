@@ -4,11 +4,8 @@
 
 ack
 argon/mas/mas
-docker
-docker-compose
-docker-machine
 coreutils
-moreutils
+dnsmasq
 findutils
 geoip
 git
@@ -20,6 +17,7 @@ hub
 links
 lynx
 mercurial
+moreutils
 nmap
 node
 p7zip
