@@ -58,6 +58,15 @@ if [[ "$(type -P $binroot/htop)" ]] && [[ "$(stat -L -f "%Su:%Sg" "$binroot/htop
     sudo chmod u+s "$binroot/htop"
 fi
 
+# dnsmasq
+ln -sfv "$DOTFILES_DIR/dnsmasq/dnsmasq.conf" /usr/local/etc/dnsmasq.conf
+sudo cp $(brew list dnsmasq | grep /homebrew.mxcl.dnsmasq.plist$) /Library/LaunchDaemons/
+sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+sudo mkdir -p /etc/resolver
+sudo tee /etc/resolver/dev >/dev/null <<EOF
+nameserver 127.0.0.1
+EOF
+
 echo ""
 echo ""
 echo ""
