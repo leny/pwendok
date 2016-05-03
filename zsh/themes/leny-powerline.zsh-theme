@@ -54,13 +54,16 @@ prompt_status() {
 }
 
 prompt_user() {
+    if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+        REMOTE_HOSTNAME=" %{$fg_no_bold[cyan]%}@%{$fg_no_bold[white]%}$(hostname)"
+    fi
     if [[ $UID -eq 0 ]]; then
-        prompt_segment black red ""
+        prompt_segment black red "$REMOTE_HOSTNAME%{$fg_no_bold[red]%}"
     else
         if [[ $USER != "leny" ]]; then
-            prompt_segment black yellow $USER
+            prompt_segment black yellow "$USER$REMOTE_HOSTNAME%{$fg_no_bold[yellow]%}"
         else
-            prompt_segment black yellow ""
+            prompt_segment black yellow "$REMOTE_HOSTNAME%{$fg_no_bold[yellow]%}"
         fi
     fi
 }
