@@ -11,9 +11,6 @@ export WORKS_PATH="~/Works"
 # Tell grep to highlight matches
 export GREP_OPTIONS="--color=auto"
 
-# Docker
-export DOCKER_HOST=tcp://127.0.0.1:4243
-
 # Cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
