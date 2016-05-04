@@ -66,6 +66,8 @@ sudo mkdir -p /etc/resolver
 sudo tee /etc/resolver/dev >/dev/null <<EOF
 nameserver 127.0.0.1
 EOF
+sudo launchctl stop homebrew.mxcl.dnsmasq
+sudo launchctl start homebrew.mxcl.dnsmasq
 
 echo ""
 echo ""
