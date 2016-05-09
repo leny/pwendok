@@ -1,42 +1,70 @@
 "*":
-  "exception-reporting":
-    userId: "b08fe082-5af7-c7d4-b900-777e08a254b5"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "5acd58d5e46233222cf4316630249b64bf87bc75"
-  editor:
-    fontFamily: "Fira Mono OT"
-    fontSize: 12
-    showInvisibles: true
-    invisibles: {}
-    tabLength: 4
+  "atom-beautify":
+    _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
+  "atom-color-highlight":
+    hideMarkersInComments: true
+    hideMarkersInStrings: true
+  autosave:
+    enabled: true
+  build: {}
+  caniuse:
+    useAccessibleColors: true
   core:
+    destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
+      "spell-check"
+    ]
+    packagesWithKeymapsDisabled: [
       "spell-check"
     ]
     themes: [
       "seti-ui"
       "tomorrow-night-eighties"
     ]
-    destroyEmptyPanes: false
-    packagesWithKeymapsDisabled: [
-      "spell-check"
-    ]
-  "atom-color-highlight":
-    hideMarkersInStrings: true
-    hideMarkersInComments: true
-  "tree-view":
-    hideVcsIgnoredFiles: true
-    hideIgnoredNames: true
+  covalent: {}
+  "easy-motion": {}
+  editor:
+    fontFamily: "Fira Mono OT"
+    fontSize: 12
+    invisibles: {}
+    showInvisibles: true
+    tabLength: 4
   emmet:
     extensionsPath: "~/.pwendok/emmet"
-  autosave:
-    enabled: true
+  "exception-reporting":
+    userId: "b08fe082-5af7-c7d4-b900-777e08a254b5"
+  "file-types": {}
+  "fuzzy-finder":
+    ignoredNames: [
+      "*.scssc"
+    ]
+  "html-validation": {}
+  htmlhint:
+    validateOnSave: false
   "inline-autocomplete":
-    includeGrammarKeywords: true
     includeCompletionsFromAllBuffers: true
+    includeGrammarKeywords: true
+  linter:
+    lintOnChange: false
+    lintOnEditorFocus: false
+    showErrorPanel: false
+    statusBar: "Show error if the cursor is in range"
+    subtleLinterErrors: [
+      "csslint"
+      "htmlhint"
+    ]
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "local-config":
+    applyOnActivation: true
+  metrics:
+    userId: "5acd58d5e46233222cf4316630249b64bf87bc75"
+  motepair: {}
+  "run-command": {}
+  "spell-check": {}
   "string-looper":
     enums: [
       [
@@ -48,75 +76,47 @@
         "pm"
       ]
     ]
-  "fuzzy-finder":
-    ignoredNames: [
-      "*.scssc"
-    ]
-  "easy-motion": {}
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  linter:
-    lintOnChange: false
-    lintOnEditorFocus: false
-    subtleLinterErrors: [
-      "csslint"
-      "htmlhint"
-    ]
-    statusBar: "Show error if the cursor is in range"
-    showErrorPanel: false
-  htmlhint:
-    validateOnSave: false
-  "html-validation": {}
-  "w3c-validation":
-    validateOnSave: false
-  "tree-ignore": {}
   "tab-control":
     autoSaveChanges: true
     displayInStatusBar: true
-  "linter-eslint":
-    disableWhenNoEslintrcFileInPath: true
-    useGlobalEslint: true
-    globalNodePath: "/usr/local"
-  "file-types": {}
-  "atom-beautify":
-    _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
-  build: {}
-  "run-command": {}
-  covalent: {}
-  motepair: {}
-  "spell-check": {}
-  "wrap-and-pad":
-    "trim-before": true
-  "local-config":
-    applyOnActivation: true
-  caniuse:
-    useAccessibleColors: true
   "toggle-quotes":
     quoteCharacters: "\"'`"
+  "tree-ignore": {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "w3c-validation":
+    validateOnSave: false
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+  "wrap-and-pad":
+    "trim-before": true
 ".basic.html.text":
   editor:
-    tabLength: 4
     softTabs: true
+    tabLength: 4
 ".coffee.source":
   editor:
+    softTabs: true
     tabLength: 2
-    softTabs: true
-".js.source":
-  editor:
-    tabLength: 4
-    softTabs: true
-".source.yaml":
-  editor:
-    tabLength: 4
-    softTabs: true
 ".jade.source":
   whitespace:
     removeTrailingWhitespace: true
-"source.js":
+".js.source":
   editor:
-    tabLength: 4
     softTabs: true
+    tabLength: 4
+".source.yaml":
+  editor:
+    softTabs: true
+    tabLength: 4
 "source.coffee":
   editor:
-    tabLength: 4
     softTabs: true
+    tabLength: 4
+"source.js":
+  editor:
+    softTabs: true
+    tabLength: 4
