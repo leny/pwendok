@@ -44,3 +44,8 @@ task() {
     [[ -e gruntfile.js ]] && grunt $@
     [[ -e gruntfile.coffee ]] && grunt $@
 }
+
+dockup() {
+    docker-machine env $1
+    eval $(docker-machine env $1)
+}
