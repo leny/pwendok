@@ -87,7 +87,6 @@ echo "----- Install app's from AppStore -----"
 mas install 918858936 # Airmail 2
 mas install 937984704 # Amphetamine
 mas install 434514810 # Billings Pro
-mas install 955297617 # CodeRunner
 mas install 417896628 # ColorSchemer Studio
 mas install 449589707 # Dash
 mas install 498672703 # Droplr
