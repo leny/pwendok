@@ -39,9 +39,9 @@ atom-text-editor::shadow .gutter .line-number.foldable .icon-right {
 @import "ui-variables";
 
 // fix height for empty tab-bar, allowing to drag & drop tabs between panes
-.list-inline.tab-bar.inset-panel {
-    height: 40px;
-}
+// .list-inline.tab-bar.inset-panel {
+//     height: 40px;
+// }
 
 // adjust opacity & background-color setting in inactive panes, because it sucks
 @hacked-pane-background-color: lighten(@app-background-color, 7%);
@@ -71,9 +71,9 @@ atom-pane {
             }
         }
         .tab.active {
-            border-bottom: solid 4px darken( @tab-highlight-color, 25% );
+            border-bottom: solid 4px darken( @hacked-pane-background-color, 25% );
             &:before {
-                border-bottom: solid 4px darken( @tab-highlight-color, 25% );
+                border-bottom: solid 4px darken( @hacked-pane-background-color, 25% );
             }
         }
     }
