@@ -64,6 +64,9 @@
     userId: "5acd58d5e46233222cf4316630249b64bf87bc75"
   motepair: {}
   "run-command": {}
+  "seti-ui":
+    compactView: true
+    themeColor: "Steel"
   "spell-check": {}
   "string-looper":
     enums: [
