@@ -82,6 +82,16 @@ atom-pane {
     }
 }
 
+atom-pane-container atom-pane-axis.horizontal > atom-pane-resize-handle {
+    width: 2px;
+    margin-left: -1px;
+    border-right: 1px solid @tree-view-border-color;
+}
+
+atom-workspace atom-panel.bottom {
+    padding: 2px 10px 0;
+}
+
 // Hack Stylus coloration
 atom-text-editor::shadow {
     .line {
