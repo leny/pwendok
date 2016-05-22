@@ -56,7 +56,7 @@
 
 '.platform-darwin atom-text-editor':
   # Remapping bookmarks
-  'cmd-j': 'bookmarks:toggle-bookmark'
+  'cmd-k cmd-j': 'bookmarks:toggle-bookmark'
   'ctrl-j': 'bookmarks:jump-to-next-bookmark'
   'ctrl-shift-j': 'bookmarks:jump-to-previous-bookmark'
   'cmd-alt-j': 'bookmarks:view-all'
