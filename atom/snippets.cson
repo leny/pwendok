@@ -36,7 +36,7 @@
     }"""
   'import statement':
     'prefix': 'import',
-    'body': """import $1 from \"$2\";"""
+    'body': """import $1 from \"$1$2\";$3"""
   'ajax error':
     'prefix': 'ajerr',
     'body': """return ajax.error( oRequest, oResponse, ${1:500}, "${2:UNKNOWN_ERROR}"$3 );"""
