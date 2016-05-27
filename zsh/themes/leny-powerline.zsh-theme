@@ -90,25 +90,20 @@ prompt_timer() {
 # ------------------------------ DIRECTORY
 
 prompt_dir() {
-    if [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)$' ]]; then
-        _bg='blue'
-        _fg='white'
-        _dir="$match[1]/%{$fg_bold[yellow]%}$match[2]%{$fg_no_bold[blue]%}"
+    if [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)\/(.+)$' ]]; then
+        prompt_segment blue white "$match[1]/%{$fg_bold[yellow]%}$match[2]%{$fg_no_bold[blue]%}"
+        _path="./$match[3]"
+        _path="%$1<(…)<$_path%<<"
+        prompt_segment cyan black $_path
+    elif [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)$' ]]; then
+        prompt_segment blue white "$match[1]/%{$fg_bold[yellow]%}$match[2]%{$fg_no_bold[blue]%}"
     elif [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)$' ]]; then
-        _bg='blue'
-        _fg='white'
-        _dir="$match[1]%{$fg_no_bold[blue]%}"
+        prompt_segment blue white "$match[1]%{$fg_no_bold[blue]%}"
     elif [[ $PWD =~ '^\/Users\/leny\/.pwendok$' ]]; then
-        _bg='red'
-        _fg='white'
-        _dir="%{$fg_bold[yellow]%}.pwendok%{$fg_no_bold[red]%}"
+        prompt_segment red white "%{$fg_bold[yellow]%}.pwendok%{$fg_no_bold[red]%}"
     else
-        _fg='black'
-        _bg='cyan'
-        _dir="%$1<(…)<%~%<<"
+        prompt_segment cyan black "%$1<(…)<%~%<<"
     fi
-
-    prompt_segment $_bg $_fg $_dir
 }
 
 # ------------------------------ GIT
