@@ -42,6 +42,9 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Disable Resume system-wide
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
@@ -56,6 +59,15 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Set language and text formats
+defaults write NSGlobalDomain AppleLanguages -array "fr" "en"
+defaults write NSGlobalDomain AppleLocale -string "fr_BE@currency=EUR"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
@@ -181,6 +193,14 @@ defaults write com.apple.finder EmptyTrashSecurely -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+# Remove Dropbox’s green checkmark icons in Finder
+file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
+[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
+
+# Expand the following File Info panes:
+# “General”, “Open with”, and “Sharing & Permissions”
+defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -191,8 +211,14 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
 
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# Don’t group windows by application in Mission Control (i.e. use the old Exposé behavior instead)
+defaults write com.apple.dock expose-group-by-app -bool false
 
 # Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
@@ -212,8 +238,15 @@ defaults write com.apple.dock tilesize -int 18
 # Dock: disable magnification
 defaults write com.apple.dock magnification -bool false
 
+# Show only open applications in the Dock
+defaults write com.apple.dock static-only -bool true
+
 # Set magnification icon size to 18 pixels
 defaults write com.apple.dock largesize -float 18
+
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
 
 ###############################################################################
 # Safari & WebKit                                                             #
@@ -248,6 +281,18 @@ defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 # Disable inline attachments (just show the icons)
 defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
+
+###############################################################################
+# Google Chrome                                                               #
+###############################################################################
+
+# Expand the print dialog by default
+defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
+defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool true
+
+# Disable the all too sensitive backswipe on Magic Mouse
+defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # Time Machine                                                                #
