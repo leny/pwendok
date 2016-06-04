@@ -15,14 +15,6 @@
       "wrap-guide"
       "spell-check"
     ]
-    ignoredNames: [
-      ".gitignore"
-      ".eslintrc.json"
-      "README.md"
-      "api/docs"
-      "apidoc.json"
-      "npm-debug.log"
-    ]
     packagesWithKeymapsDisabled: [
       "spell-check"
     ]
@@ -46,7 +38,6 @@
   "fuzzy-finder":
     ignoredNames: [
       "*.scssc"
-      "*.css"
     ]
   "html-validation": {}
   htmlhint:
@@ -91,20 +82,6 @@
   "tab-control":
     autoSaveChanges: true
     displayInStatusBar: true
-  "todo-show":
-    findTheseRegexes: [
-      "FIXME"
-      "/\\bFIXME:?\\d*($|\\s.*$)/g"
-      "TODO"
-      "/\\bTODO:?\\d*($|\\s.*$)/g"
-      "NOTE"
-      "/\\bNOTE:?\\d*($|\\s.*$)/g"
-    ]
-    ignoreThesePaths: [
-      "**/node_modules/"
-      "**/vendor/"
-      "**/vendors/"
-    ]
   "toggle-quotes":
     quoteCharacters: "\"'`"
   "tree-ignore": {}
