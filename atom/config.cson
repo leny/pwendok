@@ -14,6 +14,7 @@
     disabledPackages: [
       "wrap-guide"
       "spell-check"
+      "apidoc-snippets"
     ]
     packagesWithKeymapsDisabled: [
       "spell-check"
