@@ -1,5 +1,4 @@
 packages: [
-  "apidoc-snippets"
   "atom-beautify"
   "caniuse"
   "coffeescript-check"
@@ -10,6 +9,7 @@ packages: [
   "indent-toggle-on-paste"
   "language-babel"
   "language-docker"
+  "language-graphql"
   "language-jade"
   "language-javascript-jxa"
   "language-nginx"
