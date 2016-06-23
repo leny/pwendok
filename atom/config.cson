@@ -38,6 +38,7 @@
   "fuzzy-finder":
     ignoredNames: [
       "*.scssc"
+      "node_modules"
     ]
   "html-validation": {}
   htmlhint:
