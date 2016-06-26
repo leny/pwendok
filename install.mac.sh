@@ -30,6 +30,13 @@ fi
 echo ""
 echo ""
 echo ""
+echo "----- Install gems -----"
+sudo gem update --system
+sudo gem install cocoapods
+
+echo ""
+echo ""
+echo ""
 echo "----- Install homebrew & cask -----"
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
