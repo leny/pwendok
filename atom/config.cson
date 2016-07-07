@@ -14,6 +14,7 @@
     disabledPackages: [
       "wrap-guide"
       "spell-check"
+      "react"
     ]
     packagesWithKeymapsDisabled: [
       "spell-check"
@@ -115,7 +116,7 @@
 ".source.yaml":
   editor:
     softTabs: true
-    tabLength: 4
+    tabLength: 2
 "source.coffee":
   editor:
     softTabs: true
