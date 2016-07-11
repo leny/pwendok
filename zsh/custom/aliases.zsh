@@ -83,5 +83,8 @@ alias localip="ipconfig getifaddr en0"
 # --- OSX GUI Restart (sometime my OS graphics freeze, this helps)
 alias sysgfxreload="sudo killall SystemUIServer"
 
+# --- OSX Sleep
+alias goodnight="pmset sleepnow"
+
 # --- Gource
 alias pyebwa="gource --hide dirnames,progress,filenames -r 60 --seconds-per-day 0.25 --auto-skip-seconds 1 -1600x1000 -multi-sampling --title"
