@@ -16,7 +16,7 @@ rm ~/.zshrc.pre-oh-my-zsh
 ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny-simple.zsh-theme" ~/.oh-my-zsh/themes/leny-simple.zsh-theme
-ln -sfv "$DOTFILES_DIR/zsh/themes/leny-powerline.zsh-theme" ~/.oh-my-zsh/themes/leny-simple.zsh-theme
+ln -sfv "$DOTFILES_DIR/zsh/themes/leny-powerline.zsh-theme" ~/.oh-my-zsh/themes/leny-powerline.zsh-theme
 
 echo ""
 echo ""
