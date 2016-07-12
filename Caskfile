@@ -28,6 +28,7 @@ minecraft
 mongohub
 1password
 onyx
+parallels-desktop
 path-finder
 postico
 postman
@@ -36,19 +37,13 @@ sketch
 slack
 steam
 sublime-text3
-teamviewer
 teseve
 things
 tower
 transmission
 transmit
 vagrant
-virtualbox
 vlc
-
-# ----- Quicklook plugins
-
-qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
 
 # ----- Fonts
 
@@ -103,3 +98,7 @@ font-times-new-roman
 font-ubuntu
 font-trebuchet-ms
 font-verdana
+
+# ----- Quicklook plugins
+
+qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
