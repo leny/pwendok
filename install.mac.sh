@@ -122,7 +122,7 @@ echo ""
 echo ""
 echo "----- Install useful global npm packages -----"
 
-npm install -g babel-eslint bower browserify coffee-script enpot eslint gadkod grunt grunt-cli gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
+npm install -g babel-cli babel-eslint bower browserify coffee-script enpot eslint gadkod grunt grunt-cli gulp hexo mocha phantomas seve stylus stylint tankipas vows watchify woazar yo
 
 echo ""
 echo ""
