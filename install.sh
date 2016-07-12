@@ -16,6 +16,8 @@ ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/curl/curlrc" ~/.curlrc
 ln -sfv "$DOTFILES_DIR/wget/wgetrc" ~/.wgetrc
+ln -sfv "$DOTFILES_DIR/eslint/eslintrc.json" ~/.eslintrc
+ln -sfv "$DOTFILES_DIR/babel/babelrc.json" ~/.wgetrc
 ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
 echo ""
