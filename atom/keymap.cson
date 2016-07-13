@@ -88,6 +88,8 @@
   'cmd-g cmd-e': 'easy-motion-redux:words'
   # Indent Toggle On Paste
   'cmd-shift-v': 'indent-toggle-on-paste:paste'
+  # Delete line
+  "cmd-backspace": "editor:delete-line"
 
 '.platform-darwin atom-text-editor:not([mini])':
   # Remapping Emmet
