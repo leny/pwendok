@@ -11,14 +11,12 @@ echo ""
 echo ""
 echo "----- Link dotfiles -----"
 
-ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/git/gitconfig" ~/.gitconfig
 ln -sfv "$DOTFILES_DIR/git/gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/curl/curlrc" ~/.curlrc
 ln -sfv "$DOTFILES_DIR/wget/wgetrc" ~/.wgetrc
 ln -sfv "$DOTFILES_DIR/eslint/eslintrc.json" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/babel/babelrc.json" ~/.wgetrc
-ln -sfv "$DOTFILES_DIR/atom" ~/.atom
 
 echo ""
 echo ""
@@ -26,7 +24,6 @@ echo ""
 echo "----- Install oh-my-zsh -----"
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 
