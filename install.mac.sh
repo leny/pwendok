@@ -25,6 +25,7 @@ echo "----- Link dotfiles -----"
 
 ln -sfv "$DOTFILES_DIR/editorconfig/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/atom" ~/.atom
+ln -sfv "$DOTFILES_DIR/hyperterm/hyperterm.js" ~/.hyperterm.js
 
 echo ""
 echo ""
