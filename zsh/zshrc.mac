@@ -13,3 +13,4 @@ ZSH_CUSTOM=$PWENDOK/zsh/custom
 plugins=(git brew brew-cask depo docker docker-compose encode64 grunt gulp k leny-git-prompt npm pip python sote)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zsh-syntax/zsh-syntax-highlighting.zsh
