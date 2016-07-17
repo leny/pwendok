@@ -68,7 +68,7 @@ alias dvrm="docker volume rm"
 
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
-alias gs="git status -sb"
+valias gs="git status -sb"
 alias gitinit="git init"
 alias gi="git init"
 
@@ -84,7 +84,8 @@ alias localip="ipconfig getifaddr en0"
 alias sysgfxreload="sudo killall SystemUIServer"
 
 # --- OSX Sleep
-alias goodnight="pmset sleepnow"
+alias goodnight="pmset displaysleepnow && pmset sleepnow"
+alias lock="pmset lock"
 
 # --- Gource
 alias pyebwa="gource --hide dirnames,progress,filenames -r 60 --seconds-per-day 0.25 --auto-skip-seconds 1 -1600x1000 -multi-sampling --title"
