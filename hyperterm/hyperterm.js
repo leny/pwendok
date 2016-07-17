@@ -1,51 +1,32 @@
 module.exports = {
   config: {
-    // default font size in pixels for all tabs
-    fontSize: 12,
-
-    // font family with optional fallbacks
-    fontFamily: '"Fura Mono for Powerline", "Fira Mono OT", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',
-
-    // terminal cursor background color (hex)
-    cursorColor: '#d6d6d6',
-
-    // color of the text
-    foregroundColor: '#d6d6d6',
-
-    // terminal background color
-    backgroundColor: '#2b2b2b',
-
-    // border color (window, tabs)
-    borderColor: '#444',
-
-    // custom css to embed in the main window
-    css: '',
-
-    // custom padding (css format, i.e.: `top right bottom left`)
-    termCSS: '',
-
-    // custom padding
-    padding: '12px 14px',
-
-    // some color overrides. see http://bit.ly/29k1iU2 for
-    // the full list
-    colors: [
-      '#000000',
-      '#f78d8c', // '#ff0000',
-      '#a8d4a9', // '#33ff00',
-      '#ffd479', // '#ffff00',
-      '#78aad6', // '#0066ff',
-      '#d7acd6', // '#cc00ff',
-      '#76d4d6', // '#00ffff',
-      '#ffffff',
-      '#000000',
-      '#f78d8c', // '#ff0000',
-      '#a8d4a9', // '#33ff00',
-      '#ffd479', // '#ffff00',
-      '#78aad6', // '#0066ff',
-      '#d7acd6', // '#cc00ff',
-      '#76d4d6', // '#00ffff',
-      '#ffffff'
+    fontSize: 12, // default font size in pixels for all tabs
+    fontFamily: '"Fira Mono OT", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace', // font family with optional fallbacks
+    cursorColor: '#999999', // terminal cursor background color (hex)
+    foregroundColor: '#cccccc', // color of the text
+    backgroundColor: '#2b2b2b', // terminal background color
+    borderColor: '#393939', // border color (window, tabs)
+    css: '', // custom css to embed in the main window
+    termCSS: '', // custom padding (css format, i.e.: `top right bottom left`)
+    padding: '12px 14px', // custom padding
+    colors: [ // some color overrides. see http://bit.ly/29k1iU2 for the full list
+      "#393939", // '#000000', // black
+      "#f2777a", // '#ff0000', // red
+      "#99cc99", // '#33ff00', // green
+      "#ffcc66", // '#ffff00', // yellow
+      "#6699cc", // '#0066ff', // blue
+      "#cc99cc", // '#cc00ff', // magenta
+      "#66cccc", // '#00ffff', // cyan
+      "#cccccc", // white
+      "#393939", // '#000000', // black
+      "#f2777a", // '#ff0000', // red
+      "#99cc99", // '#33ff00', // green
+      "#ffcc66", // '#ffff00', // yellow
+      "#6699cc", // '#0066ff', // blue
+      "#cc99cc", // '#cc00ff', // magenta
+      "#66cccc", // '#00ffff', // cyan
+      "#cccccc", // white
+      "#cccccc" // white
     ]
   },
 
