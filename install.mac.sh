@@ -17,6 +17,7 @@ ln -sfv "$DOTFILES_DIR/zsh/zshrc.mac" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny-simple.zsh-theme" ~/.oh-my-zsh/themes/leny-simple.zsh-theme
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny-powerline.zsh-theme" ~/.oh-my-zsh/themes/leny-powerline.zsh-theme
+ln -sfv "$DOTFILES_DIR/zsh/themes/neoleny.zsh-theme" ~/.oh-my-zsh/themes/neoleny.zsh-theme
 
 echo ""
 echo ""
