@@ -13,7 +13,7 @@ echo "----- Finalize zsh installation -----"
 
 rm ~/.zshrc
 rm ~/.zshrc.pre-oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.pwendok/zsh/custom/plugins/zsh-syntax-highlighting
 ln -sfv "$DOTFILES_DIR/zsh/zshrc.mac" ~/.zshrc
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny.zsh-theme" ~/.oh-my-zsh/themes/leny.zsh-theme
 ln -sfv "$DOTFILES_DIR/zsh/themes/leny-simple.zsh-theme" ~/.oh-my-zsh/themes/leny-simple.zsh-theme
