@@ -68,7 +68,7 @@ alias dvrm="docker volume rm"
 
 # --- git (overrides from oh-my-zsh/git - )
 alias gcm="git commit -m"
-valias gs="git status -sb"
+alias gs="git status -sb"
 alias gitinit="git init"
 alias gi="git init"
 
