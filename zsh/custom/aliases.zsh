@@ -85,7 +85,6 @@ alias sysgfxreload="sudo killall SystemUIServer"
 
 # --- OSX Sleep
 alias goodnight="pmset displaysleepnow && pmset sleepnow"
-alias lock="pmset lock"
 
 # --- Gource
 alias pyebwa="gource --hide dirnames,progress,filenames -r 60 --seconds-per-day 0.25 --auto-skip-seconds 1 -1600x1000 -multi-sampling --title"
