@@ -161,7 +161,7 @@
     "one-var-declaration-per-line": [ "error", "initializations" ],
     "operator-linebreak": [ "error", "none" ],
     "quote-props": [ "error", "consistent" ],
-    "quotes": [ "error", "double", { "avoid-escape": true, "allowTemplateLiterals": true } ],
+    "quotes": [ "error", "double", { "avoidEscape": true, "allowTemplateLiterals": true } ],
     "semi": [ "error", "always" ],
     "space-before-blocks": [ "error", "always" ],
     "space-before-function-paren": [ "error", "never" ],
