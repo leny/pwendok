@@ -7,12 +7,9 @@ font-alegreya
 font-amaranth
 font-bebas-neue
 font-bitter
-font-bree-serif
 font-charter
 font-code
 font-comfortaa
-font-copse
-font-dejavu-sans
 font-droid-sans-mono
 font-droid-sans
 font-droid-serif
@@ -26,7 +23,6 @@ font-lobster-two
 font-norwester
 font-octicons
 font-open-sans
-font-pacifico
 font-pt-mono
 font-pt-sans
 font-pt-serif
@@ -38,6 +34,4 @@ font-roboto
 font-source-code-pro
 font-source-sans-pro
 font-source-serif-pro
-font-tauri
-font-tex-gyre-schola
 font-ubuntu
