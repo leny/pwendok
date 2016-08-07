@@ -9,11 +9,11 @@ echo ""
 echo "---------- .pwendok --------"
 echo ""
 echo "This will install & setup all the system."
-read -p "Ready? (y/N)" -n 1 -r
-if [[ $REPLY =~ ^[^Yy]$ ]]
-then
-    exit 1
-fi
+read -n 1 -r -p "Ready? [y/N]" response
+case $response in
+    [yY]) break;;
+    *) exit 1;;
+esac
 
 read -e -p "Please enter machine name: " machine_name
 MACHINE_NAME=${machine_name:-LenyMachine}
@@ -506,8 +506,8 @@ echo "-------------------------"
 echo "Done. All these changes require a logout/restart to take effect."
 echo "-------------------------"
 
-read -p "Reboot? (y/N)" -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    osascript -e 'tell app "System Events" to restart'
-fi
+read -n 1 -r -p "Ready? [y/N]" response
+case $response in
+    [yY]) osascript -e 'tell app "System Events" to restart';;
+    *) echo "ok."; exit 0;;
+esac
