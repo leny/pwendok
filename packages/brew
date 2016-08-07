@@ -8,7 +8,7 @@ findutils
 geoip
 git
 git-extras
-gnu-sed --default-names
+gnu-sed --with-default-names
 gstreamer
 htop-osx
 hub
