@@ -54,7 +54,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 echo "----- brew: install formulas -----"
-brew install $(cat "$DOTFILES_DIR/packages/brew"|grep -v "#")
+xargs brew install < "$DOTFILES_DIR/packages/brew"
 brew cleanup
 
 echo ""
@@ -64,22 +64,22 @@ rm ~/.zshrc
 rm ~/.zshrc.pre-oh-my-zsh
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.pwendok/zsh/custom/plugins/zsh-syntax-highlighting
 ln -sfv "$DOTFILES_DIR/zsh/themes/neoleny.zsh-theme" ~/.oh-my-zsh/themes/neoleny.zsh-theme
-ln -sfv "$DOTFILES_DIR/zsh/zshrc.mac" ~/.zshrc
+ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
 
 echo ""
 echo "----- brew: cask -----"
 brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-brew cask install $(cat "$DOTFILES_DIR/packages/cask"|grep -v "#")
+xargs brew cask install < "$DOTFILES_DIR/packages/cask"
 
 echo ""
 echo "----- brew: quicklook -----"
-brew cask install $(cat "$DOTFILES_DIR/packages/quicklook"|grep -v "#")
+xargs brew cask install < "$DOTFILES_DIR/packages/quicklook"
 
 echo ""
 echo "----- brew: fonts -----"
 brew tap caskroom/fonts
-brew cask install $(cat "$DOTFILES_DIR/packages/fonts"|grep -v "#")
+xargs brew cask install < "$DOTFILES_DIR/packages/fonts"
 
 echo ""
 echo "----- setup: htop -----"
@@ -132,7 +132,7 @@ mas install 889428659 # xScope
 
 echo ""
 echo "----- install npm packages -----"
-npm install -g $(cat "$DOTFILES_DIR/packages/npm"|grep -v "#")
+xargs npm install -g < "$DOTFILES_DIR/packages/npm"
 
 echo ""
 echo "----- install atom packages -----"
