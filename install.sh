@@ -11,12 +11,15 @@ echo ""
 echo "This will install & setup all the system."
 read -n 1 -r -p "Ready? [y/N]" response
 case $response in
-    [yY]) break;;
+    [yY]) echo "";;
     *) exit 1;;
 esac
 
 read -e -p "Please enter machine name: " machine_name
 MACHINE_NAME=${machine_name:-LenyMachine}
+
+read -e -p "Please enter app store account: " mac_account
+APPLE_ACOUNT=${mac_account}
 
 echo ""
 echo "----- link dotfiles -----"
@@ -100,6 +103,7 @@ sudo launchctl start homebrew.mxcl.dnsmasq
 
 echo ""
 echo "----- install apps from Mac App Store -----"
+mas signin $APPLE_ACOUNT
 mas install 918858936 # Airmail 2
 mas install 937984704 # Amphetamine
 mas install 434514810 # Billings Pro
@@ -508,6 +512,6 @@ echo "-------------------------"
 
 read -n 1 -r -p "Ready? [y/N]" response
 case $response in
-    [yY]) osascript -e 'tell app "System Events" to restart';;
+    [yY]) echo ""; osascript -e 'tell app "System Events" to restart';;
     *) echo "ok."; exit 0;;
 esac
