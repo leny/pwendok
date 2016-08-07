@@ -17,7 +17,7 @@ Commands to run after a fresh install.
 1. Configure sys prefs & Finder prefs (remap capslock to ctrl)
 2. Install XCode Command Line tools with `xcode-select --install`.
 3. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
-4. System setup: launch `source install.sh`, then `source install.mac.sh` if you're on a mac, then `source setup.sh` to setup & clean the system (the script reboot).
+4. System setup: launch `source install.sh` (the script ask for reboot at the end).
 5. Clone & deploy ssh keys from repo.
 6. Launch Atom and run the `Package sync: sync` command.
 

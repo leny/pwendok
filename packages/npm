@@ -1,0 +1,24 @@
+# npm global packages to install
+
+babel-cli
+babel-eslint
+bower
+browserify
+coffee-script
+enpot
+eslint
+gadkod
+grunt
+grunt-cli
+gulp
+hexo
+mocha
+phantomas
+seve
+stylus
+stylint
+tankipas
+vows
+watchify
+woazar
+yo

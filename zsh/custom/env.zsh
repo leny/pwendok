@@ -1,6 +1,6 @@
 # -- ENV
 
-PATH="~/.pwendok/bin:/usr/local/sbin:${PATH}"
+PATH="~/.pwendok/bin:$(brew --prefix coreutils)/libexec/gnubin::/usr/local/sbin:${PATH}"
 export PATH
 export EDITOR="atom -w"
 export CLICOLOR=1

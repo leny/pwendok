@@ -34,15 +34,15 @@ prompt_precmd() {
 }
 
 prompt_dir() {
-    if [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)\/(.+)$' ]]; then
+    if [[ $PWD =~ "^${HOME}\/Works\/([^\/]+)\/([^\/]+)\/(.+)\$" ]]; then
         _path="./$match[3]"
         _path="%{$fg_no_bold[yellow]%}:%{$fg_no_bold[cyan]%}%$1<(…)<$_path%<<"
         echo "%{$fg_no_bold[magenta]%}$match[1]%{$reset_color%}/%{$fg_bold[cyan]%}$match[2]%{$reset_color%}$_path"
-    elif [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)\/([^\/]+)$' ]]; then
+    elif [[ $PWD =~ "^${HOME}\/Works\/([^\/]+)\/([^\/]+)\$" ]]; then
         echo "%{$fg_no_bold[magenta]%}$match[1]%{$reset_color%}/%{$fg_bold[cyan]%}$match[2]%{$reset_color%}"
-    elif [[ $PWD =~ '^\/Users\/leny\/Works\/([^\/]+)$' ]]; then
+    elif [[ $PWD =~ "^${HOME}\/Works\/([^\/]+)\$" ]]; then
         echo "%{$fg_no_bold[magenta]%}$match[1]%{$reset_color%}"
-    elif [[ $PWD =~ '^\/Users\/leny\/.pwendok$' ]]; then
+    elif [[ $PWD =~ "^${HOME}\/.pwendok$" ]]; then
         echo "%{$fg_bold[red]%}pwendok%{$reset_color%}"
     else
         echo "%{$fg_no_bold[cyan]%}%$1<(…)<%~%<<"

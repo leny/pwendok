@@ -1,6 +1,4 @@
 "*":
-  "atom-beautify":
-    _analyticsUserId: "a375f862-3e7f-4e6b-8a52-7e8fa1dcd539"
   "atom-color-highlight":
     hideMarkersInComments: true
     hideMarkersInStrings: true
@@ -14,7 +12,6 @@
     disabledPackages: [
       "wrap-guide"
       "spell-check"
-      "react"
     ]
     packagesWithKeymapsDisabled: [
       "spell-check"
@@ -23,8 +20,6 @@
       "seti-ui"
       "tomorrow-night-eighties"
     ]
-  covalent: {}
-  "easy-motion": {}
   editor:
     fontFamily: "Fira Mono OT"
     fontSize: 12
@@ -32,16 +27,12 @@
     showInvisibles: true
     tabLength: 4
   emmet:
-    extensionsPath: "~/.pwendok/emmet"
-  "exception-reporting":
-    userId: "b08fe082-5af7-c7d4-b900-777e08a254b5"
-  "file-types": {}
+    extensionsPath: "~/.pwendok/atom/emmet"
   "fuzzy-finder":
     ignoredNames: [
       "*.scssc"
       "node_modules"
     ]
-  "html-validation": {}
   htmlhint:
     validateOnSave: false
   "inline-autocomplete":
@@ -64,12 +55,9 @@
     applyOnActivation: true
   metrics:
     userId: "5acd58d5e46233222cf4316630249b64bf87bc75"
-  motepair: {}
-  "run-command": {}
   "seti-ui":
     compactView: true
     themeColor: "Steel"
-  "spell-check": {}
   "string-looper":
     enums: [
       [
@@ -86,7 +74,6 @@
     displayInStatusBar: true
   "toggle-quotes":
     quoteCharacters: "\"'`"
-  "tree-ignore": {}
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
@@ -98,30 +85,3 @@
     ignoreWhitespaceOnCurrentLine: false
   "wrap-and-pad":
     "trim-before": true
-".basic.html.text":
-  editor:
-    softTabs: true
-    tabLength: 4
-".coffee.source":
-  editor:
-    softTabs: true
-    tabLength: 2
-".jade.source":
-  whitespace:
-    removeTrailingWhitespace: true
-".js.source":
-  editor:
-    softTabs: true
-    tabLength: 4
-".source.yaml":
-  editor:
-    softTabs: true
-    tabLength: 2
-"source.coffee":
-  editor:
-    softTabs: true
-    tabLength: 4
-"source.js":
-  editor:
-    softTabs: true
-    tabLength: 4

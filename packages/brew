@@ -1,6 +1,4 @@
-# --- Brewfile
-
-# Install GNU packages (and override OSX version)
+# Homebrew formulas to install
 
 ack
 argon/mas/mas

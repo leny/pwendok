@@ -31,7 +31,6 @@ packages: [
   "pane-manager"
   "pigments"
   "pretty-json"
-  "react"
   "react-es6-snippets"
   "react-snippets"
   "set-syntax"
