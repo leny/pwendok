@@ -219,7 +219,7 @@ sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Change Terminal Default Theme
-open "$DOTFILES_DIR/preferences/terminal/leny.terminal"
+open "$DOTFILES_DIR/preferences/leny.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
 defaults write com.apple.terminal "Default Window Settings" -string "leny"
 defaults write com.apple.terminal "Startup Window Settings" -string "leny"
