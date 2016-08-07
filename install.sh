@@ -8,13 +8,12 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo ""
 echo "---------- .pwendok --------"
 echo ""
-echo "This will install & setup all the system. Ready?"
-select yn in "yes" "no"; do
-    case $yn in
-        yes ) break;;
-        no ) echo "kthksbye."
-    esac
-done
+echo "This will install & setup all the system."
+read -p "Ready? (y/N)" -n 1 -r
+if [[ $REPLY =~ ^[^Yy]$ ]]
+then
+    exit 1
+fi
 
 read -e -p "Please enter machine name: " machine_name
 MACHINE_NAME=${machine_name:-LenyMachine}
