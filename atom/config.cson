@@ -21,13 +21,15 @@
       "tomorrow-night-eighties"
     ]
   editor:
-    fontFamily: "Fira Mono OT"
+    fontFamily: "Fira Mono"
     fontSize: 12
     invisibles: {}
     showInvisibles: true
     tabLength: 4
   emmet:
     extensionsPath: "~/.pwendok/atom/emmet"
+  "exception-reporting":
+    userId: "0c6ce87a-a468-40fc-4501-dcb78f5ab28b"
   "fuzzy-finder":
     ignoredNames: [
       "*.scssc"
