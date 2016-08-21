@@ -1,4 +1,5 @@
 packages: [
+  "autocomplete-paths"
   "atom-beautify"
   "caniuse"
   "coffeescript-check"
@@ -23,7 +24,6 @@ packages: [
   "linter-gadkod"
   "linter-htmlhint"
   "linter-jsonlint"
-  "linter-markdown"
   "linter-stylint-h"
   "local-config"
   "markdown-writer"
