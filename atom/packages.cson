@@ -34,6 +34,7 @@ packages: [
   "pretty-json"
   "react-es6-snippets"
   "react-snippets"
+  "selection-counter"
   "set-syntax"
   "seti-ui"
   "sort-lines"
