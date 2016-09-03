@@ -7,6 +7,7 @@ packages: [
   "editorconfig"
   "emmet"
   "gutter-shadow"
+  "html-outliner"
   "indent-toggle-on-paste"
   "language-babel"
   "language-docker"
