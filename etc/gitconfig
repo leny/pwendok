@@ -45,3 +45,5 @@
     helper = osxkeychain
 [push]
 	default = simple
+[pull]
+    rebase = preserve
