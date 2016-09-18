@@ -1,6 +1,7 @@
 ack
 argon/mas/mas
 bfg
+cloc
 coreutils
 dnsmasq
 findutils
@@ -9,6 +10,7 @@ git
 git-extras
 gnu-sed --with-default-names
 gstreamer
+hr
 htop-osx
 hub
 links
