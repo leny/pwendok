@@ -90,6 +90,8 @@
   'cmd-shift-v': 'indent-toggle-on-paste:paste'
   # Delete line
   "cmd-backspace": "editor:delete-line"
+  # Remapping linter
+  'cmd-l cmd-l': "linter:next-error"
 
 '.platform-darwin atom-text-editor:not([mini])':
   # Remapping Emmet
