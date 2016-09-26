@@ -104,7 +104,7 @@ sudo launchctl start homebrew.mxcl.dnsmasq
 echo ""
 echo "----- install apps from Mac App Store -----"
 mas signin $APPLE_ACOUNT
-mas install 918858936 # Airmail 2
+mas install 918858936 # Airmail 3
 mas install 937984704 # Amphetamine
 mas install 434514810 # Billings Pro
 mas install 417896628 # ColorSchemer Studio
@@ -137,6 +137,10 @@ xargs npm install -g < "$DOTFILES_DIR/packages/npm"
 echo ""
 echo "----- install atom packages -----"
 apm install package-sync
+
+echo ""
+echo "----- install go packages -----"
+go get -u github.com/davecheney/httpstat
 
 echo ""
 echo "----- generate directory structure -----"
