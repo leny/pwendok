@@ -18,3 +18,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 . <(npm completion)
 . <(enpot completion)
 eval "$(gulp --completion=zsh)"
+
+# Go
+export GOPATH=$HOME/.golang
+export PATH=$PATH:$GOPATH/bin

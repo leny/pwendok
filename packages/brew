@@ -9,6 +9,7 @@ geoip
 git
 git-extras
 gnu-sed --with-default-names
+go
 gstreamer
 hr
 htop-osx
