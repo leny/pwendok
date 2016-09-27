@@ -4,6 +4,7 @@ bfg
 cloc
 coreutils
 dnsmasq
+ffmpeg
 findutils
 geoip
 git
