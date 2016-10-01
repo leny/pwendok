@@ -31,6 +31,7 @@ sdl2_ttf
 sdl2_mixer
 ssh-copy-id
 svn
+transmission
 tree
 wget --enable-iri
 youtube-dl
