@@ -13,6 +13,6 @@ ZSH_THEME="neoleny"
     # Custom folder location
 ZSH_CUSTOM=$PWENDOK/zsh/custom
     # Plugins
-plugins=(git brew brew-cask depo docker docker-compose encode64 golang grunt gulp k leny-git-prompt npm pip python sote zsh-syntax-highlighting)
+plugins=(git brew brew-cask depo docker docker-compose encode64 golang grunt gulp k leny-git-prompt npm pip python sote vagrant zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
