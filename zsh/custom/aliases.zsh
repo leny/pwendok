@@ -54,6 +54,16 @@ alias ncc="npm cache clear"
 # --- tower
 alias tower="gittower ."
 
+# --- vagrant
+alias vup="vagrant up"
+alias vdestroy="vagrant destroy --force"
+alias vssh="vagrant ssh"
+alias vdeploy="vagrant destroy --force && vagrant up && vagrant ssh"
+alias vreload="vagrant up && vagrant ssh"
+alias vhalt="vagrant halt"
+alias vgstatus="vagrant global-status"
+alias vstatus="vagrant status"
+
 # --- docker & Boot2Docker
 alias dcompose="docker-compose"
 alias dmachine="docker-machine"
