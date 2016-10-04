@@ -18,6 +18,7 @@ packages: [
   "language-jade"
   "language-javascript-jxa"
   "language-nginx"
+  "language-pug"
   "language-swift"
   "lazy-motion"
   "linter"
