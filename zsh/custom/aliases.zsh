@@ -90,6 +90,7 @@ alias gcm="git commit -m"
 alias gs="git status -sb"
 alias gitinit="git init"
 alias gi="git init"
+alias gap="git add -p"
 
 # --- brew
 alias burp="brew update && brew upgrade && brew cleanup"
