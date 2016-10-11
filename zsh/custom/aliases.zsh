@@ -38,7 +38,6 @@ alias ydlp="youtube-dl --yes-playlist -f '(mp4)[height>=720]'"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
 # --- npm
-# european mirror
 alias ni="npm install"
 alias nid="npm install --only=dev"
 alias nip="npm install --only=prod"
@@ -50,6 +49,14 @@ alias npmo="npm outdated --depth=0"
 alias nity="npm init -y"
 alias nit="npm init"
 alias ncc="npm cache clear"
+# ----- yarn
+alias ny="yarn install"
+alias nya="yarn add"
+alias nyad="yarn add -d"
+alias nyp="yarn install --production"
+alias nry="rm -rf ./node_modules && yarn install"
+alias nyt="yarn init"
+alias nyty="yarn init"
 
 # --- tower
 alias tower="gittower ."
