@@ -52,7 +52,7 @@ alias ncc="npm cache clear"
 # ----- yarn
 alias ny="yarn install"
 alias nya="yarn add"
-alias nyad="yarn add -d"
+alias nyad="yarn add --dev"
 alias nyp="yarn install --production"
 alias nry="rm -rf ./node_modules && yarn install"
 alias nyt="yarn init"
