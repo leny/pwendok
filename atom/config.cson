@@ -16,10 +16,12 @@
     packagesWithKeymapsDisabled: [
       "spell-check"
     ]
+    telemetryConsent: "limited"
     themes: [
       "seti-ui"
       "tomorrow-night-eighties"
     ]
+    useCustomTitleBar: true
   editor:
     fontFamily: "Fira Mono"
     fontSize: 12
