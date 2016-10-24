@@ -135,7 +135,7 @@ xargs npm install -g < "$DOTFILES_DIR/packages/npm"
 
 echo ""
 echo "----- install atom packages -----"
-apm install package-sync
+xargs apm install -g < "$DOTFILES_DIR/packages/apm"
 
 echo ""
 echo "----- install go packages -----"
