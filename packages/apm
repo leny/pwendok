@@ -11,6 +11,7 @@ emmet
 gutter-shadow
 html-outliner
 indent-toggle-on-paste
+language-apache
 language-babel
 language-docker
 language-graphql
