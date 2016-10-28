@@ -81,6 +81,8 @@
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    statusBarModeStringStyle: "long"
   "w3c-validation":
     validateOnSave: false
   welcome:
