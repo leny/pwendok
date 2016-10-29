@@ -156,3 +156,72 @@ atom-text-editor::shadow {
 pigments-palette {
     background: transparent;
 }
+
+// Hack vim-mode-plus
+@vim-mode-plus-cursor-color: darken( @hacked-pane-background-color, 5% );
+
+.cursor-base() {
+  border: none;
+  background: none;
+  opacity: 0.5;
+}
+
+.block-cursor(@visibility) {
+  .cursor-base();
+  background-color: @vim-mode-plus-cursor-color;
+  visibility: @visibility;
+}
+
+.underline-cursor(@visibility) {
+  .cursor-base();
+  border-bottom: .3em solid @vim-mode-plus-cursor-color;
+  visibility: @visibility;
+}
+
+.low-block-cursor(@visibility) {
+  .cursor-base();
+  border-bottom: .6em solid @vim-mode-plus-cursor-color;
+  visibility: @visibility;
+}
+
+atom-text-editor.vim-mode-plus.normal-mode, atom-text-editor.vim-mode-plus.visual-mode {
+  &.is-focused::shadow {
+    .cursor {
+      .block-cursor(visible);
+    }
+  }
+}
+
+atom-text-editor.vim-mode-plus-input-char-waiting,
+{
+  &.is-focused::shadow {
+    .cursor {
+      .underline-cursor(visible);
+      border-bottom-width: .2em;
+    }
+  }
+}
+
+atom-text-editor.vim-mode-plus.operator-pending-mode.is-focused,
+{
+  &::shadow {
+    .cursor {
+      .low-block-cursor(visible);
+    }
+    .cursors.blink-off .cursor {
+      .low-block-cursor(hidden);
+    }
+  }
+}
+
+atom-text-editor.vim-mode-plus.insert-mode.replace.is-focused,
+{
+  &::shadow {
+    .cursor {
+      .underline-cursor(visible);
+    }
+    .cursors.blink-off .cursor {
+      .underline-cursor(hidden);
+    }
+  }
+}
