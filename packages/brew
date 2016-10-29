@@ -33,6 +33,7 @@ ssh-copy-id
 svn
 transmission
 tree
+vim
 wget --enable-iri
 youtube-dl
 zsh
