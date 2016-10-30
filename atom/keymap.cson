@@ -122,3 +122,13 @@
   'cmd-g cmd-"': "markdown-writer:toggle-codeblock-text"
   "cmd-g cmd-o": "markdown-writer:toggle-ol"
   "cmd-g cmd-u": "markdown-writer:toggle-ul"
+
+# Add commands to vim-mode-plus
+
+# except insert
+# -------------------------
+"atom-text-editor.vim-mode-plus:not(.insert-mode)":
+  "g e": "easy-motion-redux:words"
+  "g E": "easy-motion-redux:letter"
+  "g i": "lazy-motion:forward"
+  "g I": "lazy-motion:backward"
