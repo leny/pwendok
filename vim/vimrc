@@ -82,6 +82,7 @@ Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
@@ -103,3 +104,5 @@ noremap <leader>b :FufBuffer<CR>
 map <leader>e <plug>(easymotion-bd-w)
 nmap <leader>e <plug>(easymotion-overwin-w)
 
+" ----- Emmet configuration
+let g:user_emmet_leader_key='<c-e>'
