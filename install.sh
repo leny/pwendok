@@ -36,6 +36,12 @@ ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
 ln -sfv "$DOTFILES_DIR/vim" ~/.vim
 
 echo ""
+echo "----- configure vim -----"
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
+echo ""
 echo "----- link atom -----"
 
 ln -sfv "$DOTFILES_DIR/atom" ~/.atom

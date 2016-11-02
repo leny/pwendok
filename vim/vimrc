@@ -63,3 +63,13 @@ nmap <leader>w :set wrap!<CR> " Togglewrap
 set scrolloff=8 " Lines to keep above and below the cursor 
 set sidescrolloff=15
 set sidescroll=1
+" ----- Plugins configuration
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim " setup vundle
+call vundle#begin() " start vundle plugins list
+Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
+
+
+call vundle#end() " end vundle plugins list
+filetype plugin indent on
+
