@@ -77,10 +77,12 @@ call vundle#begin() " start vundle plugins list
 Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end() " end vundle plugins list
-filetype plugin indent on
+filetype plugin on
 
 " ----- NERDTree configuration
 autocmd vimenter * NERDTree
@@ -91,3 +93,7 @@ map <leader>kb :NERDTreeToggle<CR>
 " ----- FuzzyFinder configuration
 noremap <leader>f :FufFile<CR>
 noremap <leader>b :FufBuffer<CR>
+
+" ----- Lightline configuration
+" TODO: https://github.com/itchyny/lightline.vim#configuration-tutorial
+

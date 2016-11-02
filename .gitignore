@@ -10,3 +10,4 @@ atom/blob-store
 atom/config.cson.bck
 zsh/custom/plugins/zsh-syntax-highlighting
 vim/bundle/*
+vim/.netrwhist
