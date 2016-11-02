@@ -77,6 +77,7 @@ call vundle#begin() " start vundle plugins list
 Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
 
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/FuzzyFinder'
 
 call vundle#end() " end vundle plugins list
 filetype plugin indent on
@@ -87,3 +88,6 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <leader>kb :NERDTreeToggle<CR>
 
+" ----- FuzzyFinder configuration
+noremap <leader>f :FufFile<CR>
+noremap <leader>b :FufBuffer<CR>
