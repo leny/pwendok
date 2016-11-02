@@ -39,6 +39,9 @@ syntax on " Enable syntax highlighting
 set autoread " Reload files changed outside vim
 set fileformat=unix " Use unix line endings
 set fileformats=unix,dos " Try unix line endings prior to dos
+:au FocusLost * :wa "Save on focus lost
+set ttyfast " Improve terminal redraw speed
+set foldlevel=250 " Unfold all at opening
 
 " ----- Color theme
 colorscheme tomorrow-night-eighties
@@ -77,14 +80,20 @@ call vundle#begin() " start vundle plugins list
 Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
 " --- Utils plugins
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/L9'
-Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'raimondi/delimitmate'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'jsx/jsx.vim'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
@@ -95,10 +104,7 @@ autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <leader>kb :NERDTreeToggle<CR>
-
-" ----- FuzzyFinder configuration
-noremap <leader>f :FufFile<CR>
-noremap <leader>b :FufBuffer<CR>
+map <leader>kf :NERDTreeFind<CR>
 
 " ----- Lightline configuration
 " TODO: https://github.com/itchyny/lightline.vim#configuration-tutorial
@@ -109,3 +115,7 @@ nmap <leader>e <plug>(easymotion-overwin-w)
 
 " ----- Emmet configuration
 let g:user_emmet_leader_key='<c-e>'
+
+" ----- ctrlp configuration
+let g:ctrlp_map = '<c-p>'
+
