@@ -80,6 +80,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'itchyny/lightline.vim'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
@@ -96,4 +97,8 @@ noremap <leader>b :FufBuffer<CR>
 
 " ----- Lightline configuration
 " TODO: https://github.com/itchyny/lightline.vim#configuration-tutorial
+
+" ----- EasyMotion configuration
+map <leader>e <plug>(easymotion-bd-w)
+nmap <leader>e <plug>(easymotion-overwin-w)
 
