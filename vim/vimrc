@@ -76,7 +76,14 @@ set rtp+=~/.vim/bundle/Vundle.vim " setup vundle
 call vundle#begin() " start vundle plugins list
 Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
 
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end() " end vundle plugins list
 filetype plugin indent on
+
+" ----- NERDTree configuration
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <leader>kb :NERDTreeToggle<CR>
 
