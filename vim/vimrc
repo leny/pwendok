@@ -81,6 +81,7 @@ Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-surround'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
