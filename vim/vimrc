@@ -49,6 +49,9 @@ colorscheme tomorrow-night-eighties
 " ----- MacVim Configuration
 set guifont=Fira\ Mono:h12
 
+" ----- Quicker escape mode
+inoremap jj <ESC>
+
 " ----- Remaps goto match
 nnoremap <tab> %
 vnoremap <tab> %
