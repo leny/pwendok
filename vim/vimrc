@@ -49,6 +49,19 @@ colorscheme tomorrow-night-eighties
 " ----- MacVim Configuration
 set guifont=Fira\ Mono:h12
 
+" ----- Remaps goto match
+nnoremap <tab> %
+vnoremap <tab> %
+
+" ----- Disable arrows in normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+nnoremap j gj
+nnoremap k gk
+
 " ----- Splits Configuration
 set splitbelow
 set splitright
@@ -90,13 +103,13 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'michalliu/sourcebeautify.vim'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'jsx/jsx.vim'
+Plugin 'vim-scripts/smarty-syntax'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
