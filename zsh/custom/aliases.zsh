@@ -93,6 +93,7 @@ alias gs="git status -sb"
 alias gitinit="git init"
 alias gi="git init"
 alias gap="git add -p"
+alias gds="git diff --staged"
 
 # --- brew
 alias burp="brew update && brew upgrade && brew cleanup"
