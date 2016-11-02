@@ -36,6 +36,9 @@ set wildmenu " Display autocomplete options
 set nowrap " Don't wrap long lines
 set linebreak " Wrap lines at convenient points
 syntax on " Enable syntax highlighting
+set autoread " Reload files changed outside vim
+set fileformat=unix " Use unix line endings
+set fileformats=unix,dos " Try unix line endings prior to dos
 
 " ----- Color theme
 colorscheme tomorrow-night-eighties
@@ -63,6 +66,10 @@ nmap <leader>w :set wrap!<CR> " Togglewrap
 set scrolloff=8 " Lines to keep above and below the cursor 
 set sidescrolloff=15
 set sidescroll=1
+
+" ----- Add save shortcuts
+nmap <C-O> :w<CR> " nano-like save shortcut
+
 " ----- Plugins configuration
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim " setup vundle
