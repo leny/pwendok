@@ -103,9 +103,6 @@ filetype plugin on
 
 " ----- NERDTree configuration
 let NERDTreeShowHidden = 1
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <leader>kb :NERDTreeToggle<CR>
 map <leader>kf :NERDTreeFind<CR>
 
@@ -121,4 +118,5 @@ let g:user_emmet_leader_key='<c-e>'
 
 " ----- ctrlp configuration
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
