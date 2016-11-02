@@ -75,7 +75,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim " setup vundle
 call vundle#begin() " start vundle plugins list
 Plugin 'VundleVim/Vundle.vim' " Vundle needs to manage itself
-
+" --- Utils plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
@@ -83,12 +83,14 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
+" --- Syntax plugins
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
 
 " ----- NERDTree configuration
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
