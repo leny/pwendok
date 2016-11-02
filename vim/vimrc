@@ -88,6 +88,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'raimondi/delimitmate'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
