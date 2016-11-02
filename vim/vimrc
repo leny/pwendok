@@ -88,6 +88,7 @@ set sidescroll=1
 
 " ----- Add save shortcuts
 nmap <C-O> :w<CR> " nano-like save shortcut
+nmap <leader>w :w!<cr> " save with leader keystroke
 
 " ----- Plugins configuration
 filetype off
