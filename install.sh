@@ -33,6 +33,7 @@ ln -sfv "$DOTFILES_DIR/etc/babelrc.json" ~/.babelrc
 ln -sfv "$DOTFILES_DIR/etc/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/etc/hyperterm.js" ~/.hyperterm.js
 ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
+ln -sfv "$DOTFILES_DIR/vim" ~/.vim
 
 echo ""
 echo "----- link atom -----"
