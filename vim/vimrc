@@ -49,6 +49,9 @@ colorscheme tomorrow-night-eighties
 " ----- MacVim Configuration
 set guifont=Fira\ Mono:h12
 
+" ----- Remap ; to : in normal mode (less misscases)
+nnoremap ; :
+
 " ----- Quicker escape mode
 inoremap jj <ESC>
 
