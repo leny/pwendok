@@ -137,6 +137,8 @@ let g:user_emmet_leader_key='<c-e>'
 
 " ----- ctrlp configuration
 let g:ctrlp_map = '<c-p>'
+map <c-p> :CtrlP<cr>
+map <c-b> :CtrlPBufTag<cr>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ----- whitespace cleaning
