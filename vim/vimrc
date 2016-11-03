@@ -52,6 +52,9 @@ set guifont=Fira\ Mono:h12
 " ----- Remap ; to : in normal mode (less misscases)
 nnoremap ; :
 
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
 " ----- Quicker escape mode
 inoremap jj <ESC>
 
