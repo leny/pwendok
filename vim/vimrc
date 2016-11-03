@@ -114,6 +114,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'editorconfig/editorconfig-vim'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
