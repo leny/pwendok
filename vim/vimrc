@@ -77,12 +77,13 @@ nnoremap <C-H> <C-W><C-H>
 " ----- Invisibles chars configuration
 nmap <leader>l :set list!<CR> " Toggle invisible chars
 set listchars=tab:••,eol:¬ " Customize chars used for invisibles
+set list
 
 " ----- Toggle wrap
 nmap <leader>w :set wrap!<CR> " Togglewrap
 
 " ----- Scrolling
-set scrolloff=8 " Lines to keep above and below the cursor 
+set scrolloff=8 " Lines to keep above and below the cursor
 set sidescrolloff=15
 set sidescroll=1
 
@@ -138,3 +139,5 @@ let g:user_emmet_leader_key='<c-e>'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+" ----- whitespace cleaning
+autocmd BufWritePre * :%s/\s\+$//e
