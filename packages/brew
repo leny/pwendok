@@ -2,6 +2,7 @@ ack
 argon/mas/mas
 bfg
 cloc
+cmake
 coreutils
 dnsmasq
 ffmpeg
