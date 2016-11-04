@@ -142,6 +142,10 @@ nmap <leader>e <plug>(easymotion-overwin-w)
 
 " ----- Emmet configuration
 let g:user_emmet_leader_key='<c-e>'
+autocmd FileType html,jade,css,sass,scss,stylus EmmetInstall
+autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+autocmd BufNewFile,BufReadPost *.css set filetype=css
+autocmd BufRead,BufNewFile *.styl set filetype=css
 
 " ----- ctrlp configuration
 let g:ctrlp_map = '<c-p>'
