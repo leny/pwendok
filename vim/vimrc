@@ -127,12 +127,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'jsx/jsx.vim'
 Plugin 'vim-scripts/smarty-syntax'
-Plugin 'wavded/vim-stylus'
 
 call vundle#end() " end vundle plugins list
 filetype plugin on
