@@ -123,6 +123,8 @@ Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
@@ -209,3 +211,9 @@ inoremap <expr><TAB>
 
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+" ----- Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
