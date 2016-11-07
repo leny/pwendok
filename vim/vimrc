@@ -150,9 +150,6 @@ let g:user_emmet_prev_key = '<c-j>'
 let g:user_emmet_next_key = '<c-k>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType html,jade,css,sass,scss,stylus EmmetInstall
-autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
-autocmd BufNewFile,BufReadPost *.css set filetype=css
-autocmd BufRead,BufNewFile *.styl set filetype=css
 
 " ----- ctrlp configuration
 let g:ctrlp_map = '<c-p>'
@@ -211,4 +208,4 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
