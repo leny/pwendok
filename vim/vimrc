@@ -82,7 +82,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " ----- Invisibles chars configuration
 nmap <leader>l :set list!<CR> " Toggle invisible chars
-set listchars=tab:••,eol:¬ " Customize chars used for invisibles
+set listchars=tab:··,eol:¬ " Customize chars used for invisibles
 set list
 
 " ----- Toggle wrap
