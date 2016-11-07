@@ -148,7 +148,10 @@ map <leader>e <plug>(easymotion-bd-w)
 nmap <leader>e <plug>(easymotion-overwin-w)
 
 " ----- Emmet configuration
-let g:user_emmet_leader_key='<c-e>'
+let g:user_emmet_leader_key = '<c-y>'
+let g:user_emmet_prev_key = '<c-j>'
+let g:user_emmet_next_key = '<c-k>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType html,jade,css,sass,scss,stylus EmmetInstall
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 autocmd BufNewFile,BufReadPost *.css set filetype=css
