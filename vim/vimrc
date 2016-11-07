@@ -97,6 +97,13 @@ set sidescroll=1
 nmap <C-O> :w<CR> " nano-like save shortcut
 nmap <leader>w :w!<cr> " save with leader keystroke
 
+" ----- Reloads .vimrc
+nmap <Leader>s :source ~/.vimrc
+
+" ----- Space to toggle folds
+nnoremap <Space> za
+vnoremap <Space> za
+
 " ----- Plugins configuration
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim " setup vundle
