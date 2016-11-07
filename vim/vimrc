@@ -122,7 +122,7 @@ Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/neocomplete.vim'
 " --- Syntax plugins
 Plugin 'sheerun/vim-polyglot'
 Plugin 'kchmck/vim-coffee-script'
@@ -165,3 +165,47 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " ----- whitespace cleaning
 autocmd BufWritePre * :%s/\s\+$//e
+
+" ----- neocomplete configuration
+" (taken from deblan, need to refine)
+
+function! s:my_cr_function()
+	return neocomplete#close_popup() . "\<CR>"
+	"return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
+	"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+	""	\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+endfunction
+
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#force_omni_input_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+"let g:neocomplete#force_omni_input_patterns.php = '\h\w*\|[^- \t]->\w*'
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+\ }
+let g:neocomplete#disable_auto_complete = 1
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+
+inoremap <expr><TAB>
+	\ pumvisible() ? "\<C-n>" :
+	\ neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" :
+	\ "\<TAB>"
+
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
