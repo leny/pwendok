@@ -94,6 +94,7 @@ alias gitinit="git init"
 alias gi="git init"
 alias gap="git add -p"
 alias gds="git diff --staged"
+alias cdg="cd \$(git rev-parse --show-toplevel)"
 
 # --- brew
 alias burp="brew update && brew upgrade && brew cleanup"
