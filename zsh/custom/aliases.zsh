@@ -108,7 +108,7 @@ alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 
 # --- OSX GUI Restart (sometime my OS graphics freeze, this helps)
-alias sysgfxreload="sudo killall SystemUIServer"
+alias gfxreload="sudo killall SystemUIServer"
 
 # --- OSX Sleep
 alias goodnight="pmset displaysleepnow && pmset sleepnow"
