@@ -52,9 +52,6 @@ set guifont=Fira\ Mono:h12
 " ----- Remap ; to : in normal mode (less misscases)
 nnoremap ; :
 
-"This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
-
 " ----- Quicker escape mode
 inoremap jj <ESC>
 
@@ -122,7 +119,8 @@ Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Shougo/neocomplete.vim'
+Bundle 'ervandew/supertab'
+Bundle 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " --- Syntax plugins
@@ -160,34 +158,13 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " ----- whitespace cleaning
 autocmd BufWritePre * :%s/\s\+$//e
 
-" ----- neocomplete configuration
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries = { 'default' : '', 'vimshell' : $HOME.'/.vimshell_hist', 'scheme' : $HOME.'/.gosh_completions' }
-
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-endfunction
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+" ----- YCM Configuration (cf. http://stackoverflow.com/a/22253548)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " ----- Ultisnips
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<C-R>=g:UltiSnips#ExpandSnippet()<CR>"
-
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
