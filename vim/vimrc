@@ -162,6 +162,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabClosePreviewOnPopupClose = 1
 
 " ----- Ultisnips
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
