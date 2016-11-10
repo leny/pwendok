@@ -147,7 +147,7 @@ let g:user_emmet_leader_key = '<c-y>'
 let g:user_emmet_prev_key = '<c-j>'
 let g:user_emmet_next_key = '<c-k>'
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-autocmd FileType html,jade,css,sass,scss,stylus EmmetInstall
+autocmd FileType html,jade,css,sass,scss,stylus,smarty EmmetInstall
 
 " ----- ctrlp configuration
 let g:ctrlp_map = '<c-p>'
