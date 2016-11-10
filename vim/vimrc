@@ -146,7 +146,7 @@ nmap <leader>e <plug>(easymotion-overwin-w)
 let g:user_emmet_leader_key = '<c-y>'
 let g:user_emmet_prev_key = '<c-j>'
 let g:user_emmet_next_key = '<c-k>'
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+imap <expr> <c-e> emmet#expandAbbrIntelligent("\<tab>")
 autocmd FileType html,jade,css,sass,scss,stylus,smarty EmmetInstall
 
 " ----- ctrlp configuration
