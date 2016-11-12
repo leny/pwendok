@@ -85,7 +85,7 @@ set list
 " ----- Toggle wrap
 nmap <leader>w :set wrap!<CR> " Togglewrap
 
-" ----- Scrolling
+" ---- Scrolling
 set scrolloff=8 " Lines to keep above and below the cursor
 set sidescrolloff=15
 set sidescroll=1
@@ -119,8 +119,9 @@ Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
-Bundle 'ervandew/supertab'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'justinmk/vim-sneak'
+Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 " --- Syntax plugins
@@ -169,3 +170,6 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "snips"]
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" ----- Sneak
+let g:sneak#streak = 1
