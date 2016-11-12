@@ -54,6 +54,7 @@ nnoremap ; :
 
 " ----- Quicker escape mode
 inoremap jj <ESC>
+inoremap ;; ;<ESC>
 
 " ----- Remaps goto match
 nnoremap <tab> %
