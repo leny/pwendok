@@ -66,8 +66,8 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
-nnoremap j gj
-nnoremap k gk
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 " ----- Splits Configuration
 set splitbelow
@@ -88,7 +88,7 @@ nmap <leader>w :set wrap!<CR> " Togglewrap
 
 " ---- Scrolling
 set scrolloff=8 " Lines to keep above and below the cursor
-set sidescrolloff=15
+set sidescrolloff=5
 set sidescroll=1
 
 " ----- Add save shortcuts
