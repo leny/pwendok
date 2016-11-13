@@ -119,6 +119,7 @@ Plugin 'raimondi/delimitmate'
 Plugin 'vim-scripts/gitignore'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'terryma/vim-expand-region'
 Plugin 'justinmk/vim-sneak'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
@@ -159,6 +160,10 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " ----- whitespace cleaning
 autocmd BufWritePre * :%s/\s\+$//e
+
+" ----- Region expanding configuration
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
 
 " ----- YCM Configuration (cf. http://stackoverflow.com/a/22253548)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
