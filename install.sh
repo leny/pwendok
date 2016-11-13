@@ -32,12 +32,13 @@ ln -sfv "$DOTFILES_DIR/etc/eslintrc.json" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/etc/babelrc.json" ~/.babelrc
 ln -sfv "$DOTFILES_DIR/etc/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/etc/hyperterm.js" ~/.hyperterm.js
-ln -sfv "$DOTFILES_DIR/vim/vimrc" ~/.vimrc
-ln -sfv "$DOTFILES_DIR/vim" ~/.vim
 
 echo ""
 echo "----- configure vim -----"
 
+cd && git clone https://github.com/leny/pwenvim ~/.pwenvim
+ln -sfv ~/.pwenvim/vimrc ~/.vimrc
+ln -sfv ~/.pwenvim/vim ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
