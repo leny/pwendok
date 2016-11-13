@@ -6,7 +6,7 @@
 set nocompatible
 
 " ----- Leader configuration
-let mapleader="," " Switch leader char from backslash to comma
+let mapleader="\<Space>" " cf. http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 
 " ----- Editor config
 set backspace=indent,eol,start " Allow backspacing everything in insert mode
@@ -98,9 +98,8 @@ nmap <leader>w :w!<cr> " save with leader keystroke
 " ----- Reloads .vimrc
 nmap <Leader>s :source ~/.vimrc
 
-" ----- Space to toggle folds
-nnoremap <Space> za
-vnoremap <Space> za
+" ----- Remapping visual mode
+nmap <Leader><Leader> V
 
 " ----- Plugins configuration
 filetype off
@@ -155,6 +154,7 @@ autocmd FileType html,jade,css,sass,scss,stylus,smarty EmmetInstall
 let g:ctrlp_map = '<c-p>'
 map <c-p> :CtrlP<cr>
 map <c-b> :CtrlPBufTag<cr>
+nnoremap <Leader>p :CtrlP<CR>
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " ----- whitespace cleaning
