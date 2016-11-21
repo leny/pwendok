@@ -14,3 +14,8 @@ hs.pathwatcher.new( os.getenv( "HOME" ) .. "/.pwendok/hammerspoon/", reloadConfi
 
 -- Window Relocator
 require "window-relocator"
+
+-- Window Hints
+hs.hotkey.bind( { "ctrl", "alt" }, "c", function()
+    hs.hints.windowHints()
+end )
