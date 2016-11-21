@@ -2,7 +2,7 @@
 aModifiers = { "ctrl", "alt" }
 sTrigger = "x"
 iTriggerCode = hs.keycodes.map[ sTrigger ]
-sInvite = "💠"
+sInvite = "🍱"
 iTimeout = 3
 oModalStyles = {
     strokeColor = { alpha = 0 },
