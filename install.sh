@@ -32,6 +32,8 @@ ln -sfv "$DOTFILES_DIR/etc/eslintrc.json" ~/.eslintrc
 ln -sfv "$DOTFILES_DIR/etc/babelrc.json" ~/.babelrc
 ln -sfv "$DOTFILES_DIR/etc/editorconfig" ~/.editorconfig
 ln -sfv "$DOTFILES_DIR/etc/hyperterm.js" ~/.hyperterm.js
+mkdir ~/.hammerspoon
+ln -sfv "$DOTFILES_DIR/etc/hammerspoon.lua" ~/.hammerspoon/init.lua
 
 echo ""
 echo "----- configure vim -----"
