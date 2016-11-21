@@ -127,7 +127,6 @@ mas install 463541543 # Gemini
 mas install 435932420 # iPackr
 mas install 409183694 # Keynote
 mas install 421131143 # MPlayerX
-mas install 419330170 # Moom
 mas install 928871589 # Noizio
 mas install 409203825 # Numbers
 mas install 409201541 # Pages
@@ -504,10 +503,6 @@ defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
-
-########## Moom
-
-defaults import com.manytricks.Moom "$DOTFILES_DIR/preferences/com.manytricks.Moom.plist"
 
 ###############################################################################
 
