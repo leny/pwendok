@@ -1,5 +1,13 @@
 -- Hammerspoon init script
 
-hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
-    hs.alert.show("Hello World!")
-end)
+-- Reload config when changes
+function reloadConfig( files )
+    for _, file in pairs( files ) do
+        if file:sub( -4 ) == ".lua" then
+            hs.reload()
+            return
+        end
+    end
+end
+hs.pathwatcher.new( os.getenv( "HOME" ) .. "/.pwendok/etc/", reloadConfig ):start()
+
