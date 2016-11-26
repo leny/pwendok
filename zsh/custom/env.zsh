@@ -2,7 +2,7 @@
 
 PATH="~/.pwendok/bin:$(brew --prefix coreutils)/libexec/gnubin::/usr/local/sbin:${PATH}"
 export PATH
-export EDITOR="atom -w"
+export EDITOR="vim"
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
