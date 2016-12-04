@@ -19,3 +19,6 @@ require "window-relocator"
 hs.hotkey.bind( { "ctrl", "alt" }, "c", function()
     hs.hints.windowHints()
 end )
+
+-- iTunes current track
+require "itunes-current"
