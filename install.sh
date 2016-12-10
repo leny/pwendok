@@ -39,6 +39,7 @@ echo "----- configure vim -----"
 
 cd && git clone https://github.com/leny/pwenvim ~/.pwenvim
 ln -sfv ~/.pwenvim/vimrc ~/.vimrc
+ln -sfv ~/.pwenvim/gvimrc ~/.gvimrc
 ln -sfv ~/.pwenvim/vim ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
