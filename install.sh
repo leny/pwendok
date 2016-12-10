@@ -237,6 +237,9 @@ defaults write com.apple.terminal "Startup Window Settings" -string "leny"
 # Import iTerm2 settings
 defaults import com.googlecode.iterm2 "$DOTFILES_DIR/preferences/com.googlecode.iterm2.plist"
 
+# Disable Spark Updates in MacVim
+defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
+
 ########## Trackpad, mouse, keyboard, Bluetooth accessories, and input
 
 # Trackpad: enable tap to click for this user and for the login screen
