@@ -15,10 +15,6 @@ case $response in
     *) exit 1;;
 esac
 
-echo ""
-echo "----- XCode license acceptation -----"
-sudo xcodebuild -license accept
-
 read -e -p "Please enter machine name: " machine_name
 MACHINE_NAME=${machine_name:-LenyMachine}
 
@@ -136,6 +132,7 @@ mas install 413965349 # Soulver
 mas install 1176895641 # Spark
 mas install 531349534 # Tadam
 mas install 557168941 # Tweetbot
+mas install 497799835 # Xcode
 mas install 889428659 # xScope
 
 echo ""
