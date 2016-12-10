@@ -114,25 +114,22 @@ sudo launchctl start homebrew.mxcl.dnsmasq
 echo ""
 echo "----- install apps from Mac App Store -----"
 mas signin $APPLE_ACOUNT
-mas install 918858936 # Airmail 3
 mas install 937984704 # Amphetamine
 mas install 434514810 # Billings Pro
-mas install 417896628 # ColorSchemer Studio
-mas install 923920635 # Current
+mas install 536511979 # Characters
 mas install 498672703 # Droplr
 mas install 975937182 # Fantastical 2
 mas install 724408341 # Fonts
 mas install 463541543 # Gemini
 mas install 435932420 # iPackr
 mas install 409183694 # Keynote
-mas install 421131143 # MPlayerX
 mas install 928871589 # Noizio
 mas install 409203825 # Numbers
 mas install 409201541 # Pages
 mas install 568494494 # Pocket
 mas install 880001334 # Reeder
-mas install 421879749 # Rested
 mas install 413965349 # Soulver
+mas install 1176895641 # Spark
 mas install 531349534 # Tadam
 mas install 557168941 # Tweetbot
 mas install 497799835 # Xcode
