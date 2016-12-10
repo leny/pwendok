@@ -38,5 +38,6 @@ transmission
 tree
 vim
 wget --enable-iri
+yarn
 youtube-dl
 zsh

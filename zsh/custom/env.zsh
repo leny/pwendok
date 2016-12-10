@@ -1,6 +1,6 @@
 # -- ENV
 
-PATH="~/.pwendok/bin:$(brew --prefix coreutils)/libexec/gnubin::/usr/local/sbin:${PATH}"
+PATH="~/.pwendok/bin:`yarn global bin`:$(brew --prefix coreutils)/libexec/gnubin::/usr/local/sbin:${PATH}"
 export PATH
 export EDITOR="vim"
 export CLICOLOR=1
