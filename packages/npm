@@ -10,6 +10,7 @@ grunt
 grunt-cli
 gulp
 hexo
+lighthouse
 mocha
 phantomas
 seve
