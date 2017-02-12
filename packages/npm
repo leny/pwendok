@@ -5,6 +5,7 @@ browserify
 coffee-script
 enpot
 eslint
+eslint-plugin-react
 gadkod
 grunt
 grunt-cli
