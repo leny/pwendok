@@ -38,6 +38,7 @@ tree
 vim
 watchman
 wget --enable-iri
+wrk
 yarn
 youtube-dl
 zsh
