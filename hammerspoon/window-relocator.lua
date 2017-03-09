@@ -26,6 +26,7 @@ oActions = {
     [ 124 ] = function( oWindow ) oWindow:move( { 0.5, 0, 0.5, 1 } ) end, -- arrow right
     -- full screen
     [ 49 ] = function( oWindow ) oWindow:maximize() end, -- space
+    [ 36 ] = function( oWindow ) oWindow:move( { 1 / 5, 1 / 8, 3 / 5, 6 / 8 } ) end, -- enter
     -- change screen
     [ 33 ] = function( oWindow ) oWindow:moveOneScreenWest() end, -- ^ (move to left screen)
     [ 30 ] = function( oWindow ) oWindow:moveOneScreenEast() end, -- $ (move to right screen)
