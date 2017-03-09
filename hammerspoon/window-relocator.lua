@@ -45,7 +45,7 @@ oKeyCollector = hs.eventtap.new( { hs.eventtap.event.types.keyDown }, function( 
         print( "-- window relocator: no action for \"" .. oEvent:getCharacters() .. "\" (keyCode: " .. iCode .. ")" )
     end
 
-    return false
+    return true
 end )
 
 hs.hotkey.bind( aModifiers, sTrigger, function()
