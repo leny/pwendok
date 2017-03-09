@@ -84,10 +84,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 xargs brew cask install < "$DOTFILES_DIR/packages/cask"
 
 echo ""
-echo "----- brew: quicklook -----"
-xargs brew cask install < "$DOTFILES_DIR/packages/quicklook"
-
-echo ""
 echo "----- brew: fonts -----"
 brew tap caskroom/fonts
 xargs brew cask install < "$DOTFILES_DIR/packages/fonts"
