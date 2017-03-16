@@ -10,8 +10,6 @@ cleanmymac
 dash
 docker
 dropbox
-fman
-insomnia
 filebot
 firefox
 flux
@@ -19,6 +17,7 @@ forklift
 google-chrome
 google-chrome-canary
 hammerspoon
+insomnia
 istat-menus
 iterm2
 kaleidoscope
