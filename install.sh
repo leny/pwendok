@@ -216,9 +216,6 @@ defaults write NSGlobalDomain AppleLocale -string "fr_BE@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
-# Set Forklift as default FileViewer, instead of Finder
-defaults write -g NSFileViewer -string com.binarynights.ForkLift-3
-
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
