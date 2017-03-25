@@ -31,7 +31,7 @@ oActions = {
     [ 33 ] = function( oWindow ) oWindow:moveOneScreenWest() end, -- ^ (move to left screen)
     [ 30 ] = function( oWindow ) oWindow:moveOneScreenEast() end, -- $ (move to right screen)
     -- moving around, using vim keys
-    [ 4 ] = function( oWindow ) oWindow:move( { 0, oWindow:frame().y, oWindow:frame().w, oWindow:frame().h } ) end, -- h (move left)
+    [ 4 ] = function( oWindow ) oWindow:move( { oWindow:screen():frame().x, oWindow:frame().y, oWindow:frame().w, oWindow:frame().h } ) end, -- h (move left)
     [ 37 ] = function( oWindow ) oWindow:move( { oWindow:screen():frame().w - oWindow:frame().w, oWindow:frame().y, oWindow:frame().w, oWindow:frame().h } ) end, -- l (move right)
     [ 38 ] = function( oWindow ) oWindow:move( { oWindow:frame().x, oWindow:screen():frame().h - oWindow:frame().h, oWindow:frame().w, oWindow:frame().h } ) end, -- j (move down)
     [ 40 ] = function( oWindow ) oWindow:move( { oWindow:frame().x, 0, oWindow:frame().w, oWindow:frame().h } ) end, -- k (move up)
