@@ -108,6 +108,9 @@ alias cask="brew cask"
 # --- Transmission
 alias transmission="transmission-remote"
 
+# --- Forklift
+alias fo="open -a Forklift"
+
 # --- IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
