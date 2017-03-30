@@ -110,6 +110,7 @@ alias transmission="transmission-remote"
 
 # --- Forklift
 alias fo="open -a Forklift"
+alias fopen="open -a Forklift"
 
 # --- IP
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
