@@ -25,16 +25,17 @@ oActions = {
     [ 123 ] = function( oWindow ) oWindow:move( { 0, 0, 0.5, 1 } ) end, -- arrow left
     [ 124 ] = function( oWindow ) oWindow:move( { 0.5, 0, 0.5, 1 } ) end, -- arrow right
     -- full screen
+    [ 48 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { ( oScreenFrame.w - oWindowFrame.w ) / 2, ( oScreenFrame.h - oWindowFrame.h ) / 2, oWindowFrame.w, oWindowFrame.h } ) end, -- tab (move to center)
     [ 49 ] = function( oWindow ) oWindow:maximize() end, -- space
     [ 36 ] = function( oWindow ) oWindow:move( { 1 / 5, 1 / 8, 3 / 5, 6 / 8 } ) end, -- enter
     -- change screen
     [ 33 ] = function( oWindow ) oWindow:moveOneScreenWest() end, -- ^ (move to left screen)
     [ 30 ] = function( oWindow ) oWindow:moveOneScreenEast() end, -- $ (move to right screen)
     -- moving around, using vim keys
-    [ 4 ] = function( oWindow ) oWindow:move( { oWindow:screen():frame().x, oWindow:frame().y, oWindow:frame().w, oWindow:frame().h } ) end, -- h (move left)
-    [ 37 ] = function( oWindow ) oWindow:move( { oWindow:screen():frame().w - oWindow:frame().w, oWindow:frame().y, oWindow:frame().w, oWindow:frame().h } ) end, -- l (move right)
-    [ 38 ] = function( oWindow ) oWindow:move( { oWindow:frame().x, oWindow:screen():frame().h - oWindow:frame().h, oWindow:frame().w, oWindow:frame().h } ) end, -- j (move down)
-    [ 40 ] = function( oWindow ) oWindow:move( { oWindow:frame().x, 0, oWindow:frame().w, oWindow:frame().h } ) end, -- k (move up)
+    [ 4 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oScreenFrame.x, oWindowFrame.y, oWindowFrame.w, oWindowFrame.h } ) end, -- h (move left)
+    [ 37 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oScreenFrame.w - oWindowFrame.w, oWindowFrame.y, oWindowFrame.w, oWindowFrame.h } ) end, -- l (move right)
+    [ 38 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oWindowFrame.x, oScreenFrame.h - oWindowFrame.h, oWindowFrame.w, oWindowFrame.h } ) end, -- j (move down)
+    [ 40 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oWindowFrame.x, 0, oWindowFrame.w, oWindowFrame.h } ) end, -- k (move up)
 }
 
 oKeyCollector = hs.eventtap.new( { hs.eventtap.event.types.keyDown }, function( oEvent )
@@ -46,7 +47,7 @@ oKeyCollector = hs.eventtap.new( { hs.eventtap.event.types.keyDown }, function( 
     hs.alert.closeAll()
 
     if fAction and type( fAction ) == "function" then
-        fAction( oWindow, oWindow:screen(), oWindow:screen():frame() )
+        fAction( oWindow, oWindow:frame(), oWindow:screen(), oWindow:screen():frame() )
     else
         print( "-- window relocator: no action for \"" .. oEvent:getCharacters() .. "\" (keyCode: " .. iCode .. ")" )
     end
