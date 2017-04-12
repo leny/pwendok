@@ -64,6 +64,7 @@ alias nyp="yarn install --production"
 alias nry="rm -rf ./node_modules && yarn install"
 alias nyt="yarn init"
 alias nyty="yarn init"
+alias nyo="yarn outdated"
 
 # --- tower
 alias tower="gittower ."
