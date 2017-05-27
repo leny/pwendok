@@ -4,6 +4,7 @@ cloc
 cmake
 coreutils
 dnsmasq
+elixir
 ffmpeg
 findutils
 geoip
