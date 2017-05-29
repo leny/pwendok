@@ -10,7 +10,7 @@ iTimeout = 1
 
 hs.hotkey.bind( aModifiers, sTrigger, function()
     if ( hs.itunes.isRunning() and hs.itunes.isPlaying() ) then
-        sCurrentTrack = "🎵 " .. hs.itunes.getCurrentArtist() .. " - " .. hs.itunes.getCurrentTrack()
+        sCurrentTrack = "🎵 " .. hs.itunes.getCurrentArtist() .. " - " .. hs.itunes.getCurrentTrack() .. "\n" .. hs.itunes.getCurrentAlbum()
     else
         sCurrentTrack = "🎵 No track is playing!"
     end
