@@ -101,6 +101,7 @@ alias gitinit="git init"
 alias gi="git init"
 alias gap="git add -p"
 alias gds="git diff --staged"
+alias gcdf="git clean -f -d"
 alias cdg="cd \$(git rev-parse --show-toplevel)"
 
 # --- brew
