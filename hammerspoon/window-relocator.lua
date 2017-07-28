@@ -33,7 +33,7 @@ oActions = {
     [ 30 ] = function( oWindow ) oWindow:moveOneScreenEast() end, -- $ (move to right screen)
     -- moving around, using vim keys
     [ 4 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oScreenFrame.x, oWindowFrame.y, oWindowFrame.w, oWindowFrame.h } ) end, -- h (move left)
-    [ 37 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oScreenFrame.w - oWindowFrame.w, oWindowFrame.y, oWindowFrame.w, oWindowFrame.h } ) end, -- l (move right)
+    [ 37 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oScreenFrame.w - oWindowFrame.w + oScreenFrame.x, oWindowFrame.y, oWindowFrame.w, oWindowFrame.h } ) end, -- l (move right)
     [ 38 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oWindowFrame.x, oScreenFrame.h - oWindowFrame.h, oWindowFrame.w, oWindowFrame.h } ) end, -- j (move down)
     [ 40 ] = function( oWindow, oWindowFrame, oScreen, oScreenFrame ) oWindow:move( { oWindowFrame.x, 0, oWindowFrame.w, oWindowFrame.h } ) end, -- k (move up)
 }
