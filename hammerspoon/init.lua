@@ -15,11 +15,5 @@ hs.pathwatcher.new( os.getenv( "HOME" ) .. "/.pwendok/hammerspoon/", reloadConfi
 -- Window Relocator
 require "window-relocator"
 
--- Window Hints
-hs.hints.style = "vimperator"
-hs.hotkey.bind( { "ctrl", "alt" }, "c", function()
-    hs.hints.windowHints()
-end )
-
 -- iTunes current track
 require "itunes-current"
