@@ -1,12 +1,16 @@
 ack
 argon/mas/mas
+avrdude
+avr-gcc
 cloc
 cmake
 coreutils
+dfu-programmer
 dnsmasq
 elixir
 ffmpeg
 findutils
+gcc-arm-none-eabi
 geoip
 git
 git-extras
