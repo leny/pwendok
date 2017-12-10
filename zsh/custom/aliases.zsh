@@ -37,8 +37,6 @@ alias ydl="youtube-dl"
 alias ydlp="youtube-dl --yes-playlist -f '(mp4)[height>=720]'"
 alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
 
-alias brotli="bro"
-
 # --- parallelized zip libs
 alias gzip="pigz"
 alias bzip2="pbzip2"
