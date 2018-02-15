@@ -3,7 +3,7 @@
     email = info@flatland.be
 [core]
     excludesfile = ~/.gitignore_global
-	editor = nano
+	editor = vim
 [alias]
     aa = add --all
     st = status
