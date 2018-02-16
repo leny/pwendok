@@ -1,3 +1,5 @@
+set fish_greeting ""
+
 set -x EDITOR "vim"
 set -x CLICOLOR 1
 set -x LSCOLORS gxfxcxdxbxegedabagacad
