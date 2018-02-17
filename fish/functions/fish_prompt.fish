@@ -5,13 +5,16 @@ function fish_prompt
     set -l resetColor (set_color normal)
     set -l nWhite (set_color white)
     set -l nBlue (set_color blue)
+    set -l nRed (set_color red)
     set -l bRed (set_color --bold red)
     set -l nCyan (set_color cyan)
     set -l bCyan (set_color --bold cyan)
     set -l nYellow (set_color yellow)
     set -l bYellow (set_color --bold yellow)
     set -l nMagenta (set_color magenta)
+    set -l bMagenta (set_color --bold magenta)
     set -l nGreen (set_color green)
+    set -l bGreen (set_color --bold green)
 
     # last command duration
     if test $CMD_DURATION
@@ -50,7 +53,7 @@ function fish_prompt
 
     # current directory
     if set -l match (string match -r "^$HOME\/Works\/([^\/]+)\/([^\/]+)\/(.+)\$" (pwd))
-        echo -sn "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor" "$nYellow" ":" "$nCyan" "$match[4]"
+        echo -sn "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor" "$nYellow" ":" "$nCyan" (string replace "~/Wo/"(string sub -l 2 $match[2])"/"(string sub -l 2 $match[3])"/" "" (prompt_pwd))
     else if set -l match (string match -r "^$HOME\/Works\/([^\/]+)\/([^\/]+)\$" (pwd))
         echo -sn "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor"
     else if set -l match (string match -r "^$HOME\/Works\/([^\/]+)\$" (pwd))
