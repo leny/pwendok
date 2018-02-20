@@ -2,5 +2,12 @@ function depo -d "try to change directory to github repo, with user/repo, from t
     cd $WORKS_PATH/$argv[1]
 end
 
-# TODO: completion
-# cf. https://github.com/fish-shell/fish-shell/tree/master/share/completions
+function __depo
+    for orga in (ls $WORKS_PATH)
+        for repo in (ls $WORKS_PATH/$orga)
+            echo "$orga/$repo"
+        end
+    end
+end
+
+complete -x -c depo -a "(__depo)"
