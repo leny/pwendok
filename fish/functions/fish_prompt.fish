@@ -22,8 +22,8 @@ function fish_prompt
         if test $timer -ge 3600
             set -l timerHours (math "$timer / 3600")
             set -l timerRemain (math "$timer % 3600")
-            set -l timerMinutes (math "$timer / 60")
-            set -l timerSeconds (math "$timer % 60")
+            set -l timerMinutes (math "$timerRemain / 60")
+            set -l timerSeconds (math "$timerRemain % 60")
             echo -s "$resetColor" "$nMagenta" "◴ duration: " "$bRed" "$timerHours" "h " "$timerMinutes" "m " "$timerSeconds" "s " "$resetColor"
         else if test $timer -ge 60
             set -l timerMinutes (math "$timer / 60")
