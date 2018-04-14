@@ -52,9 +52,9 @@ function fish_prompt
     echo -sn "$nYellow • $nWhite"
 
     # current directory
-    if set -l match (string match -r "^$GOPATH\/src\/([^\/]+)\/([^\/]+)\/(.+)\$" (pwd))
-        echo -sn "$bRed" "go" "$nYellow" ":" "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor" "$nYellow" ":" "$nCyan" (string replace "~/Wo/go/sr/"(string sub -l 2 $match[2])"/"(string sub -l 2 $match[3])"/" "" (prompt_pwd))
-    else if set -l match (string match -r "^$GOPATH\/src\/([^\/]+)\/(.+)\$" (pwd))
+    if set -l match (string match -r "^$GOPATH\/src\/github\.com\/([^\/]+)\/([^\/]+)\/(.+)\$" (pwd))
+        echo -sn "$bRed" "go" "$nYellow" ":" "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor" "$nYellow" ":" "$nCyan" (string replace "~/Wo/go/sr/gi/"(string sub -l 2 $match[2])"/"(string sub -l 2 $match[3])"/" "" (prompt_pwd))
+    else if set -l match (string match -r "^$GOPATH\/src\/github\.com\/([^\/]+)\/(.+)\$" (pwd))
         echo -sn "$bRed" "go" "$nYellow" ":" "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor"
     else if set -l match (string match -r "^$HOME\/Works\/([^\/]+)\/([^\/]+)\/(.+)\$" (pwd))
         echo -sn "$nMagenta" "$match[2]" "$nWhite" "/" "$bCyan" "$match[3]" "$resetColor" "$nYellow" ":" "$nCyan" (string replace "~/Wo/"(string sub -l 2 $match[2])"/"(string sub -l 2 $match[3])"/" "" (prompt_pwd))
