@@ -2,14 +2,17 @@ ack
 argon/mas/mas
 avrdude
 avr-gcc
+bash
+bash-completion
 cloc
 cmake
 coreutils
 dfu-programmer
 dnsmasq
 elixir
-ffmpeg
+ffmpeg --with-libvpx
 findutils
+fish
 gcc-arm-none-eabi
 geoip
 git
@@ -51,4 +54,5 @@ wget --enable-iri
 wrk
 yarn
 youtube-dl
-zsh
+fzf
+z

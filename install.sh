@@ -146,8 +146,9 @@ go get -u github.com/davecheney/httpstat
 echo ""
 echo "----- generate directory structure -----"
 
-mkdir -p ~/Works/flatland
 mkdir -p ~/Works/becode
+mkdir -p ~/Works/flatland
+mkdir -p ~/Works/go
 mkdir -p ~/Works/leny
 mkdir -p ~/Works/misc
 mkdir -p ~/Works/resources
