@@ -1,9 +1,0 @@
-{
-  "variables": {
-		"lang": "fr",
-		"locale": "fr-BE",
-		"charset": "UTF-8",
-		"indentation": "\t",
-		"newline": "\n"
-	}
-}
