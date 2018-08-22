@@ -22,60 +22,75 @@ read -e -p "Please enter app store account: " mac_account
 APPLE_ACOUNT=${mac_account}
 
 echo ""
-echo "----- link dotfiles -----"
+echo "----- XCode Command Line Tools -----"
 
-ln -sfv "$DOTFILES_DIR/etc/gitconfig" ~/.gitconfig
-ln -sfv "$DOTFILES_DIR/etc/gitignore_global" ~/.gitignore_global
-ln -sfv "$DOTFILES_DIR/etc/curlrc" ~/.curlrc
-ln -sfv "$DOTFILES_DIR/etc/wgetrc" ~/.wgetrc
-ln -sfv "$DOTFILES_DIR/etc/eslintrc.json" ~/.eslintrc
-ln -sfv "$DOTFILES_DIR/etc/babelrc.json" ~/.babelrc
-ln -sfv "$DOTFILES_DIR/etc/editorconfig" ~/.editorconfig
-ln -sfv "$DOTFILES_DIR/etc/hyperterm.js" ~/.hyperterm.js
-ln -sfv "$DOTFILES_DIR/hammerspoon" ~/.hammerspoon
+# cf. https://github.com/paulirish/dotfiles/blob/master/setup-a-new-machine.sh#L87
 
-echo ""
-echo "----- configure vim -----"
-
-cd && git clone https://github.com/leny/pwenvim ~/.pwenvim
-ln -sfv ~/.pwenvim/vimrc ~/.vimrc
-ln -sfv ~/.pwenvim/gvimrc ~/.gvimrc
-ln -sfv ~/.pwenvim/vim ~/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
-echo ""
-echo "----- link atom -----"
-
-ln -sfv "$DOTFILES_DIR/atom" ~/.atom
-
-echo ""
-echo "----- install tools for XCode -----"
-if [[ ! -d "$('xcode-select' -print-path 2>/dev/null)" ]]; then
-    sudo xcode-select -switch /usr/bin
+if ! xcode-select --print-path &> /dev/null; then
+    xcode-select --install &> /dev/null
+    until xcode-select --print-path &> /dev/null; do
+        sleep 5
+    done
+    print_result $? 'Install XCode Command Line Tools'
+    sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+    print_result $? 'Make "xcode-select" developer directory point to Xcode'
+    sudo xcodebuild -license
+    print_result $? 'Agree with the XCode Command Line Tools licence'
 fi
 
 echo ""
+echo "----- link dotfiles -----"
+
+ln -sfv "$DOTFILES_DIR/etc/babelrc.json" ~/.babelrc
+ln -sfv "$DOTFILES_DIR/etc/curlrc" ~/.curlrc
+ln -sfv "$DOTFILES_DIR/etc/editorconfig" ~/.editorconfig
+ln -sfv "$DOTFILES_DIR/etc/eslintrc.js" ~/.eslintrc.js
+ln -sfv "$DOTFILES_DIR/etc/gitconfig" ~/.gitconfig
+ln -sfv "$DOTFILES_DIR/etc/gitignore_global" ~/.gitignore_global
+ln -sfv "$DOTFILES_DIR/etc/prettierrc" ~/.prettierrc
+ln -sfv "$DOTFILES_DIR/etc/wgetrc" ~/.wgetrc
+
+
+echo ""
 echo "----- install homebrew -----"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew doctor
 brew update
 brew upgrade
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
 
 echo "----- brew: install formulas -----"
 xargs brew install < "$DOTFILES_DIR/packages/brew"
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/nano
+brew install homebrew/dupes/openssh
+brew install homebrew/dupes/screen
 brew cleanup
 
 echo ""
-echo "----- install oh-my-zsh -----"
-wget --no-check-certificate https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-rm ~/.zshrc
-rm ~/.zshrc.pre-oh-my-zsh
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.pwendok/zsh/custom/plugins/zsh-syntax-highlighting
-ln -sfv "$DOTFILES_DIR/zsh/themes/neoleny.zsh-theme" ~/.oh-my-zsh/themes/neoleny.zsh-theme
-ln -sfv "$DOTFILES_DIR/zsh/zshrc" ~/.zshrc
+echo "----- configure neovim -----"
+
+pip3 install --user --upgrade neovim
+git clone https://github.com/leny/pweneovim ~/.pweneovim
+ln -sfv ~/.pweneovim ~/.config/nvim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
+
+echo ""
+echo "----- configure & install tmux -----"
+git clone https://github.com/leny/dotmux.git ~/.dotmux
+ln -sfv ~/.dotmux/tmux.conf ~/.tmux.conf
+cd ~/.dotmux
+go get -d ~/.dotmux/scripts/...
+go build -o ~/.dotmux/bin/systats ~/.dotmux/scripts/systats/main.go
+
+echo ""
+echo "----- install fish -----"
+rm ~/.config/fish
+ln -sfv "$DOTFILES_DIR/fish" ~/.config/fish
+FISHPATH=$(brew --prefix)/bin/fish
+sudo bash -c 'echo $(brew --prefix)/bin/fish >> /etc/shells'
+chsh -s $FISHPATH
 
 echo ""
 echo "----- brew: cask -----"
@@ -83,7 +98,6 @@ brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 xargs brew cask install < "$DOTFILES_DIR/packages/cask"
 
-echo ""
 echo "----- brew: fonts -----"
 brew tap caskroom/fonts
 xargs brew cask install < "$DOTFILES_DIR/packages/fonts"
@@ -111,34 +125,31 @@ sudo launchctl start homebrew.mxcl.dnsmasq
 echo ""
 echo "----- install apps from Mac App Store -----"
 mas signin $APPLE_ACOUNT
-mas install 937984704 # Amphetamine
-mas install 434514810 # Billings Pro
-mas install 536511979 # Characters
-mas install 498672703 # Droplr
-mas install 975937182 # Fantastical 2
-mas install 724408341 # Fonts
-mas install 463541543 # Gemini
-mas install 435932420 # iPackr
+mas install 411643860 # DaisyDisk
+mas install 918858936 # Airmail 3
+mas install 419330170 # Moom
 mas install 409183694 # Keynote
-mas install 928871589 # Noizio
-mas install 409203825 # Numbers
 mas install 409201541 # Pages
-mas install 568494494 # Pocket
-mas install 880001334 # Reeder
+mas install 409203825 # Numbers
 mas install 413965349 # Soulver
-mas install 1176895641 # Spark
-mas install 531349534 # Tadam
-mas install 557168941 # Tweetbot
+mas install 434514810 # Billings Pro
+mas install 435932420 # iPackr
 mas install 497799835 # Xcode
+mas install 498672703 # Droplr
+mas install 531349534 # Tadam
+mas install 536511979 # Characters
+mas install 557168941 # Tweetbot
+mas install 568494494 # Pocket
+mas install 724408341 # Fonts
+mas install 880001334 # Reeder
 mas install 889428659 # xScope
+mas install 904280696 # Things 3
+mas install 937984704 # Amphetamine
+mas install 975937182 # Fantastical 2
 
 echo ""
 echo "----- install npm packages -----"
 xargs npm install -g < "$DOTFILES_DIR/packages/npm"
-
-echo ""
-echo "----- install atom packages -----"
-xargs apm install -g < "$DOTFILES_DIR/packages/apm"
 
 echo ""
 echo "----- install go packages -----"
@@ -148,7 +159,7 @@ echo ""
 echo "----- generate directory structure -----"
 
 mkdir -p ~/Works/flatland
-mkdir -p ~/Works/hepl
+mkdir -p ~/Works/becode
 mkdir -p ~/Works/leny
 mkdir -p ~/Works/misc
 mkdir -p ~/Works/resources
