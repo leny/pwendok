@@ -50,6 +50,11 @@ ln -sfv "$DOTFILES_DIR/etc/gitignore_global" ~/.gitignore_global
 ln -sfv "$DOTFILES_DIR/etc/prettierrc" ~/.prettierrc
 ln -sfv "$DOTFILES_DIR/etc/wgetrc" ~/.wgetrc
 
+echo ""
+echo "----- link terminfo files -----"
+
+tic -x "$DOTFILES_DIR/etc/terminfo/xterm-256color-italic.terminfo"
+tic -x "$DOTFILES_DIR/etc/terminfo/tmux-256color.terminfo"
 
 echo ""
 echo "----- install homebrew -----"
