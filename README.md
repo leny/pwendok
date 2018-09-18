@@ -15,6 +15,7 @@ Commands to run after a fresh install.
 **Note:** the following list (and the whole content of this *repo*) is useful for me, but feel free to dig into it, I hope some of my tools can help you too!
 
 1. Configure sys prefs & Finder prefs (remap capslock to ctrl)
+1. Install Dank Mono font (stored in Dropbox)
 1. Clone this repo to `~/.pwendok`: `cd && git clone https://github.com/leny/pwendok.git ./.pwendok && cd .pwendok`
 1. System setup: launch `source install.sh` (the script ask for reboot at the end).
 1. Clone & deploy ssh keys from repo.
