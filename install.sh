@@ -341,6 +341,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true Ope
 
 ########## Dock, Dashboard, and hot corners
 
+# Disable bouncing
+defaults write com.apple.dock no-bouncing -bool true
+
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
