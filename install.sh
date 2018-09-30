@@ -147,6 +147,10 @@ echo "----- install npm packages -----"
 xargs npm install -g < "$DOTFILES_DIR/packages/npm"
 
 echo ""
+echo "----- install pip packages -----"
+xargs pip install < "$DOTFILES_DIR/packages/pip"
+
+echo ""
 echo "----- install go packages -----"
 go get -u github.com/davecheney/httpstat
 
