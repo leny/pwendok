@@ -1,5 +1,4 @@
 ack
-argon/mas/mas
 avrdude
 bash
 bash-completion
@@ -12,6 +11,7 @@ elixir
 ffmpeg --with-libvpx
 findutils
 fish
+fzf
 geoip
 git
 git-extras
@@ -24,6 +24,7 @@ hub
 links
 lynx
 lzip
+mas
 mercurial
 moreutils
 mosh
@@ -39,8 +40,8 @@ python
 python3
 sdl2
 sdl2_image
-sdl2_ttf
 sdl2_mixer
+sdl2_ttf
 ssh-copy-id
 svn
 the_silver_searcher
@@ -52,5 +53,4 @@ wget --enable-iri
 wrk
 yarn
 youtube-dl
-fzf
 z
