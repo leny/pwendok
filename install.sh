@@ -499,6 +499,11 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+######### F.lux
+
+# Import F.lux settings
+defaults import org.herf.Flux "$DOTFILES_DIR/preferences/org.herf.Flux.plist"
+
 ######### Moom
 
 # Import Moom settings
