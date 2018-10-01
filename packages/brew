@@ -8,6 +8,7 @@ coreutils
 dfu-programmer
 dnsmasq
 elixir
+exa
 ffmpeg --with-libvpx
 findutils
 fish
@@ -31,6 +32,7 @@ mosh
 neofetch
 nmap
 node
+nvim
 p7zip
 pbzip2
 pigz

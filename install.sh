@@ -18,9 +18,6 @@ esac
 read -e -p "Please enter machine name: " machine_name
 MACHINE_NAME=${machine_name:-LenyMachine}
 
-read -e -p "Please enter app store account: " mac_account
-APPLE_ACOUNT=${mac_account}
-
 echo ""
 echo "----- XCode Command Line Tools -----"
 
@@ -77,6 +74,7 @@ echo "----- configure neovim -----"
 
 pip3 install --user --upgrade neovim
 git clone https://github.com/leny/pweneovim ~/.pweneovim
+mkdir -p ~/.config
 ln -sfv ~/.pweneovim ~/.config/nvim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +qall
@@ -119,28 +117,32 @@ fi
 
 echo ""
 echo "----- install apps from Mac App Store -----"
-mas signin $APPLE_ACOUNT
-mas install 411643860 # DaisyDisk
-mas install 918858936 # Airmail 3
-mas install 419330170 # Moom
-mas install 409183694 # Keynote
-mas install 409201541 # Pages
-mas install 409203825 # Numbers
-mas install 413965349 # Soulver
-mas install 434514810 # Billings Pro
-mas install 435932420 # iPackr
-mas install 497799835 # Xcode
-mas install 498672703 # Droplr
-mas install 531349534 # Tadam
-mas install 536511979 # Characters
-mas install 557168941 # Tweetbot
-mas install 568494494 # Pocket
-mas install 724408341 # Fonts
-mas install 880001334 # Reeder
-mas install 889428659 # xScope
-mas install 904280696 # Things 3
-mas install 937984704 # Amphetamine
-mas install 975937182 # Fantastical 2
+echo "MAS is disabled on Mojave for now."
+# read -e -p "Please enter app store account: " mac_account
+# APPLE_ACOUNT=${mac_account}
+
+# mas signin $APPLE_ACOUNT
+# mas install 411643860 # DaisyDisk
+# mas install 918858936 # Airmail 3
+# mas install 419330170 # Moom
+# mas install 409183694 # Keynote
+# mas install 409201541 # Pages
+# mas install 409203825 # Numbers
+# mas install 413965349 # Soulver
+# mas install 434514810 # Billings Pro
+# mas install 435932420 # iPackr
+# mas install 497799835 # Xcode
+# mas install 498672703 # Droplr
+# mas install 531349534 # Tadam
+# mas install 536511979 # Characters
+# mas install 557168941 # Tweetbot
+# mas install 568494494 # Pocket
+# mas install 724408341 # Fonts
+# mas install 880001334 # Reeder
+# mas install 889428659 # xScope
+# mas install 904280696 # Things 3
+# mas install 937984704 # Amphetamine
+# mas install 975937182 # Fantastical 2
 
 echo ""
 echo "----- install npm packages -----"
