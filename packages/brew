@@ -1,7 +1,6 @@
 ack
 argon/mas/mas
 avrdude
-avr-gcc
 bash
 bash-completion
 cloc
@@ -13,7 +12,6 @@ elixir
 ffmpeg --with-libvpx
 findutils
 fish
-gcc-arm-none-eabi
 geoip
 git
 git-extras
