@@ -4,7 +4,7 @@
     "disableScrollingIf3" : true,
     "BTTForceNormalClickPressure5F" : 200,
     "disableScrollingIf2" : true,
-    "BTTDidRegisterForUpdateStats" : "2.536",
+    "BTTDidRegisterForUpdateStats" : "2.627",
     "BTTShowControlStrip" : true,
     "BTTShowControlStripItem" : true,
     "BTTForceForceClickPressure5F" : 600,
@@ -12,7 +12,7 @@
     "BSTSnapAreaDefaultBorderWidth" : 3,
     "BTTThreeFingerTipTapMinSpread" : 0.03,
     "BTTEnableUsageLogging" : true,
-    "BSTTopMissionControlTreshold" : 34,
+    "BTTTouchBarHapticFeedback" : 0,
     "BTTForceNormalClickPressure" : 150,
     "BSTSnapAreaDefaultHighlightColor" : "92.624286, 122.650411, 161.665578, 56.100000",
     "BTTLastClamshellState" : false,
@@ -23,6 +23,7 @@
     "BTTFreeSpaceAfterBTT" : 20,
     "BTTForceNormalClickPressure3F" : 150,
     "BSTSnapAreaDefaultBorderColor" : "0.000000, 0.000000, 0.000000, 255.000000",
+    "BSTTopMissionControlTreshold" : 34,
     "singleFingerTapRight" : 0.05,
     "BTTDrawingsHighlightStartPoint" : true,
     "BSTWindowGrabPosX" : 67,
@@ -109,7 +110,7 @@
     "BSTCornerRoundness" : 40,
     "BTTDismissIfNothingToShow" : true,
     "BSTPreventTopMissionControl" : true,
-    "BTTNumberOfStarts" : 25,
+    "BTTNumberOfStarts" : 60,
     "BTTHTTPServerEncrypted" : false,
     "showKeyboardTab" : true,
     "BTTConvertedDevices" : true,
@@ -126,27 +127,36 @@
     "BTTTouchBarVisible" : false,
     "BTTTouchBarUseMonoSpacedFont" : true
   },
-  "BTTPresetUUID" : "19C0BDD4-7B13-4B83-A265-0C6CC7BDD2F7",
+  "BTTPresetUUID" : "C6F7847E-F95D-41F4-BEBA-BCA8B9F9BC2A",
   "BTTPresetContent" : [
-    {
-      "BTTAppBundleIdentifier" : "com.apple.finder",
-      "BTTAppName" : "Finder",
-      "BTTTriggers" : [
-
-      ]
-    },
     {
       "BTTAppBundleIdentifier" : "BT.G",
       "BTTAppName" : "Global",
       "BTTTriggers" : [
         {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 177,
+          "BTTPredefinedActionName" : "Show\/Hide Specific Application",
+          "BTTAppToShowOrHide" : "com.fournova.Tower3",
+          "BTTAdditionalConfiguration" : "917539",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "D454CD33-C5CA-4A24-B3CE-6E509AAF82DC",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 5,
+          "BTTShortcutModifierKeys" : 917504,
+          "BTTOrder" : 2
+        },
+        {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 177,
           "BTTPredefinedActionName" : "Show\/Hide Specific Application",
           "BTTAppToShowOrHide" : "com.google.Chrome",
           "BTTAdditionalConfiguration" : "917504",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "A48D2900-A29D-4B4E-99AB-B7DB804F85CE",
+          "BTTUUID" : "01E78461-24E4-4000-899C-F8601BE2D82A",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 8,
@@ -158,9 +168,9 @@
           "BTTPredefinedActionType" : 177,
           "BTTPredefinedActionName" : "Show\/Hide Specific Application",
           "BTTAppToShowOrHide" : "com.binarynights.forklift-setapp",
-          "BTTAdditionalConfiguration" : "917539",
+          "BTTAdditionalConfiguration" : "917504",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "3F38FA16-D748-45F3-B1DA-06896BE276B2",
+          "BTTUUID" : "8438AB27-D89A-49EB-BAC0-2BEFB5CAD9F0",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 3,
@@ -169,32 +179,40 @@
         },
         {
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 177,
-          "BTTPredefinedActionName" : "Show\/Hide Specific Application",
-          "BTTAppToShowOrHide" : "com.fournova.Tower3",
-          "BTTAdditionalConfiguration" : "917539",
+          "BTTPredefinedActionType" : 172,
+          "BTTPredefinedActionName" : "Run Apple Script (blocking)",
+          "BTTInlineAppleScript" : "tell application \"iTunes\"\r\tif running then\r\t\tset state to player state\r\t\tif state = playing then\r\t\t\tset trackProperties to (properties of current track)\r\t\t\tset _artist to artist in trackProperties\r\t\t\tset _title to name in trackProperties\r\t\t\tset _album to album in trackProperties\r\t\t\t\r\t\t\tdisplay notification _album subtitle _artist with title _title\r\t\tend if\r\tend if\rend tell\r\r\r",
+          "BTTAdditionalConfiguration" : "917504",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "6178D2B6-F953-4E09-9A53-5831FCAD1DD2",
+          "BTTUUID" : "D86E63A3-BA6C-47BB-A440-525D1F02597C",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 5,
+          "BTTShortcutKeyCode" : 34,
           "BTTShortcutModifierKeys" : 917504,
-          "BTTOrder" : 2
+          "BTTOrder" : 4
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 177,
           "BTTPredefinedActionName" : "Show\/Hide Specific Application",
           "BTTAppToShowOrHide" : "com.googlecode.iterm2",
           "BTTAdditionalConfiguration" : "917539",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "711158A1-97F7-445C-BE02-D708FA7AC152",
+          "BTTUUID" : "7CB4C398-ED4E-4D4B-955B-B73212C9C336",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 17,
           "BTTShortcutModifierKeys" : 917504,
           "BTTOrder" : 1
         }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTTriggers" : [
+
       ]
     }
   ],

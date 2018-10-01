@@ -499,6 +499,11 @@ defaults write org.m0k.transmission WarningDonate -bool false
 # Hide the legal disclaimer
 defaults write org.m0k.transmission WarningLegal -bool false
 
+######### Moom
+
+# Import Moom settings
+defaults import com.manytricks.Moom "$DOTFILES_DIR/preferences/com.manytricks.Moom.plist"
+
 ###############################################################################
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
