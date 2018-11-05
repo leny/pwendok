@@ -2,6 +2,7 @@ ack
 avrdude
 bash
 bash-completion
+bat
 cloc
 cmake
 coreutils
@@ -29,6 +30,7 @@ mas
 mercurial
 moreutils
 mosh
+ncdu
 neofetch
 nmap
 node
@@ -37,6 +39,7 @@ p7zip
 pbzip2
 pigz
 plzip
+prettyping
 python
 python3
 sdl2
