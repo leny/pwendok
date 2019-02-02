@@ -18,16 +18,16 @@ function fish_prompt
 
     # last command duration
     if test $CMD_DURATION
-        set -l timer (math "$CMD_DURATION / 1000")
+        set -l timer (math -s0 "$CMD_DURATION / 1000")
         if test $timer -ge 3600
-            set -l timerHours (math "$timer / 3600")
-            set -l timerRemain (math "$timer % 3600")
-            set -l timerMinutes (math "$timerRemain / 60")
-            set -l timerSeconds (math "$timerRemain % 60")
+            set -l timerHours (math -s0 "$timer / 3600")
+            set -l timerRemain (math -s0 "$timer % 3600")
+            set -l timerMinutes (math -s0 "$timerRemain / 60")
+            set -l timerSeconds (math -s0 "$timerRemain % 60")
             echo -s "$resetColor" "$nMagenta" "◴ duration: " "$bRed" "$timerHours" "h " "$timerMinutes" "m " "$timerSeconds" "s " "$resetColor"
         else if test $timer -ge 60
-            set -l timerMinutes (math "$timer / 60")
-            set -l timerSeconds (math "$timer % 60")
+            set -l timerMinutes (math -s0 "$timer / 60")
+            set -l timerSeconds (math -s0 "$timer % 60")
             echo -s "$resetColor" "$nMagenta" "◴ duration: " "$bYellow" "$timerMinutes" "m " "$timerSeconds" "s " "$resetColor"
         else if test $timer -ge 5
             echo -s "$resetColor" "$nMagenta" "◴ duration: " "$nGreen" "$timer" "s " "$resetColor"
