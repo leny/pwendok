@@ -18,6 +18,7 @@ geoip
 git
 git-extras
 gnu-sed --with-default-names
+gnupg
 go
 gstreamer
 hr
