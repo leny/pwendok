@@ -1,9 +1,10 @@
 [user]
     name = leny
     email = info@flatland.be
+    signingkey = 1D6E903016B20E2C0725DCED1B80E87CC423DF3D
 [core]
     excludesfile = ~/.gitignore_global
-	editor = vim
+    editor = vim
 [alias]
     aa = add --all
     st = status
@@ -47,3 +48,9 @@
 	default = simple
 [pull]
     rebase = preserve
+[gpg]
+    program = /usr/local/MacGPG2/bin/gpg2
+[commit]
+    gpgsign = true
+[tag]
+    forceSignAnnotated = true
