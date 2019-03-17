@@ -9,6 +9,7 @@ eslint-plugin-react
 eslint-plugin-prettier
 neovim
 prettier
+prettier-plugin-elm
 seve
 stylus
 tankipas

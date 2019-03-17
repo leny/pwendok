@@ -9,6 +9,7 @@ coreutils
 dfu-programmer
 dnsmasq
 elixir
+elm
 exa
 ffmpeg --with-libvpx
 findutils
