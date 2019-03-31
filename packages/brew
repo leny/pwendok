@@ -18,6 +18,7 @@ fzf
 geoip
 git
 git-extras
+git-sizer
 gnu-sed --with-default-names
 gnupg
 go
