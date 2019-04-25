@@ -23,3 +23,7 @@ set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
 thefuck --alias | source
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish ]; and . /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish
