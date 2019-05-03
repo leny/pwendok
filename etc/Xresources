@@ -1,0 +1,41 @@
+!! URxvt Appearance
+URxvt.font: xft:Dank Mono:style=Regular:size=14
+URxvt.boldFont: xft:Dank Mono:style=Bold:size=14
+
+!! Colorscheme
+! special
+*.foreground: #cccccc
+*.background: #2d2d2d
+*.cursorColor: #515151
+
+! black
+*.color0: #393939
+*.color8: #393939
+
+! red
+*.color1: #f2777a
+*.color9: #f2777a
+
+! green
+*.color2: #99cc99
+*.color10: #99cc99
+
+! yellow
+*.color3: #ffcc66
+*.color11: #ffcc66
+
+! blue
+*.color4: #6699cc
+*.color12: #6699cc
+
+! magenta
+*.color5: #cc99cc
+*.color13: #cc99cc
+
+! cyan
+*.color6: #66cccc
+*.color14: #66cccc
+
+! white
+*.color7: #cccccc
+*.color15: #cccccc
