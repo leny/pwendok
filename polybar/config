@@ -12,7 +12,7 @@ padding = 1
 separator = " | "
 
 modules-left = i3
-modules-right = cpu memory filesystem network battery date time
+modules-right = cpu memory filesystem network nordvpn battery date time lock
 
 [module/i3]
 type = internal/i3
@@ -49,11 +49,21 @@ type = internal/fs
 mount-0 = /
 label-mounted =  %free%
 
+[module/nordvpn]
+type = custom/script
+exec = ~/.config/scripts/nordvpn.sh
+interval = 1
+format = <label>
+click-left = ~/.config/scripts/nordvpn-toggle.sh
+click-middle = ~/.config/scripts/nordvpn-toggle.sh
+click-right = ~/.config/scripts/nordvpn-toggle.sh
+
 [module/network]
 type = internal/network
 interface = wlp1s0
 label-disconnected = 
 label-connected =  %essid%
+click-left = nm-connection-editor
 
 [module/battery]
 type = internal/battery
@@ -86,3 +96,9 @@ interval = 1.0
 time = %H:%M
 label =  %time%
 
+[module/lock]
+type = custom/text
+content = 
+click-left = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
+click-middle = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
+click-right = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
