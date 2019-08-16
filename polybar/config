@@ -1,0 +1,104 @@
+[bar/top]
+override-redirect = false
+wm-restack = i3
+bottom = false
+font-0 = "Dank Mono:size=10"
+font-1 = "Font Awesome 5 Pro:size=10"
+width = 100%
+height = 26
+background = #44000000
+padding = 1
+
+separator = " | "
+
+modules-left = i3
+modules-right = cpu memory filesystem network nordvpn battery date time lock
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+strip-wsnumbers = true
+index-sort = true
+
+label-visible = %index%
+label-visible-foreground = #555555
+label-visible-padding = 1
+
+label-focused = %index%
+label-focused-foreground = #ffffff
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-foreground = #888888
+label-unfocused-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label>
+label =  %percentage%%
+
+[module/memory]
+type = internal/memory
+format = <label>
+label =  %percentage_used%%
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+label-mounted =  %free%
+
+[module/nordvpn]
+type = custom/script
+exec = ~/.config/scripts/nordvpn.sh
+interval = 1
+format = <label>
+click-left = ~/.config/scripts/nordvpn-toggle.sh
+click-middle = ~/.config/scripts/nordvpn-toggle.sh
+click-right = ~/.config/scripts/nordvpn-toggle.sh
+
+[module/network]
+type = internal/network
+interface = wlp1s0
+label-disconnected = 
+label-connected =  %essid%
+click-left = nm-connection-editor
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC0
+
+time-format = %H:%M
+label-full =  %percentage%%
+format-charging = <label-charging>
+label-charging =  %percentage%%
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+[module/date]
+type = internal/date
+interval = 60.0
+date = %d/%m%
+label =  %date%
+date-alt = %A, %e %B
+
+[module/time]
+type = internal/date
+interval = 1.0
+time = %H:%M
+label =  %time%
+
+[module/lock]
+type = custom/text
+content = 
+click-left = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
+click-middle = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
+click-right = i3lock --image /home/leny/Pictures/vladstudio_starry_night_wallpaper.png
