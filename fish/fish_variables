@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export FZF_DEFAULT_COMMAND:ag\x20\x2d\x2dhidden\x20\x2d\x2dignore\x20\x2egit\x20\x2dg\x20\x22\x22
-SETUVAR --export GOBIN:/Users/leny/Works/go/bin
-SETUVAR --export GOPATH:/Users/leny/Works/go
+SETUVAR --export GOBIN:/home/leny/Works/go/bin
+SETUVAR --export GOPATH:/home/leny/Works/go
 SETUVAR --export GOROOT:/usr/local/Cellar/go/1\x2e11/libexec
 SETUVAR LANG:en_US\x2eutf8
 SETUVAR __fish_init_2_39_8:\x1d
