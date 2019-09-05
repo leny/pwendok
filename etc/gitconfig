@@ -1,6 +1,7 @@
 [user]
     name = leny
     email = info@flatland.be
+    signingkey = 915D9ADF40F63C03
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
@@ -47,3 +48,5 @@
     rebase = preserve
 [tag]
     forceSignAnnotated = true
+[commit]
+	gpgsign = true
