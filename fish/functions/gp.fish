@@ -1,3 +1,3 @@
 function gp --description 'git push'
-	git push $argv
+	git push --follow-tags $argv
 end
