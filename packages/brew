@@ -11,7 +11,7 @@ dnsmasq
 elixir
 elm
 exa
-ffmpeg --with-libvpx
+ffmpeg 
 findutils
 fish
 fzf
@@ -19,7 +19,7 @@ geoip
 git
 git-extras
 git-sizer
-gnu-sed --with-default-names
+gnu-sed 
 gnupg
 go
 gstreamer
@@ -57,7 +57,7 @@ transmission
 tree
 vim
 watchman
-wget --enable-iri
+wget 
 wrk
 yarn
 youtube-dl
