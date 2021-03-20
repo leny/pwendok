@@ -1,7 +1,7 @@
 [user]
     name = leny
     email = info@flatland.be
-    signingkey = 1D6E903016B20E2C0725DCED1B80E87CC423DF3D
+    signingkey = 6277FF09395794DC
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
