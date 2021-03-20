@@ -55,18 +55,13 @@ tic -x "$DOTFILES_DIR/etc/terminfo/tmux-256color.terminfo"
 
 echo ""
 echo "----- install homebrew -----"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
 brew update
 brew upgrade
-brew tap homebrew/dupes
 
 echo "----- brew: install formulas -----"
 xargs brew install < "$DOTFILES_DIR/packages/brew"
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/nano
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
 brew cleanup
 
 echo ""
@@ -85,9 +80,6 @@ mkdir -p ~/.config/tmux-plugins
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.config/tmux-plugins/tmux-resurrect
 git clone https://github.com/leny/dotmux.git ~/.dotmux
 ln -sfv ~/.dotmux/tmux.conf ~/.tmux.conf
-cd ~/.dotmux
-go get -d ~/.dotmux/scripts/...
-go build -o ~/.dotmux/bin/systats ~/.dotmux/scripts/systats/main.go
 
 echo ""
 echo "----- install fish -----"
@@ -101,7 +93,7 @@ echo ""
 echo "----- brew: cask -----"
 brew tap caskroom/cask
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-xargs brew cask install < "$DOTFILES_DIR/packages/cask"
+xargs brew install --cask < "$DOTFILES_DIR/packages/cask"
 
 echo "----- brew: fonts -----"
 brew tap caskroom/fonts
@@ -117,7 +109,7 @@ fi
 
 echo ""
 echo "----- install apps from Mac App Store -----"
-echo "MAS is disabled on Mojave for now."
+echo "MAS is disabled on BigSur for now."
 # read -e -p "Please enter app store account: " mac_account
 # APPLE_ACOUNT=${mac_account}
 
@@ -149,20 +141,11 @@ echo "----- install npm packages -----"
 xargs npm install -g < "$DOTFILES_DIR/packages/npm"
 
 echo ""
-echo "----- install pip packages -----"
-xargs pip install < "$DOTFILES_DIR/packages/pip"
-
-echo ""
-echo "----- install go packages -----"
-go get -u github.com/davecheney/httpstat
-
-echo ""
 echo "----- generate directory structure -----"
 
-mkdir -p ~/Works/becode
 mkdir -p ~/Works/flatland
-mkdir -p ~/Works/go
 mkdir -p ~/Works/leny
+mkdir -p ~/Works/mango
 mkdir -p ~/Works/misc
 mkdir -p ~/Works/resources
 
