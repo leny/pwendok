@@ -69,17 +69,17 @@ function fish_prompt
     end
 
     # git status
-    if command git rev-parse --git-dir > /dev/null ^ /dev/null
+    if command git rev-parse --git-dir > /dev/null 2> /dev/null
         echo -sn "$resetColor" "$nYellow" " ԍ " "$bMagenta"
 
         # git branch / tag
-        set -l gitBranch (command git symbolic-ref --short HEAD ^ /dev/null)
+        set -l gitBranch (command git symbolic-ref --short HEAD 2> /dev/null)
 
         if test -z "$gitBranch"
-            set -l gitTag (command git describe --tags --exact-match HEAD ^ /dev/null)
+            set -l gitTag (command git describe --tags --exact-match HEAD 2> /dev/null)
 
             if test -z "$gitTag"
-                command git rev-parse --short HEAD ^ /dev/null
+                command git rev-parse --short HEAD 2> /dev/null
             else
                 echo -sn "$gitTag" "$resetColor "
             end
@@ -89,26 +89,26 @@ function fish_prompt
 
         # git status
         # - local status
-        set -l gitLocalStatus (git status --porcelain ^ /dev/null)
+        set -l gitLocalStatus (git status --porcelain 2> /dev/null)
         if test -n "$gitLocalStatus"
             # -- untracked files
-            set -l gitLocalQQ (echo "$gitLocalStatus" | grep -E '^\?\? ' ^ /dev/null)
+            set -l gitLocalQQ (echo "$gitLocalStatus" | grep -E '^\?\? ' 2> /dev/null)
             if test -n "$gitLocalQQ"
                 echo -sn "$nWhite" "+ " "$resetColor"
             end
             # -- added files
-            set -l gitLocalAE (echo "$gitLocalStatus" | grep -E '^A  ' ^ /dev/null)
-            set -l gitLocalME (echo "$gitLocalStatus" | grep -E '^M  ' ^ /dev/null)
+            set -l gitLocalAE (echo "$gitLocalStatus" | grep -E '^A  ' 2> /dev/null)
+            set -l gitLocalME (echo "$gitLocalStatus" | grep -E '^M  ' 2> /dev/null)
             if test -n "$gitLocalAE"
                 echo -sn "$nYellow" "* " "$resetColor"
             else if test -n "$gitLocalME"
                 echo -sn "$nYellow" "* " "$resetColor"
             end
             # -- modified
-            set -l gitLocalEM (echo "$gitLocalStatus" | grep -E '^ M ' ^ /dev/null)
-            set -l gitLocalAM (echo "$gitLocalStatus" | grep -E '^AM ' ^ /dev/null)
-            set -l gitLocalMM (echo "$gitLocalStatus" | grep -E '^MM ' ^ /dev/null)
-            set -l gitLocalET (echo "$gitLocalStatus" | grep -E '^ T ' ^ /dev/null)
+            set -l gitLocalEM (echo "$gitLocalStatus" | grep -E '^ M ' 2> /dev/null)
+            set -l gitLocalAM (echo "$gitLocalStatus" | grep -E '^AM ' 2> /dev/null)
+            set -l gitLocalMM (echo "$gitLocalStatus" | grep -E '^MM ' 2> /dev/null)
+            set -l gitLocalET (echo "$gitLocalStatus" | grep -E '^ T ' 2> /dev/null)
             if test -n "$gitLocalEM"
                 echo -sn "$nWhite" "* " "$resetColor"
             else if test -n "$gitLocalAM"
@@ -119,14 +119,14 @@ function fish_prompt
                 echo -sn "$nWhite" "* " "$resetColor"
             end
             # -- renamed
-            set -l gitLocalRE (echo "$gitLocalStatus" | grep -E '^R  ' ^ /dev/null)
+            set -l gitLocalRE (echo "$gitLocalStatus" | grep -E '^R  ' 2> /dev/null)
             if test -n "$gitLocalRE"
                 echo -sn "$nYellow" "r " "$resetColor"
             end
             # -- deleted
-            set -l gitLocalED (echo "$gitLocalStatus" | grep -E '^ D ' ^ /dev/null)
-            set -l gitLocalDE (echo "$gitLocalStatus" | grep -E '^D  ' ^ /dev/null)
-            set -l gitLocalAD (echo "$gitLocalStatus" | grep -E '^AD ' ^ /dev/null)
+            set -l gitLocalED (echo "$gitLocalStatus" | grep -E '^ D ' 2> /dev/null)
+            set -l gitLocalDE (echo "$gitLocalStatus" | grep -E '^D  ' 2> /dev/null)
+            set -l gitLocalAD (echo "$gitLocalStatus" | grep -E '^AD ' 2> /dev/null)
             if test -n "$gitLocalED"
                 echo -sn "$nRed" "- " "$resetColor"
             else if test -n "$gitLocalDE"
@@ -139,11 +139,11 @@ function fish_prompt
             echo -sn "$bGreen" "✓ " "$resetColor"
         end
         # - remote status
-        set -l gitAhead (git status -b ^ /dev/null | grep '^## .*ahead' ^ /dev/null)
+        set -l gitAhead (git status -b 2> /dev/null | grep '^## .*ahead' 2> /dev/null)
         if test -n "$gitAhead"
             echo -sn "$bCyan" "↑ " "$resetColor"
         end
-        set -l gitBehind (git status -b ^ /dev/null | grep '^## .*behind' ^ /dev/null)
+        set -l gitBehind (git status -b 2> /dev/null | grep '^## .*behind' 2> /dev/null)
         if test -n "$gitBehind"
             echo -sn "$bRed" "↓ " "$resetColor"
         end
