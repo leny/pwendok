@@ -5,6 +5,8 @@
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
+	eol = lf
+	autocrlf = false
 [alias]
     aa = add --all
     st = status
@@ -47,7 +49,7 @@
 [push]
 	default = simple
 [pull]
-    rebase = preserve
+    rebase = merges
 [gpg]
     program = /usr/local/MacGPG2/bin/gpg2
 [commit]
