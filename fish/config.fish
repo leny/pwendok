@@ -7,7 +7,7 @@ set -x LSCOLORS gxfxcxdxbxegedabagacad
 set -x WORKS_PATH $HOME/Works
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH (brew --prefix coreutils)/libexec/gnubin $HOME/.pyenv/bin:$PATH /usr/local/sbin $PATH
+set -x PATH (brew --prefix coreutils)/libexec/gnubin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
 
 set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
 set -x -U GOPATH $WORKS_PATH/go
@@ -35,3 +35,11 @@ nvm use default --silent
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish ]; and . /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish
+set -gx HOMEBREW_GITHUB_API_TOKEN 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
+
+complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
+
+# pnpm
+set -gx PNPM_HOME "/Users/leny/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
