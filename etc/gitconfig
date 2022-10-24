@@ -48,6 +48,7 @@
     helper = osxkeychain
 [push]
 	default = simple
+    autoSetupRemote = true
 [pull]
     rebase = merges
 [gpg]
