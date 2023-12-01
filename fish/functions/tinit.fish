@@ -15,6 +15,8 @@ function tinit -d "init a tmux session for given project"
     tmux send-keys -t $session:$window "cd $WORKS_PATH/$session" Enter
     tmux send-keys -t $session:$window "nvm use" Enter
     tmux send-keys -t $session:$window "git pull" Enter
+    tmux send-keys -t $session:$window "clear" Enter
+
     tmux split-window -t $session:$window -h
     tmux resize-pane -t $session:$window -L 60
     tmux send-keys -t $session:$window.right "cd $WORKS_PATH/$session" Enter
