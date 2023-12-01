@@ -9,6 +9,8 @@ set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH (brew --prefix coreutils)/libexec/gnubin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
 
+set -x -U TZ "UTC"
+
 set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
 set -x -U GOPATH $WORKS_PATH/go
 set -x -U GOBIN $GOPATH/bin
@@ -41,5 +43,11 @@ complete --command aws --no-files --arguments '(begin; set --local --export COMP
 
 # pnpm
 set -gx PNPM_HOME "/Users/leny/Library/pnpm"
-set -gx PATH "$PNPM_HOME" $PATH
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
 # pnpm end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
