@@ -7,7 +7,7 @@ set -x LSCOLORS gxfxcxdxbxegedabagacad
 set -x WORKS_PATH $HOME/Works
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH (brew --prefix coreutils)/libexec/gnubin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
+set -x PATH /usr/local/opt/coreutils/libexec/gnubin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
 
 set -x -U TZ "UTC"
 
@@ -18,7 +18,7 @@ set -x -U GOBIN $GOPATH/bin
 set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 function nvm
-   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+   bass source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
 end
 
 set -x NVM_DIR ~/.nvm
