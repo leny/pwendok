@@ -13,3 +13,4 @@ vim/bundle/*
 vim/.netrwhist
 fish/fishd.*
 /fish/functions/fzf_key_bindings.fish
+/fish/fish_variables
