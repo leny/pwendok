@@ -49,3 +49,6 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# Created by `pipx` on 2024-03-10 13:55:26
+set PATH $PATH /Users/leny/.local/bin
