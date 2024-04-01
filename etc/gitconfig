@@ -1,7 +1,7 @@
 [user]
     name = leny
     email = info@flatland.be
-    signingkey = 6277FF09395794DC
+	signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDstlbn9Ivq1Yap4TpMBzK1gtJT7QWtNuMC84SrFLOd46TvfFXIdQm8T9TT/mAmAA/JdbACiVpUR/ZCeB8+gtRnH6oDdDpwPBo0a5ATMlux2MpbuB3uY7TRP9Viz5OeBPF8Nrk+VU9hBnLTd++XdMNo8hP8WnT9WRBmTR/uzoCycMhg0VYgXWpIfroc7L+LrgxkKicSp2mX2cSV3s5rg7923pVuyOqumD00MikDXpJMXULWQPKOQpfMabSqXm2y2CI1kHVaUvujuPBNv9++9E5DHvA2Wt2Kt/Qtnp5oNuzyhvMSycjxBapZ24lN5Kmq/4SjTW2Rx7a4fCsUYSzXap6VGaExHWwsluXmJi8RtCOTbjdyJ2ljy+xPOlp/xQXP73lVsls/pe0mCbgeCBra+ImF2pADvGk8Sh9jT80lglKMpGFlzB4gzV+zBCun2Ww51RL6g6QMSUpTBy9tyWNw/6/kgF9abSITBw22M7krNJvOs01+C/LSRx4iOZZDg9QzwAveiDyLHcpN+3Nokf9ImM2U0l4vomWwdQikYI7vrez3k/IxOodhLR423K1d5asJGMk7gI3iHCUhXfnWaB91ECsBxLtfSlonwc5/WgHBsujrlZuT+87LfoILdVMSqmQDDIDycjmn49oEgBuPfgJ7DTA1iqrSCwb/mtxdPvgjNUcl2w==
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
@@ -53,6 +53,7 @@
     rebase = merges
 [gpg]
     program = /usr/local/MacGPG2/bin/gpg2
+	format = ssh
 [commit]
     gpgsign = true
 [tag]
@@ -64,3 +65,5 @@
 	required = true
 [init]
     defaultBranch = main
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
