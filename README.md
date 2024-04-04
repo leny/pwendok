@@ -32,7 +32,7 @@ If you don't know [f.lux](https://justgetflux.com), go get a look, and try it. Y
 
 ## git commit signing
 
-git commit signing is handled by 1password, so you need to install the 1password CLI tool to make it work.
+git commit signing is [handled by 1password](https://blog.1password.com/git-commit-signing/), so you need to install the 1password CLI tool to make it work.
 
 * * *
 
