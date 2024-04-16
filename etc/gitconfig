@@ -69,3 +69,9 @@
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [rerere]
 	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /Users/leny/Works/mango/graph
