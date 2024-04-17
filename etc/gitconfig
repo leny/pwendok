@@ -75,3 +75,5 @@
 	sort = -committerdate
 [maintenance]
 	repo = /Users/leny/Works/mango/graph
+[fetch]
+	all = true
