@@ -1,0 +1,9 @@
+# Ghostty's config (from pwendok)
+
+font-family = "Dank Mono"
+font-size = 14
+font-thicken = true
+
+theme = leny
+
+shell-integration = fish
