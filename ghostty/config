@@ -3,6 +3,7 @@
 font-family = "Dank Mono"
 font-size = 14
 font-thicken = true
+font-feature = -calt
 
 theme = "Tomorrow Night Eighties"
 
