@@ -4,6 +4,6 @@ font-family = "Dank Mono"
 font-size = 14
 font-thicken = true
 
-theme = leny
+theme = "Tomorrow Night Eighties"
 
 shell-integration = fish
