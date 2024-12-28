@@ -215,7 +215,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
-######### Terminal & iTerm 2
+######### Terminal (iTerm 2 & Ghostty)
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
@@ -231,6 +231,9 @@ defaults import com.googlecode.iterm2 "$DOTFILES_DIR/preferences/com.googlecode.
 
 # Disable Spark Updates in MacVim
 defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
+
+# Link the ghostty configuration
+ln -sfv "$DOTFILES_DIR/ghostty" ~/.config/ghostty
 
 ########## Trackpad, mouse, keyboard, Bluetooth accessories, and input
 
