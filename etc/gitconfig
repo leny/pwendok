@@ -83,6 +83,9 @@
 	all = true
 [interactive]
 	diffFilter = diff-so-fancy --patch
-
+[mergetool "nvimdiff"]
+    layout = "LOCAL,BASE,REMOTE / MERGED"
 [log]
 	abbrevCommit = true
+[merge]
+	tool = nvimdiff
