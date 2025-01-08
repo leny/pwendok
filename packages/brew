@@ -7,11 +7,12 @@ cloc
 cmake
 coreutils
 dfu-programmer
+diff-so-fancy
 dnsmasq
 elixir
 elm
 exa
-ffmpeg 
+ffmpeg
 findutils
 fish
 fzf
@@ -19,7 +20,7 @@ geoip
 git
 git-extras
 git-sizer
-gnu-sed 
+gnu-sed
 gnupg
 go
 gstreamer
@@ -57,7 +58,7 @@ transmission
 tree
 vim
 watchman
-wget 
+wget
 wrk
 yarn
 youtube-dl
