@@ -8,21 +8,6 @@
 	eol = lf
 	autocrlf = false
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[alias]
-    aa = add --all
-    st = status
-    sts = status -sb
-    stl = ls-files -m -o --exclude-standard
-    ci = commit
-    br = branch
-    co = checkout
-    cr = clone --recursive
-    df = diff --word-diff
-    unstage = reset --hard HEAD
-    ag = !sh -c 'git ls-files -m -o --exclude-standard | grep $1 | xargs git add --verbose' -
-    ll = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lg = log -p
-    g = grep --break --heading --line-number
 [color]
     ui = auto
 [color "branch"]
