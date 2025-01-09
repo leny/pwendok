@@ -51,7 +51,7 @@
 	process = git-lfs filter-process
 	required = true
 [init]
-    defaultBranch = main
+    defaultBranch = develop
 [mergetool]
 	prompt = false
 [gpg "ssh"]
