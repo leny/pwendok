@@ -1,3 +1,3 @@
 function l --description 'Fancy directory listing'
-    exa -la --git
+    lla -l --icons
 end

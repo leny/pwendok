@@ -1,3 +1,3 @@
-function gl --description 'git pull'
-	git pull $argv
+function gl --description 'ls for git'
+    lla --icons --git
 end
