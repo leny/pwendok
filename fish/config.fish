@@ -7,7 +7,7 @@ set -x LSCOLORS gxfxcxdxbxegedabagacad
 set -x WORKS_PATH $HOME/Works
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH /usr/local/opt/coreutils/libexec/gnubin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
+set -x PATH /usr/local/opt/coreutils/libexec/gnubin $HOME/.rover/bin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
 
 set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
 set -x -U GOPATH $WORKS_PATH/go

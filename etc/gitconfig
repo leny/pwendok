@@ -54,6 +54,7 @@
     defaultBranch = develop
 [mergetool]
 	prompt = false
+	keepBackup = false
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [rerere]
@@ -73,4 +74,14 @@
 [log]
 	abbrevCommit = true
 [merge]
-	tool = nvimdiff
+	tool = Kaleidoscope
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
