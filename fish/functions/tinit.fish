@@ -1,27 +1,17 @@
 function tinit -d "init a tmux session for given project"
     set session $argv[1]
 
-    tmux new -s $session -d
+    if tmux has-session -t $session 2>/dev/null
+        echo "Session $session already exists"
+        return 1
+    end
 
-    set window 1
-    tmux rename-window -t $session:$window editors
-    set window editors
-    tmux send-keys -t $session:$window "cd $WORKS_PATH/$session" Enter
-    tmux send-keys -t $session:$window "nvim ." Enter
+    tmux new-session -s $session -d -n editors "cd $WORKS_PATH/$session ; nvim . || fish"
 
     set window 2
-    tmux new-window -t $session:$window -n operations
+    tmux new-window -d -t $session:$window -n operations "cd $WORKS_PATH/$session ; nvm use || true ; git pull || true ; clear ; fish"
     set window operations
-    tmux send-keys -t $session:$window "cd $WORKS_PATH/$session" Enter
-    tmux send-keys -t $session:$window "nvm use" Enter
-    tmux send-keys -t $session:$window "git pull" Enter
-    tmux send-keys -t $session:$window "clear" Enter
-
-    tmux split-window -t $session:$window -h
-    tmux resize-pane -t $session:$window -L 60
-    tmux send-keys -t $session:$window.right "cd $WORKS_PATH/$session" Enter
-    tmux send-keys -t $session:$window.right "nvm use" Enter
-    tmux send-keys -t $session:$window.right "clear" Enter
+    tmux split-window -d -t $session:$window -l 75% -h "cd $WORKS_PATH/$session ; nvm use || true ; clear ; fish"
 end
 
 function __tinit
