@@ -14,3 +14,9 @@ vim/.netrwhist
 fish/fishd.*
 /fish/functions/fzf_key_bindings.fish
 /fish/fish_variables
+/superfile/firstUseCheck
+/superfile/lastCheckVersion
+/superfile/superfile.log
+/superfile/themeFileVersion
+/superfile/toggleDotFile
+/superfile/toggleFooter
