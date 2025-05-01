@@ -6,7 +6,7 @@ function tinit -d "init a tmux session for given project"
         return 1
     end
 
-    tmux new-session -s $session -d -n editors "cd $WORKS_PATH/$session ; nvim . || fish"
+    tmux new-session -s $session -d -n editors "cd $WORKS_PATH/$session ; nvim . ; fish"
 
     set window 2
     tmux new-window -d -t $session:$window -n operations "cd $WORKS_PATH/$session ; nvm use || true ; git pull || true ; clear ; fish"
