@@ -40,6 +40,7 @@ git commit signing is [handled by 1password](https://blog.1password.com/git-comm
 
 - Migrate the dotfiles handling to [GNU Stow](https://www.gnu.org/software/stow/).
 - Automate installation of Amazon Q
+- Do a bit of cleanup in listed packages & apps
 
 * * *
 
