@@ -8,3 +8,5 @@ font-feature = -calt
 theme = "Tomorrow Night Eighties"
 
 shell-integration = fish
+
+confirm-close-surface = false
