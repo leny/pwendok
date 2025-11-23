@@ -52,3 +52,6 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # Created by `pipx` on 2024-03-10 13:55:26
 set PATH $PATH /Users/leny/.local/bin
+
+# Added by Antigravity
+fish_add_path /Users/leny/.antigravity/antigravity/bin
