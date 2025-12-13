@@ -7,7 +7,13 @@ set -x LSCOLORS gxfxcxdxbxegedabagacad
 set -x WORKS_PATH $HOME/Works
 set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH /usr/local/opt/coreutils/libexec/gnubin $HOME/.rover/bin $HOME/.pyenv/bin:$PATH $HOME/.cargo/bin /usr/local/sbin $PATH
+
+# PATH configuration (using fish_add_path to avoid duplicates)
+fish_add_path /usr/local/opt/coreutils/libexec/gnubin
+fish_add_path $HOME/.rover/bin
+fish_add_path $HOME/.pyenv/bin
+fish_add_path $HOME/.cargo/bin
+fish_add_path /usr/local/sbin
 
 set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
 set -x -U GOPATH $WORKS_PATH/go
@@ -41,22 +47,20 @@ complete --command aws --no-files --arguments '(begin; set --local --export COMP
 
 # pnpm
 set -gx PNPM_HOME "/Users/leny/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
+fish_add_path $PNPM_HOME
 # pnpm end
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+fish_add_path $BUN_INSTALL/bin
 
 # Created by `pipx` on 2024-03-10 13:55:26
-set PATH $PATH /Users/leny/.local/bin
+fish_add_path /Users/leny/.local/bin
 
 # Added by Antigravity
 fish_add_path /Users/leny/.antigravity/antigravity/bin
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/leny/.lmstudio/bin
+fish_add_path /Users/leny/.lmstudio/bin
 # End of LM Studio CLI section
 
