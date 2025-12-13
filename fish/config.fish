@@ -55,3 +55,8 @@ set PATH $PATH /Users/leny/.local/bin
 
 # Added by Antigravity
 fish_add_path /Users/leny/.antigravity/antigravity/bin
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/leny/.lmstudio/bin
+# End of LM Studio CLI section
+
