@@ -1,3 +1,3 @@
-function gap --description 'git add --interactive'
+function gai --description 'git add --interactive'
 	git add -i $argv
 end
