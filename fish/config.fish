@@ -22,27 +22,36 @@ set -x -U GOBIN $GOPATH/bin
 
 set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
-function nvm
-   bass source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
+set -x NVM_DIR ~/.nvm
+
+# Lazy-load NVM - ne charge que quand tu utilises node/npm/npx/nvm
+function __nvm_load
+    functions -e node npm npx nvm __nvm_load
+    function nvm
+        bass source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
+    end
+    nvm use default --silent
 end
 
-set -x NVM_DIR ~/.nvm
-nvm use default --silent
+function node
+    __nvm_load
+    command node $argv
+end
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+function npm
+    __nvm_load
+    command npm $argv
+end
 
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+function npx
+    __nvm_load
+    command npx $argv
+end
 
-# thefuck --alias | source
-
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish ]; and . /Users/leny/Works/becode/becodeorg-stats/node_modules/tabtab/.completions/slss.fish
-set -gx HOMEBREW_GITHUB_API_TOKEN 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
+function nvm
+    __nvm_load
+    nvm $argv
+end
 
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
