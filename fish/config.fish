@@ -14,6 +14,7 @@ fish_add_path $HOME/.rover/bin
 fish_add_path $HOME/.pyenv/bin
 fish_add_path $HOME/.cargo/bin
 fish_add_path /usr/local/sbin
+fish_add_path $HOME/.dotmux/scripts
 
 set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
 set -x -U GOPATH $WORKS_PATH/go
