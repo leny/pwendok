@@ -27,10 +27,11 @@ set -x NVM_DIR ~/.nvm
 # Lazy-load NVM - ne charge que quand tu utilises node/npm/npx/nvm
 function __nvm_load
     functions -e node npm npx nvm __nvm_load
+    bass source /usr/local/opt/nvm/nvm.sh
+    # Définir la vraie fonction nvm après le chargement
     function nvm
-        bass source /usr/local/opt/nvm/nvm.sh --no-use ';' nvm $argv
+        bass source /usr/local/opt/nvm/nvm.sh ';' nvm $argv
     end
-    nvm use default --silent
 end
 
 function node
