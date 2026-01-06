@@ -24,6 +24,8 @@ set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 set -x NVM_DIR ~/.nvm
 
+eval (/opt/homebrew/bin/brew shellenv)
+
 # Lazy-load NVM - ne charge que quand tu utilises node/npm/npx/nvm
 function __nvm_load
     functions -e node npm npx nvm __nvm_load
