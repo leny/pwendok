@@ -29,10 +29,10 @@ eval (/opt/homebrew/bin/brew shellenv)
 # Lazy-load NVM - ne charge que quand tu utilises node/npm/npx/nvm
 function __nvm_load
     functions -e node npm npx nvm __nvm_load
-    bass source /usr/local/opt/nvm/nvm.sh
+    bass source /opt/homebrew/opt/nvm/nvm.sh
     # Définir la vraie fonction nvm après le chargement
     function nvm
-        bass source /usr/local/opt/nvm/nvm.sh ';' nvm $argv
+        bass source /opt/homebrew/opt/nvm/nvm.sh ';' nvm $argv
     end
 end
 
