@@ -16,9 +16,10 @@ fish_add_path $HOME/.cargo/bin
 fish_add_path /usr/local/sbin
 fish_add_path $HOME/.dotmux/scripts
 
-set -x -U GOROOT /usr/local/Cellar/go/1.11/libexec
-set -x -U GOPATH $WORKS_PATH/go
-set -x -U GOBIN $GOPATH/bin
+set -x GOROOT /opt/homebrew/opt/go/libexec
+set -x GOPATH $WORKS_PATH/go
+set -x GOBIN $GOPATH/bin
+fish_add_path $GOBIN
 
 set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
