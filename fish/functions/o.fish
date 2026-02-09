@@ -1,3 +1,3 @@
-function o --description 'open vim in current directory'
-	mvim .
+function o --description 'open nvim in current directory'
+	nvim .
 end
