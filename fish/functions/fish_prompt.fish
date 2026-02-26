@@ -68,6 +68,14 @@ function fish_prompt
         echo -sn "$nCyan" (prompt_pwd) "$nWhite"
     end
 
+    # node version
+    if test -f package.json
+        set -l nodeVersion (string replace 'v' '' (command node --version 2>/dev/null))
+        if test -n "$nodeVersion"
+            echo -sn "$resetColor" " (" "$nGreen" "η" "$resetColor" " " "$nCyan" "$nodeVersion" "$resetColor" ")"
+        end
+    end
+
     # git status
     if command git rev-parse --git-dir > /dev/null 2> /dev/null
         echo -sn "$resetColor" "$nYellow" " ԍ " "$bMagenta"
