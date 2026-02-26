@@ -1,0 +1,6 @@
+[tools]
+node = "lts"
+
+[settings]
+auto_install = true
+idiomatic_version_file_enable_tools = ["node"]
