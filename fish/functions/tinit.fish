@@ -10,9 +10,9 @@ function tinit -d "init a tmux session for given project"
     tmux new-session -s $session -d -n editors "cd $WORKS_PATH/$session ; nvim . ; fish"
 
     set window 2
-    tmux new-window -d -t $session:$window -n operations "cd $WORKS_PATH/$session ; nvm use || true ; git pull || true ; clear ; fish"
+    tmux new-window -d -t $session:$window -n operations "cd $WORKS_PATH/$session ; git pull || true ; clear ; fish"
     set window operations
-    tmux split-window -d -t $session:$window -l 75% -h "cd $WORKS_PATH/$session ; nvm use || true ; clear ; fish"
+    tmux split-window -d -t $session:$window -l 75% -h "cd $WORKS_PATH/$session ; clear ; fish"
 end
 
 function __tinit

@@ -23,39 +23,7 @@ fish_add_path $GOBIN
 
 set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
-set -x NVM_DIR ~/.nvm
-
 eval (/opt/homebrew/bin/brew shellenv)
-
-# Lazy-load NVM - ne charge que quand tu utilises node/npm/npx/nvm
-function __nvm_load
-    functions -e node npm npx nvm __nvm_load
-    bass source /opt/homebrew/opt/nvm/nvm.sh
-    # Définir la vraie fonction nvm après le chargement
-    function nvm
-        bass source /opt/homebrew/opt/nvm/nvm.sh ';' nvm $argv
-    end
-end
-
-function node
-    __nvm_load
-    command node $argv
-end
-
-function npm
-    __nvm_load
-    command npm $argv
-end
-
-function npx
-    __nvm_load
-    command npx $argv
-end
-
-function nvm
-    __nvm_load
-    nvm $argv
-end
 
 complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
