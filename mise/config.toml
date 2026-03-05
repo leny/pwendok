@@ -1,5 +1,8 @@
 [tools]
 node = "lts"
+"npm:typescript-language-server" = "latest"
+"npm:typescript" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
 
 [settings]
 auto_install = true
