@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+if [ -z "$1" ]; then
+  echo "Usage: git exclude <pattern>" >&2
+  exit 1
+fi
+
+EXCLUDE_FILE="$(git rev-parse --show-toplevel)/.git/info/exclude"
+PATTERN="$1"
+
+if grep -qxF "$PATTERN" "$EXCLUDE_FILE" 2>/dev/null; then
+  echo "'$PATTERN' est déjà dans $EXCLUDE_FILE"
+else
+  echo "$PATTERN" >> "$EXCLUDE_FILE"
+  echo "Ajouté '$PATTERN' à $EXCLUDE_FILE"
+fi
