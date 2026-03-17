@@ -9,6 +9,7 @@ set -x HOMEBREW_CASK_OPTS "--appdir=/Applications"
 set -x PYENV_ROOT $HOME/.pyenv
 
 # PATH configuration (using fish_add_path to avoid duplicates)
+fish_add_path $HOME/.pwendok/bin
 fish_add_path /usr/local/opt/coreutils/libexec/gnubin
 fish_add_path $HOME/.rover/bin
 fish_add_path $HOME/.pyenv/bin
