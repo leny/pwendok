@@ -20,6 +20,7 @@ fish_add_path $HOME/.dotmux/scripts
 set -x GOROOT /opt/homebrew/opt/go/libexec
 set -x GOPATH $WORKS_PATH/go
 set -x GOBIN $GOPATH/bin
+set -x GODEBUG netdns=cgo
 fish_add_path $GOBIN
 
 set -x -U FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
