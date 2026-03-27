@@ -48,3 +48,7 @@ fish_add_path /Users/leny/.antigravity/antigravity/bin
 fish_add_path /Users/leny/.lmstudio/bin
 # End of LM Studio CLI section
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
