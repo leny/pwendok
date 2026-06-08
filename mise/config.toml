@@ -4,6 +4,7 @@ node = "lts"
 "npm:typescript" = "latest"
 "npm:vscode-langservers-extracted" = "latest"
 pnpm = "9"
+biome = "latest"
 
 [settings]
 auto_install = true
