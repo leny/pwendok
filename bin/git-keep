@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+TARGET="${1:-.}"
+
+if [ ! -d "$TARGET" ]; then
+  mkdir -p "$TARGET"
+fi
+
+GITKEEP="$TARGET/.gitkeep"
+
+if [ -f "$GITKEEP" ]; then
+  echo "'$GITKEEP' existe déjà"
+else
+  touch "$GITKEEP"
+  echo "Créé '$GITKEEP'"
+fi
