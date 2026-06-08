@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-TARGET="${1:-.}"
+# git changes CWD to repo root before running external commands.
+# GIT_PREFIX holds the relative path from repo root to the original CWD.
+# We prepend it to relative paths so the user's position is respected.
+if [ -n "$1" ]; then
+  if [[ "$1" = /* ]]; then
+    TARGET="$1"
+  else
+    TARGET="${GIT_PREFIX}$1"
+  fi
+else
+  TARGET="${GIT_PREFIX%/}"
+  TARGET="${TARGET:-.}"
+fi
 
 if [ ! -d "$TARGET" ]; then
   mkdir -p "$TARGET"
